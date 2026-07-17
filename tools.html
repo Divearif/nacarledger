@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Real Estate Deal Screener | Nácar & Ledger</title>
+<meta name="description" content="Free deal analysis tool for fix & flip and buy & hold real estate. See why your deal is incomplete without the full analysis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --abyss-deep:#081F33;
+    --ocean:#0E3A5F;
+    --gold:#C9A97E;
+    --gold-deep:#8C7A54;
+    --rose:#D98C7A;
+    --rose-deep:#B8664F;
+    --pearl:#F7F2EA;
+    --ink:#24303A;
+    --muted:#5B6670;
+    --white:#FFFFFF;
+    --line:#E4DCC9;
+    --error:#C23B22;
+    --error-light:#FEF2F2;
+    --success:#10B981;
+  }
+  
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Inter',sans-serif;
+    color:var(--ink);
+    background:var(--white);
+    -webkit-font-smoothing:antialiased;
+  }
+  
+  h1,h2,h3,h4{
+    font-family:'Fraunces',serif;
+    font-weight:500;
+    margin:0;
+  }
+  
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.72rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    font-weight:500;
+  }
+  
+  a{color:inherit; text-decoration:none;}
+  
+  .wrap{
+    max-width:1080px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:sticky;
+    top:0;
+    background:var(--white);
+    border-bottom:1px solid var(--line);
+    z-index:10;
+    padding:18px 0;
+  }
+  nav .wrap{display:flex; align-items:center; justify-content:space-between;}
+  .nav-mark{display:flex; align-items:center; gap:10px; cursor:pointer;}
+  .nav-mark:hover svg{opacity:0.7;}
+  .nav-mark svg{width:26px; height:24px; transition:opacity .2s; opacity:1;}
+  .nav-mark span{
+    font-family:'Fraunces',serif; font-size:1.15rem; color:var(--ink); letter-spacing:0.01em;
+  }
+  .nav-mark span b{color:var(--gold); font-weight:500;}
+  
+  .nav-links{
+    display:flex; gap:32px; align-items:center;
+  }
+  .nav-links a{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.75rem;
+    letter-spacing:0.06em;
+    color:var(--muted);
+    transition:color .2s;
+  }
+  .nav-links a:hover{color:var(--ocean);}
+  .nav-links a.active{color:var(--ocean); font-weight:600;}
+
+  /* ---------- PAGE HEADER ---------- */
+  .page-header{
+    background:linear-gradient(135deg, var(--pearl) 0%, #FEFDFB 100%);
+    border-bottom:1px solid var(--line);
+    padding:60px 0 50px 0;
+  }
+  .page-header .eyebrow{color:var(--gold-deep); margin-bottom:16px;}
+  .page-header h1{
+    font-size:2.2rem;
+    color:var(--ocean);
+    line-height:1.25;
+    margin-bottom:16px;
+  }
+  .page-header p{
+    font-size:1.1rem;
+    color:var(--muted);
+    line-height:1.65;
+    max-width:620px;
+    margin:0;
+  }
+
+  /* ---------- TOOL CONTAINER ---------- */
+  .tool-container{
+    padding:80px 0;
+  }
+  
+  .tool-inner{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:50px;
+  }
+
+  /* ---------- FORM SECTION ---------- */
+  .form-section .section-title{
+    font-size:1.2rem;
+    font-family:'Fraunces',serif;
+    color:var(--ocean);
+    margin-bottom:28px;
+    padding-bottom:16px;
+    border-bottom:1px solid var(--line);
+  }
+  
+  .form-group{
+    margin-bottom:28px;
+  }
+  .form-label{
+    display:block;
+    font-size:0.95rem;
+    font-weight:600;
+    color:var(--ink);
+    margin-bottom:8px;
+  }
+  
+  .form-input{
+    width:100%;
+    padding:12px 14px;
+    border:1px solid var(--line);
+    border-radius:6px;
+    font-family:inherit;
+    font-size:1rem;
+    color:var(--ink);
+    transition:border-color .2s, box-shadow .2s;
+  }
+  .form-input:focus{
+    outline:none;
+    border-color:var(--gold);
+    box-shadow:0 0 0 3px rgba(201,169,126,0.1);
+  }
+  
+  .two-col{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:28px;
+    margin-bottom:28px;
+  }
+  
+  .input-wrapper{
+    position:relative;
+    display:flex;
+    align-items:center;
+  }
+  .currency-symbol{
+    position:absolute;
+    left:14px;
+    color:var(--muted);
+    font-weight:600;
+    pointer-events:none;
+  }
+  .currency-input{
+    padding-left:32px !important;
+  }
+
+  .submit-btn{
+    background:var(--ocean);
+    color:var(--white);
+    border:none;
+    padding:14px 32px;
+    font-size:0.95rem;
+    font-weight:600;
+    font-family:'IBM Plex Mono',monospace;
+    letter-spacing:0.06em;
+    border-radius:6px;
+    cursor:pointer;
+    transition:background .2s, transform .15s;
+  }
+  .submit-btn:hover{
+    background:var(--abyss-deep);
+    transform:translateY(-1px);
+  }
+  .submit-btn:active{transform:translateY(0);}
+
+  /* ---------- RESULTS SECTION ---------- */
+  .results-section{
+    display:none;
+  }
+  .results-section.active{
+    display:block;
+    animation:fadeIn .3s ease;
+  }
+  @keyframes fadeIn{
+    from{opacity:0; transform:translateY(10px);}
+    to{opacity:1; transform:translateY(0);}
+  }
+
+  .results-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    margin-bottom:36px;
+    padding-bottom:20px;
+    border-bottom:1px solid var(--line);
+  }
+  .results-header h2{
+    font-size:1.5rem;
+    color:var(--ocean);
+  }
+  .edit-btn{
+    background:transparent;
+    color:var(--ocean);
+    border:1px solid var(--ocean);
+    padding:8px 16px;
+    border-radius:4px;
+    font-size:0.85rem;
+    font-weight:600;
+    font-family:'IBM Plex Mono',monospace;
+    cursor:pointer;
+    transition:all .2s;
+  }
+  .edit-btn:hover{
+    background:rgba(14,58,95,0.05);
+  }
+
+  /* ---------- METRICS GRID ---------- */
+  .metrics-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+    gap:20px;
+    margin-bottom:40px;
+  }
+  
+  .metric-card{
+    background:linear-gradient(135deg, #F9FAFB 0%, #FEFDFB 100%);
+    border:1px solid var(--line);
+    padding:24px;
+    border-radius:6px;
+  }
+  .metric-label{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.8rem;
+    letter-spacing:0.06em;
+    color:var(--muted);
+    text-transform:uppercase;
+    margin-bottom:10px;
+  }
+  .metric-value{
+    font-size:1.8rem;
+    font-weight:700;
+    color:var(--ink);
+    margin-bottom:8px;
+    font-family:'IBM Plex Mono',monospace;
+  }
+  .metric-note{
+    font-size:0.9rem;
+    color:var(--muted);
+    line-height:1.4;
+  }
+  .metric-value.positive{color:var(--success);}
+  .metric-value.negative{color:var(--error);}
+
+  /* ---------- COMPARISON CARD ---------- */
+  .comparison-card{
+    background:linear-gradient(135deg, #F9FAFB 0%, #FEFDFB 100%);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:24px;
+    margin-bottom:40px;
+  }
+  .comparison-title{
+    font-size:1rem;
+    font-weight:600;
+    color:var(--ocean);
+    margin-bottom:16px;
+  }
+  .comparison-row{
+    display:flex;
+    justify-content:space-between;
+    padding:10px 0;
+    font-size:0.95rem;
+    border-bottom:1px solid var(--line);
+  }
+  .comparison-row:last-child{
+    border-bottom:none;
+    border-top:1px solid var(--line);
+    margin-top:10px;
+    padding-top:16px;
+    font-weight:600;
+  }
+  .comparison-value{
+    font-family:'IBM Plex Mono',monospace;
+    font-weight:600;
+  }
+  .comparison-value.positive{color:var(--success);}
+  .comparison-value.negative{color:var(--error);}
+
+  /* ---------- GAP ANALYSIS SECTION ---------- */
+  .gap-section{
+    background:var(--error-light);
+    border:2px solid #FECACA;
+    border-radius:8px;
+    padding:32px;
+    margin-top:50px;
+  }
+  .gap-title{
+    font-size:1.4rem;
+    color:var(--error);
+    margin:0 0 8px 0;
+  }
+  .gap-subtitle{
+    font-size:1rem;
+    color:#7F1D1D;
+    margin:0 0 28px 0;
+    line-height:1.6;
+  }
+
+  .gap-list{
+    display:flex;
+    flex-direction:column;
+    gap:24px;
+    margin-bottom:32px;
+  }
+  .gap-item{
+    display:flex;
+    gap:16px;
+  }
+  .gap-icon{
+    min-width:40px;
+    width:40px;
+    height:40px;
+    background:var(--error);
+    color:var(--white);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    font-size:1.1rem;
+    flex-shrink:0;
+  }
+  .gap-item-title{
+    font-weight:600;
+    color:var(--ink);
+    margin-bottom:4px;
+  }
+  .gap-item-detail{
+    font-size:0.9rem;
+    color:var(--muted);
+    line-height:1.55;
+  }
+
+  /* ---------- CTA BOX ---------- */
+  .cta-box{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:28px;
+    margin-bottom:24px;
+  }
+  .cta-title{
+    font-size:0.95rem;
+    font-weight:600;
+    color:var(--ocean);
+    margin:0 0 12px 0;
+  }
+  .cta-list{
+    margin:0;
+    padding-left:20px;
+    color:var(--muted);
+    font-size:0.9rem;
+    line-height:1.8;
+  }
+
+  .cta-buttons{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+    margin-top:24px;
+  }
+
+  .btn-primary{
+    background:var(--success);
+    color:var(--white);
+    border:none;
+    padding:14px 24px;
+    border-radius:6px;
+    font-size:0.95rem;
+    font-weight:600;
+    font-family:'IBM Plex Mono',monospace;
+    letter-spacing:0.06em;
+    cursor:pointer;
+    transition:background .2s;
+  }
+  .btn-primary:hover{background:#059669;}
+
+  .btn-secondary{
+    background:transparent;
+    color:var(--success);
+    border:2px solid var(--success);
+    padding:12px 24px;
+    border-radius:6px;
+    font-size:0.95rem;
+    font-weight:600;
+    font-family:'IBM Plex Mono',monospace;
+    letter-spacing:0.06em;
+    cursor:pointer;
+    transition:all .2s;
+  }
+  .btn-secondary:hover{
+    background:rgba(16,185,129,0.05);
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background:var(--abyss-deep);
+    color:var(--pearl);
+    padding:40px 0;
+    margin-top:80px;
+    text-align:center;
+  }
+  footer .eyebrow{color:var(--gold); margin-bottom:16px;}
+  footer p{margin:0; font-size:0.9rem; color:#B9C4CA;}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:760px){
+    .tool-inner{padding:32px 24px;}
+    .two-col{grid-template-columns:1fr;}
+    .metrics-grid{grid-template-columns:1fr;}
+    .cta-buttons{grid-template-columns:1fr;}
+    .page-header h1{font-size:1.8rem;}
+    .nav-links{gap:16px;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="/" class="nav-mark">
+      <svg viewBox="0 0 340 320" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 170 285 L 20 285 A 150 150 0 1 1 320 285 Z" fill="#C9A97E"/>
+        <circle cx="170" cy="285" r="6" fill="#0E3A5F"/>
+        <rect x="8" y="285" width="324" height="4" rx="2" fill="#0E3A5F"/>
+      </svg>
+      <span>Nácar <b>&amp; Ledger</b></span>
+    </a>
+    <div class="nav-links">
+      <a href="/" >Home</a>
+      <a href="/tools/" class="active">Tools</a>
+      <a href="mailto:nacarledger@outlook.com">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<section class="page-header">
+  <div class="wrap">
+    <div class="eyebrow">DEAL ANALYSIS TOOL</div>
+    <h1>Real Estate Deal Screener</h1>
+    <p>Quick analysis for fix & flip and buy & hold properties. Enter 4 numbers and see why the simple math is missing half the picture.</p>
+  </div>
+</section>
+
+<section class="tool-container">
+  <div class="wrap">
+    <div class="tool-inner">
+      
+      <!-- FORM SECTION -->
+      <div class="form-section" id="formSection">
+        <div class="section-title">Deal Details</div>
+        
+        <div class="form-group">
+          <label class="form-label">Property Address</label>
+          <input type="text" id="address" class="form-input" placeholder="e.g., 123 Main St, Providence, RI 02903">
+        </div>
+
+        <div class="two-col">
+          <div class="form-group">
+            <label class="form-label">Estimated ARV (After Repair Value)</label>
+            <div class="input-wrapper">
+              <span class="currency-symbol">$</span>
+              <input type="number" id="arv" class="form-input currency-input" placeholder="500000" step="1000">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Purchase Price (Asking)</label>
+            <div class="input-wrapper">
+              <span class="currency-symbol">$</span>
+              <input type="number" id="purchasePrice" class="form-input currency-input" placeholder="350000" step="1000">
+            </div>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="form-group">
+            <label class="form-label">Rehab Budget Estimate</label>
+            <div class="input-wrapper">
+              <span class="currency-symbol">$</span>
+              <input type="number" id="rehabBudget" class="form-input currency-input" placeholder="75000" step="1000">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Deal Type</label>
+            <select id="dealType" class="form-input" style="cursor:pointer;">
+              <option value="flip">Fix & Flip</option>
+              <option value="hold">Buy & Hold</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="submit-btn" onclick="analyzeClick()">Screen This Deal</button>
+      </div>
+
+      <!-- RESULTS SECTION -->
+      <div class="results-section" id="resultsSection">
+        
+        <div class="results-header">
+          <h2 id="resultAddress">Deal Analysis</h2>
+          <button class="edit-btn" onclick="editClick()">Edit Numbers</button>
+        </div>
+
+        <!-- METRICS GRID -->
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-label">Gross Profit</div>
+            <div id="grossProfitMetric" class="metric-value">$0</div>
+            <div id="grossProfitNote" class="metric-note">—</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-label">Profit Margin</div>
+            <div id="marginMetric" class="metric-value">0%</div>
+            <div id="marginNote" class="metric-note">—</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-label">ARV Spread</div>
+            <div id="arvSpreadMetric" class="metric-value">$0</div>
+            <div class="metric-note">ARV minus asking price</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-label">70% Rule MAO</div>
+            <div id="maoMetric" class="metric-value">$0</div>
+            <div class="metric-note">Your max offer price</div>
+          </div>
+        </div>
+
+        <!-- COMPARISON -->
+        <div class="comparison-card">
+          <div class="comparison-title">Your Offer vs. 70% Rule</div>
+          <div class="comparison-row">
+            <span>Asking Price</span>
+            <span class="comparison-value" id="compAskingPrice">$0</span>
+          </div>
+          <div class="comparison-row">
+            <span>70% Rule MAO</span>
+            <span class="comparison-value positive" id="compMao">$0</span>
+          </div>
+          <div class="comparison-row">
+            <span id="compStatus">—</span>
+            <span class="comparison-value" id="compDiff">$0</span>
+          </div>
+        </div>
+
+        <!-- GAP ANALYSIS -->
+        <div class="gap-section">
+          <h3 class="gap-title">⚠️ This Screener Is Missing Critical Analysis</h3>
+          <p class="gap-subtitle">The numbers look good—but you're seeing only 25% of the real deal. Here's what's missing:</p>
+
+          <div class="gap-list">
+            <div class="gap-item">
+              <div class="gap-icon">1</div>
+              <div>
+                <div class="gap-item-title">Financing Costs Not Included</div>
+                <div class="gap-item-detail">Interest carry, origination points, broker fees, and draw costs typically consume $8–15K per deal. Your profit shrinks 40-60% after real financing is factored in.</div>
+              </div>
+            </div>
+
+            <div class="gap-item">
+              <div class="gap-icon">2</div>
+              <div>
+                <div class="gap-item-title">Closing Costs Are Missing</div>
+                <div class="gap-item-detail">Title, insurance, taxes, agent commission (typically 6% of ARV), consulting fees—this is $10–20K on acquisition, plus $5–10K at sale.</div>
+              </div>
+            </div>
+
+            <div class="gap-item">
+              <div class="gap-icon">3</div>
+              <div>
+                <div class="gap-item-title">Cash-at-Close Not Calculated</div>
+                <div class="gap-item-detail">You don't know how much actual capital you need to bring to close. A "$50K profit" deal might require $30–40K out of pocket you don't have.</div>
+              </div>
+            </div>
+
+            <div class="gap-item">
+              <div class="gap-icon">4</div>
+              <div>
+                <div class="gap-item-title">Lender Qualification Not Checked</div>
+                <div class="gap-item-detail">Your deal might not qualify based on LTV, LTC, or credit score. Different lenders have different criteria—this tool doesn't compare them.</div>
+              </div>
+            </div>
+
+            <div class="gap-item">
+              <div class="gap-icon">5</div>
+              <div>
+                <div class="gap-item-title">No Negotiation Strategy</div>
+                <div class="gap-item-detail">The full tool shows exactly where to counter, what margin preserves safety, and how each $5K negotiation swing affects your actual return.</div>
+              </div>
+            </div>
+
+            <div class="gap-item">
+              <div class="gap-icon">6</div>
+              <div>
+                <div class="gap-item-title">ROI on Actual Cash Missing</div>
+                <div class="gap-item-detail">Gross profit isn't return. The full analysis shows your actual ROI on the cash you bring, annualized, and whether it meets your hurdle rate.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cta-box">
+            <h4 class="cta-title">The Full Deal Underwriting Workbook Includes:</h4>
+            <ul class="cta-list">
+              <li>All 6 lender comparison (Cogo, SBI, Lima One, Kiavi, RCN, CoreVest)</li>
+              <li>Automated financing cost calculator with 4-draw reserve tracking</li>
+              <li>Complete closing cost breakdown (acquisition + sale)</li>
+              <li>Real cash-at-close calculation</li>
+              <li>Purchase price negotiation calculator with 70% Rule, Target Deal, Strong Deal pricing</li>
+              <li>Hold vs. Flip decision matrix (rental analysis built-in)</li>
+              <li>Refi strategy analysis for hold conversions</li>
+              <li>KPI scorecard with deal-level overrides</li>
+              <li>And more...</li>
+            </ul>
+          </div>
+
+          <div class="cta-buttons">
+            <button class="btn-primary" onclick="contactForm()">Book a Consultation</button>
+            <button class="btn-secondary" onclick="contactEmail()">Email Me About the Tool</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="eyebrow">MORE TOOLS</div>
+    <p>The Deal Screener is just the start. Nácar & Ledger builds financial tools that expose the decisions hiding in your numbers.</p>
+    <p style="margin-top:20px;">© 2026 NÁCAR &amp; LEDGER · NACARLEDGER.COM</p>
+  </div>
+</footer>
+
+<script>
+function analyzeClick() {
+  const address = document.getElementById('address').value;
+  const arv = parseFloat(document.getElementById('arv').value) || 0;
+  const pp = parseFloat(document.getElementById('purchasePrice').value) || 0;
+  const rehab = parseFloat(document.getElementById('rehabBudget').value) || 0;
+  
+  if (!address || !arv || !pp || !rehab) {
+    alert('Please fill in all fields');
+    return;
+  }
+  
+  // Calculate metrics
+  const grossProfit = arv - pp - rehab;
+  const margin = arv > 0 ? grossProfit / arv : 0;
+  const arvSpread = arv - pp;
+  const mao = (arv * 0.7) - rehab;
+  const vsMAO = pp - mao;
+  
+  // Update display
+  document.getElementById('resultAddress').textContent = address;
+  
+  document.getElementById('grossProfitMetric').textContent = '$' + grossProfit.toLocaleString(undefined, {maximumFractionDigits: 0});
+  document.getElementById('grossProfitMetric').className = 'metric-value ' + (grossProfit > 25000 ? 'positive' : 'negative');
+  document.getElementById('grossProfitNote').textContent = grossProfit > 25000 ? '✓ Meets $25K minimum' : '✗ Below $25K minimum';
+  
+  document.getElementById('marginMetric').textContent = (margin * 100).toFixed(1) + '%';
+  document.getElementById('marginMetric').className = 'metric-value ' + (margin >= 0.2 ? 'positive' : 'negative');
+  document.getElementById('marginNote').textContent = margin >= 0.2 ? '✓ 20%+ target met' : '✗ Below 20% target';
+  
+  document.getElementById('arvSpreadMetric').textContent = '$' + arvSpread.toLocaleString(undefined, {maximumFractionDigits: 0});
+  document.getElementById('maoMetric').textContent = '$' + mao.toLocaleString(undefined, {maximumFractionDigits: 0});
+  
+  document.getElementById('compAskingPrice').textContent = '$' + pp.toLocaleString(undefined, {maximumFractionDigits: 0});
+  document.getElementById('compMao').textContent = '$' + mao.toLocaleString(undefined, {maximumFractionDigits: 0});
+  
+  if (vsMAO > 0) {
+    document.getElementById('compStatus').textContent = '✗ Over MAO by';
+    document.getElementById('compDiff').className = 'comparison-value negative';
+  } else {
+    document.getElementById('compStatus').textContent = '✓ Under MAO by';
+    document.getElementById('compDiff').className = 'comparison-value positive';
+  }
+  document.getElementById('compDiff').textContent = '$' + Math.abs(vsMAO).toLocaleString(undefined, {maximumFractionDigits: 0});
+  
+  // Show results
+  document.getElementById('formSection').style.display = 'none';
+  document.getElementById('resultsSection').classList.add('active');
+  
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function editClick() {
+  document.getElementById('formSection').style.display = 'block';
+  document.getElementById('resultsSection').classList.remove('active');
+  window.scrollTo({ top: document.querySelector('.form-section').offsetTop - 100, behavior: 'smooth' });
+}
+
+function contactForm() {
+  window.location.href = 'tel:14016177926';
+}
+
+function contactEmail() {
+  window.location.href = 'mailto:nacarledger@outlook.com?subject=Real Estate Deal Screener - Full Workbook Inquiry';
+}
+</script>
+
+</body>
+</html>
