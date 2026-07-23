@@ -1,0 +1,40 @@
+<svg viewBox="0 0 980 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="nacreSweep2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0E3A5F"/>
+      <stop offset="45%" stop-color="#8C7A54"/>
+      <stop offset="72%" stop-color="#C9A97E"/>
+      <stop offset="100%" stop-color="#D98C7A"/>
+    </linearGradient>
+    <linearGradient id="ribGrad2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0B2E4A" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#7A3F35" stop-opacity="0.45"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ICON (scaled/translated copy of icon mark) -->
+  <g transform="translate(10,-10) scale(0.72)">
+    <path d="M 170 285 L 20 285 A 150 150 0 1 1 320 285 Z" fill="url(#nacreSweep2)"/>
+    <path d="M 62 285 A 108 108 0 0 1 278 285" fill="none" stroke="#F5EEDF" stroke-opacity="0.55" stroke-width="3"/>
+    <path d="M 100 285 A 70 70 0 0 1 240 285" fill="none" stroke="#F5EEDF" stroke-opacity="0.6" stroke-width="3"/>
+    <path d="M 135 285 A 35 35 0 0 1 205 285" fill="none" stroke="#F5EEDF" stroke-opacity="0.65" stroke-width="3"/>
+    <g stroke="url(#ribGrad2)" stroke-width="4" stroke-linecap="round">
+      <line x1="170" y1="285" x2="20" y2="285"/>
+      <line x1="170" y1="285" x2="40" y2="210"/>
+      <line x1="170" y1="285" x2="95" y2="150"/>
+      <line x1="170" y1="285" x2="170" y2="135"/>
+      <line x1="170" y1="285" x2="245" y2="150"/>
+      <line x1="170" y1="285" x2="300" y2="210"/>
+      <line x1="170" y1="285" x2="320" y2="285"/>
+    </g>
+    <circle cx="170" cy="285" r="7" fill="#0E3A5F"/>
+    <rect x="8" y="285" width="324" height="4" rx="2" fill="#0E3A5F"/>
+  </g>
+
+  <!-- WORDMARK -->
+  <text x="270" y="150" font-family="Georgia, 'Times New Roman', serif" font-size="86" fill="#0E3A5F" font-weight="400">N&#225;car</text>
+  <text x="270" y="215" font-family="Arial, Helvetica, sans-serif" font-size="34" letter-spacing="6" fill="#8C6B4A" font-weight="600">&amp; LEDGER</text>
+
+  <!-- rule under wordmark -->
+  <rect x="273" y="230" width="430" height="3" fill="#C9A97E"/>
+</svg>
