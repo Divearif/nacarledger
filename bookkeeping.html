@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monthly Bookkeeping for Providence Small Businesses | Nácar &amp; Ledger</title>
+<meta name="description" content="Straightforward monthly bookkeeping, QuickBooks cleanup, and catch-up work for Providence-area small businesses — clear pricing, no jargon.">
+<style>
+  :root {
+    --deep-navy: #081F33;
+    --mid-navy: #0E3A5F;
+    --rose-gold: #C9A97E;
+    --terracotta: #B8664F;
+    --terracotta-light: #D98C7A;
+    --steel: #9FB0B6;
+    --steel-light: #C7D2D6;
+    --cream: #F7F2EA;
+    --cream-deep: #E4DCC9;
+    --ink: #081F33;
+    --muted: #5B6670;
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: Calibri, "Segoe UI", Arial, sans-serif; color: var(--ink); background:#FFFFFF; line-height:1.6; }
+  h1, h2, h3, .display { font-family: Georgia, "Times New Roman", serif; font-weight:700; margin:0; letter-spacing:-0.01em; }
+  a { color: inherit; }
+  .wrap { max-width: 1120px; margin:0 auto; padding:0 32px; }
+
+  .site-nav { background: var(--deep-navy); padding:20px 0; }
+  .site-nav .wrap { display:flex; align-items:center; justify-content:space-between; }
+  .site-nav .brand { color:#FFFFFF; font-size:15px; font-weight:700; letter-spacing:2px; text-transform:uppercase; text-decoration:none; }
+  .site-nav .links { display:flex; gap:32px; }
+  .site-nav .links a { color: var(--steel-light); text-decoration:none; font-size:14px; }
+  .site-nav .links a.current { color: var(--rose-gold); }
+  .nav-mobile { display:none; position:relative; }
+  .nav-mobile summary { list-style:none; color:#FFFFFF; font-size:14px; cursor:pointer; padding:6px 10px; border:1px solid var(--steel); border-radius:6px; }
+  .nav-mobile summary::-webkit-details-marker { display:none; }
+  .nav-mobile[open] summary { border-color: var(--rose-gold); }
+  .nav-mobile-panel { position:absolute; top:calc(100% + 8px); right:0; background:var(--mid-navy); border:1px solid var(--steel); border-radius:8px; padding:8px; display:flex; flex-direction:column; min-width:160px; z-index:10; }
+  .nav-mobile-panel a { color:var(--steel-light); text-decoration:none; font-size:14px; padding:10px 12px; border-radius:6px; }
+  .nav-mobile-panel a.current { color: var(--rose-gold); }
+  .nav-mobile-panel a:hover, .nav-mobile-panel a:focus-visible { background: rgba(255,255,255,0.06); }
+
+  .hero { background: var(--deep-navy); position:relative; overflow:hidden; padding:88px 0 72px; }
+  .hero::before { content:""; position:absolute; border-radius:50%; background:var(--mid-navy); opacity:0.55; width:380px; height:380px; top:-200px; right:-80px; }
+  .hero .wrap { position:relative; z-index:1; }
+  .hero .eyebrow { color: var(--rose-gold); font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase; margin-bottom:18px; }
+  .hero h1 { color:#FFFFFF; font-size:40px; line-height:1.25; max-width:16ch; }
+  .hero p.sub { margin-top:22px; max-width:56ch; color: var(--steel-light); font-size:17px; }
+
+  .section { padding:64px 0; border-bottom:1px solid #EDE7DC; }
+  .section h2 { font-size:26px; margin-bottom:12px; }
+  .section .dek { color: var(--muted); font-size:16px; max-width:62ch; margin-bottom:36px; }
+
+  .grid-2 { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:20px; }
+  .item { background: var(--cream); border-radius:14px; padding:24px; }
+  .item h3 { font-size:16px; margin-bottom:8px; }
+  .item p { font-size:14px; color: var(--muted); margin:0; }
+
+  .fit-list { list-style:none; margin:0; padding:0; }
+  .fit-list li { display:flex; gap:12px; font-size:15px; margin-bottom:14px; align-items:flex-start; }
+  .fit-list li svg { flex-shrink:0; width:20px; height:20px; color: var(--terracotta); margin-top:2px; }
+
+  .price-card { background: var(--deep-navy); border-radius:16px; padding:36px; color:#FFFFFF; max-width:420px; }
+  .price-card .tier { color: var(--rose-gold); font-size:13px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:10px; }
+  .price-card .amount { font-family: Georgia, serif; font-size:34px; font-weight:700; margin-bottom:6px; }
+  .price-card .amount span { font-size:15px; font-weight:400; color: var(--steel-light); }
+  .price-card .scope { color: var(--steel-light); font-size:14px; margin-bottom:20px; }
+  .price-card .cta {
+    display:inline-block; background: var(--rose-gold); color:#2E2010; font-weight:700;
+    font-size:14px; padding:12px 24px; border-radius:8px; text-decoration:none;
+  }
+  .project-note { margin-top:20px; font-size:14px; color: var(--muted); }
+
+  .guide-links { display:flex; flex-direction:column; gap:14px; }
+  .guide-links a {
+    display:flex; justify-content:space-between; align-items:center; gap:12px;
+    background: var(--cream); border-radius:10px; padding:16px 20px;
+    text-decoration:none; font-size:15px; color: var(--ink);
+  }
+  .guide-links a span.arrow { color: var(--terracotta); font-weight:700; flex-shrink:0; }
+
+  .closing { background: var(--mid-navy); padding:60px 0; text-align:center; }
+  .closing h2 { color:#FFFFFF; font-size:24px; margin-bottom:12px; }
+  .closing p { color: var(--steel-light); max-width:52ch; margin:0 auto 24px; font-size:15px; }
+  .closing .cta { display:inline-block; background: var(--rose-gold); color:#2E2010; font-weight:700; font-size:14px; padding:14px 30px; border-radius:8px; text-decoration:none; }
+
+  footer { background: var(--deep-navy); color: var(--steel-light); font-size:13px; padding:28px 0; text-align:center; }
+  footer a { color: var(--steel-light); text-decoration:none; }
+
+  @media (max-width:640px) {
+    .hero { padding:60px 0 48px; }
+    .hero h1 { font-size:30px; }
+    .site-nav .links { display:none; }
+    .nav-mobile { display:block; }
+    .section { padding:48px 0; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a class="brand" href="/">Nácar &amp; Ledger</a>
+    <div class="links">
+      <a class="current" href="/bookkeeping.html">Bookkeeping</a>
+      <a href="/advisory.html">Advisory</a>
+      <a href="/tools.html">Tools</a>
+      <a href="/resources.html">Guides</a>
+    </div>
+    <details class="nav-mobile">
+      <summary aria-label="Open menu">Menu</summary>
+      <div class="nav-mobile-panel">
+        <a class="current" href="/bookkeeping.html">Bookkeeping</a>
+        <a href="/advisory.html">Advisory</a>
+        <a href="/tools.html">Tools</a>
+        <a href="/resources.html">Guides</a>
+      </div>
+    </details>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Monthly bookkeeping</p>
+    <h1>Books you can actually read, every month, on time.</h1>
+    <p class="sub">
+      Reconciled accounts, clean categorization, and financial statements that make sense — built for
+      single-entity Providence businesses who want their numbers handled by a person, not a passthrough.
+    </p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <h2>What's included</h2>
+    <p class="dek">Every month, the same way, without you having to ask.</p>
+    <div class="grid-2">
+      <div class="item">
+        <h3>Bank &amp; credit card reconciliation</h3>
+        <p>Every account tied out to the statement, every month, no exceptions carried forward silently.</p>
+      </div>
+      <div class="item">
+        <h3>Categorization &amp; QuickBooks maintenance</h3>
+        <p>Transactions coded correctly the first time, so your P&amp;L reflects what actually happened.</p>
+      </div>
+      <div class="item">
+        <h3>Monthly financial statements</h3>
+        <p>Profit &amp; loss and balance sheet delivered on a set schedule — not whenever there's time.</p>
+      </div>
+      <div class="item">
+        <h3>1099 preparation</h3>
+        <p>Contractor payments tracked all year so January isn't a scramble.</p>
+      </div>
+      <div class="item">
+        <h3>Catch-up &amp; cleanup projects</h3>
+        <p>Behind by a few months or a few years — books get reconstructed and reconciled before ongoing work starts.</p>
+      </div>
+      <div class="item">
+        <h3>QuickBooks setup</h3>
+        <p>New to QBO or migrating from spreadsheets — chart of accounts built to fit your actual business.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>Who this is for</h2>
+    <p class="dek">This is the right fit if most of the following are true:</p>
+    <ul class="fit-list">
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+        You're running a single entity, not managing money across several LLCs
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+        You're under about 50 transactions a month
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+        You want a monthly bookkeeper, not a once-a-year tax-time scramble
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+        You use — or want to move to — QuickBooks Online
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>Pricing</h2>
+    <p class="dek">Flat monthly rate, scoped to your transaction volume — no surprise invoices.</p>
+    <div class="price-card">
+      <p class="tier">Foundation</p>
+      <p class="amount">$1,500–$2,000 <span>/ month</span></p>
+      <p class="scope">Single entity, under ~50 transactions per month</p>
+      <a class="cta" href="mailto:nacarledger@outlook.com">Get a quote for your business</a>
+    </div>
+    <p class="project-note">
+      Need a one-time catch-up or cleanup instead of ongoing service? Project-based work is available at
+      $75–$125/hr or a fixed project quote — <a href="mailto:nacarledger@outlook.com" style="color:var(--terracotta);">ask us directly</a>.
+    </p>
+  </div>
+</section>
+
+<section class="section" style="border-bottom:none;">
+  <div class="wrap">
+    <h2>Just getting started?</h2>
+    <p class="dek">Free guides for first-time owners — no email required.</p>
+    <div class="guide-links">
+      <a href="/guides/pay-yourself-single-member-llc.pdf">
+        <span>I'm the only owner of my LLC — how do I actually pay myself?</span>
+        <span class="arrow">→</span>
+      </a>
+      <a href="/guides/gifted-products-taxable-income.pdf">
+        <span>A brand sent me free stuff instead of paying me — is that taxable?</span>
+        <span class="arrow">→</span>
+      </a>
+      <a href="/guides/multi-platform-1099-reconciliation.pdf">
+        <span>I have 1099s from five different platforms — am I reporting this right?</span>
+        <span class="arrow">→</span>
+      </a>
+      <a href="/resources.html">
+        <span>See all free guides</span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="wrap">
+    <h2>Ready to hand your books to someone who'll actually explain them?</h2>
+    <p>Tell us where your books stand today, and we'll tell you honestly whether Foundation is the right fit.</p>
+    <a class="cta" href="mailto:nacarledger@outlook.com">Start the conversation</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Nácar &amp; Ledger — Financial &amp; Operations Consulting for Providence's Small Businesses
+    &nbsp;|&nbsp; <a href="mailto:nacarledger@outlook.com">nacarledger@outlook.com</a>
+    &nbsp;|&nbsp; 401-617-7926
+  </div>
+</footer>
+
+</body>
+</html>
