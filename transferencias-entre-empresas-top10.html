@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moví $50K Entre Mis LLCs — ¿Metí la Pata? | Nácar &amp; Ledger</title>
+<meta name="description" content="Los 10 errores más comunes en las transferencias entre empresas, y la trampa del préstamo al accionista que atrapa a casi todos los dueños multi-entidad.">
+<link rel="alternate" hreflang="en" href="https://nacarledger.com/guides/intercompany-transfers-top10.html">
+<link rel="alternate" hreflang="es" href="https://nacarledger.com/guides/transferencias-entre-empresas-top10.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "es",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Mover dinero entre dos LLCs que poseo es automáticamente un problema?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No automáticamente, pero necesita documentarse como una transacción real — un pagaré con términos, interés real, un calendario de pago, y autorización registrada. Las transferencias no documentadas son las que se reclasifican como ingreso gravable o se cuestionan en una debida diligencia."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué pasa si un préstamo al accionista nunca se paga?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Se resuelve de una de dos maneras. O el saldo se perdona, lo cual es ingreso por Cancelación de Deuda bajo la Sección 108 del Código de Impuestos, gravable para la entidad que debía el dinero — o un examinador revisa los hechos y lo reclasifica como un dividendo constructivo o compensación, gravable desde el día en que se retiró, más multas e intereses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Importa cobrar 0% de interés en un préstamo entre empresas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. El IRS puede imputar interés a la Tasa Federal Aplicable y gravar la diferencia como ingreso fantasma, aunque nunca haya cambiado de manos dinero real por ese concepto. Una tasa de interés real y comparada con el mercado es parte de lo que hace que un préstamo parezca un préstamo."
+      }
+    }
+  ]
+}
+</script>
+<style>
+  :root{
+    --abyss-deep:#081F33; --ocean:#0E3A5F; --gold:#C9A97E; --gold-deep:#8C7A54;
+    --rose:#D98C7A; --rose-deep:#B8664F; --pearl:#F7F2EA; --ink:#24303A;
+    --muted:#5B6670; --white:#FFFFFF; --line:#E4DCC9;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{ margin:0; font-family:'Inter',sans-serif; color:var(--ink); background:var(--white); -webkit-font-smoothing:antialiased; line-height:1.65; }
+  h1,h2,h3{ font-family:'Fraunces',serif; font-weight:500; margin:0; }
+  .eyebrow{ font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; font-weight:500; }
+  a{ color:inherit; }
+  .wrap{ max-width:760px; margin:0 auto; padding:0 32px; }
+  .wrap-wide{ max-width:1080px; margin:0 auto; padding:0 32px; }
+
+  nav{ background:var(--abyss-deep); padding:22px 0; }
+  nav .wrap-wide{ display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px; }
+  .nav-mark{ display:flex; align-items:center; gap:14px; text-decoration:none; }
+  .nav-mark svg{ width:34px; height:31px; }
+  .nav-mark span{ font-family:'Fraunces',serif; font-size:1.3rem; color:var(--pearl); }
+  .nav-mark span b{ color:var(--gold); font-weight:500; }
+  .nav-links{ display:flex; align-items:center; gap:26px; }
+  .nav-links a{ font-family:'IBM Plex Mono',monospace; font-size:0.76rem; letter-spacing:0.07em; text-transform:uppercase; color:#9FB0B8; text-decoration:none; }
+  .nav-links a:hover{ color:var(--pearl); }
+  .nav-links a.current{ color:var(--gold); }
+  .nav-links .cta{ color:var(--pearl); border:1px solid rgba(247,242,234,0.35); padding:9px 18px; border-radius:2px; }
+  .nav-links .cta:hover{ border-color:var(--gold); background:rgba(201,169,126,0.08); }
+  .nav-mobile{ display:none; position:relative; }
+  .nav-mobile summary{ list-style:none; cursor:pointer; font-family:'IBM Plex Mono',monospace; font-size:0.76rem; letter-spacing:0.07em; text-transform:uppercase; color:var(--pearl); border:1px solid rgba(247,242,234,0.35); padding:8px 16px; border-radius:2px; }
+  .nav-mobile summary::-webkit-details-marker{ display:none; }
+  .nav-mobile-panel{ position:absolute; top:calc(100% + 8px); right:0; background:var(--ocean); border:1px solid rgba(247,242,234,0.2); border-radius:4px; padding:8px; display:flex; flex-direction:column; min-width:180px; z-index:10; }
+  .nav-mobile-panel a{ font-family:'IBM Plex Mono',monospace; font-size:0.76rem; letter-spacing:0.06em; text-transform:uppercase; color:#9FB0B8; text-decoration:none; padding:10px 12px; border-radius:3px; display:block; }
+  .nav-mobile-panel a.current{ color:var(--gold); }
+  .nav-mobile-panel a:hover{ background:rgba(255,255,255,0.06); color:var(--pearl); }
+  .lang-toggle{ display:flex; align-items:center; gap:6px; }
+  .lang-btn{ font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.06em; padding:5px 11px; border-radius:3px; border:1px solid rgba(159,176,184,0.4); color:#9FB0B8; text-decoration:none; }
+  .lang-btn.active{ color:var(--abyss-deep); background:var(--gold); border-color:var(--gold); font-weight:600; }
+
+  .breadcrumb{ padding:18px 0; border-bottom:1px solid var(--line); }
+  .breadcrumb ol{ list-style:none; display:flex; flex-wrap:wrap; gap:6px; margin:0; padding:0; font-size:0.82rem; color:var(--muted); }
+  .breadcrumb a{ text-decoration:none; color:var(--muted); }
+  .breadcrumb a:hover{ color:var(--ocean); }
+  .breadcrumb li:not(:last-child)::after{ content:"/"; margin-left:6px; color:#C7BFAE; }
+  .breadcrumb li:last-child{ color:var(--ink); }
+
+  article{ padding:56px 0 24px; }
+  .article-eyebrow{ color:var(--rose-deep); margin-bottom:16px; }
+  h1{ font-size:2.1rem; line-height:1.28; color:var(--ocean); margin-bottom:22px; }
+  .direct-answer{ background:var(--pearl); border-left:3px solid var(--gold); border-radius:0 8px 8px 0; padding:22px 26px; font-size:1.05rem; line-height:1.7; margin-bottom:40px; }
+  .direct-answer strong{ color:var(--ocean); }
+  article h2{ font-size:1.4rem; color:var(--ocean); margin-top:44px; margin-bottom:14px; }
+  article p{ font-size:1rem; margin:0 0 16px; }
+  article ul, article ol{ margin:0 0 16px; padding-left:22px; }
+  article li{ margin-bottom:8px; }
+  .mistake-item{ border-top:1px solid var(--line); padding:20px 0; }
+  .mistake-item .num{ font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--gold-deep); }
+  .mistake-item h3{ font-family:'Fraunces',serif; font-size:1.1rem; color:var(--ink); margin:4px 0 10px; }
+  .mistake-item p{ font-size:0.95rem; margin:0 0 6px; }
+  .callout{ background:var(--abyss-deep); color:#E4E9EB; border-radius:10px; padding:20px 24px; margin:20px 0; font-size:0.95rem; }
+  .callout strong{ color:var(--gold); }
+  .path-grid{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:16px 0 24px; }
+  .path-col{ background:var(--pearl); border-radius:8px; padding:18px 20px; }
+  .path-col.reactive{ border-top:3px solid var(--rose-deep); }
+  .path-col.proactive{ border-top:3px solid var(--ocean); }
+  .path-col p.label{ font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--muted); margin-bottom:10px; }
+  .fix-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:16px 0 24px; }
+  .fix-item{ background:var(--pearl); border-radius:8px; padding:16px 18px; }
+  .fix-item .num{ font-family:'Fraunces',serif; color:var(--gold-deep); font-size:1.2rem; }
+  .fix-item h3{ font-size:0.98rem; margin:4px 0 6px; }
+  .fix-item p{ font-size:0.88rem; color:var(--muted); margin:0; }
+
+  .faq{ margin-top:48px; }
+  .faq h2{ font-size:1.4rem; color:var(--ocean); margin-bottom:18px; }
+  .faq-item{ border-top:1px solid var(--line); padding:18px 0; }
+  .faq-item h3{ font-size:1rem; color:var(--ink); margin:0 0 8px; }
+  .faq-item p{ font-size:0.94rem; color:var(--muted); margin:0; }
+
+  .related{ background:var(--pearl); padding:44px 0; margin-top:56px; }
+  .related h2{ font-size:1.2rem; color:var(--ocean); margin-bottom:18px; }
+  .related-links{ display:flex; flex-direction:column; gap:12px; }
+  .related-links a{ display:flex; justify-content:space-between; align-items:center; gap:12px; background:var(--white); border:1px solid var(--line); border-radius:8px; padding:14px 18px; text-decoration:none; font-size:0.94rem; color:var(--ink); }
+  .related-links a span.arrow{ color:var(--rose-deep); font-weight:700; flex-shrink:0; }
+
+  .cta-band{ background:var(--ocean); padding:48px 0; text-align:center; }
+  .cta-band p.eyebrow{ color:var(--gold); margin-bottom:10px; }
+  .cta-band h2{ color:var(--white); font-size:1.4rem; margin-bottom:20px; }
+  .btn{ font-family:'IBM Plex Mono',monospace; font-size:0.8rem; letter-spacing:0.06em; text-decoration:none; padding:13px 26px; border-radius:3px; display:inline-block; }
+  .btn.primary{ background:var(--gold); color:var(--abyss-deep); font-weight:500; }
+  .btn.secondary{ border:1px solid rgba(247,242,234,0.4); color:var(--pearl); margin-left:10px; }
+
+  footer{ background:var(--abyss-deep); color:#C7D2D6; font-size:13px; padding:28px 0; text-align:center; }
+  footer a{ color:#C7D2D6; text-decoration:none; }
+  .disclaimer{ font-size:0.82rem; color:var(--muted); border-top:1px solid var(--line); padding-top:20px; margin-top:40px; }
+
+  @media (max-width:640px){
+    .nav-links{ display:none; }
+    .nav-mobile{ display:block; }
+    .path-grid, .fix-grid{ grid-template-columns:1fr; }
+    h1{ font-size:1.7rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap-wide">
+    <a class="nav-mark" href="/es.html">
+      <svg viewBox="0 0 340 320" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 170 285 L 20 285 A 150 150 0 1 1 320 285 Z" fill="#C9A97E"/>
+        <circle cx="170" cy="285" r="6" fill="#0E3A5F"/>
+        <rect x="8" y="285" width="324" height="4" rx="2" fill="#0E3A5F"/>
+      </svg>
+      <span>Nácar <b>&amp; Ledger</b></span>
+    </a>
+    <div class="nav-links">
+      <a href="/bookkeeping-es.html">Contabilidad</a>
+      <a href="/advisory-es.html">Asesoría</a>
+      <a href="/dealcheck.html">Analizar Negocio</a>
+      <a class="current" href="/resources-es.html">Guías</a>
+      <span class="lang-toggle">
+        <a href="/guides/intercompany-transfers-top10.html" class="lang-btn">EN</a>
+        <span class="lang-btn active">ES</span>
+      </span>
+    </div>
+    <details class="nav-mobile">
+      <summary aria-label="Abrir menú">Menú</summary>
+      <div class="nav-mobile-panel">
+        <a href="/bookkeeping-es.html">Contabilidad</a>
+        <a href="/advisory-es.html">Asesoría</a>
+        <a href="/dealcheck.html">Analizar Negocio</a>
+        <a class="current" href="/resources-es.html">Guías</a>
+        <a href="/guides/intercompany-transfers-top10.html">English</a>
+      </div>
+    </details>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <div class="wrap">
+    <ol>
+      <li><a href="/es.html">Inicio</a></li>
+      <li><a href="/resources-es.html">Guías</a></li>
+      <li><a href="/resources-es.html#intercompany-transfers">Transferencias Entre Empresas</a></li>
+      <li>Los 10 Errores</li>
+    </ol>
+  </div>
+</div>
+
+<article>
+  <div class="wrap">
+    <p class="eyebrow article-eyebrow">Transferencias entre empresas y préstamos a accionistas</p>
+    <h1>Moví $50,000 Entre Mis Dos LLCs — ¿Metí la Pata con Mis Impuestos?</h1>
+
+    <div class="direct-answer">
+      <strong>Respuesta corta:</strong> mover dinero entre entidades que posees no es automáticamente un problema, pero una transferencia no documentada es tratada por el IRS como si nada legítimo hubiera ocurrido — sin pagaré, sin interés real, sin calendario de pago, y sin autorización registrada convierte una simple transferencia en un dividendo gravable, una alerta en debida diligencia, o un escudo de responsabilidad perforado.
+    </div>
+
+    <h2>Por Qué Existe Esta Lista</h2>
+    <p>Una transferencia entre empresas parece sencilla el día que la haces. Deja de parecer sencilla el día que un prestamista, un auditor, o el IRS te pide que la expliques. El IRS trata un "préstamo" no documentado como un dividendo o distribución gravable — después del hecho, con multas e intereses incluidos. Prestamistas y compradores ven los saldos entre empresas sin conciliar como una señal de que los libros no son confiables. Los fondos mezclados entre entidades son una de las formas más rápidas de anular la misma separación de responsabilidad que esas entidades fueron creadas para lograr.</p>
+
+    <h2>Los 10 Errores</h2>
+
+    <div class="mistake-item">
+      <p class="num">01</p>
+      <h3>Sin Acuerdo Escrito ni Pagaré</h3>
+      <p>El dinero se mueve entre entidades con una nota, un mensaje de texto, o nada en absoluto — sin pagaré, sin términos, sin firmas. Sucede porque las entidades comparten dueño, así que se "siente" innecesario. Sin un pagaré, no hay base legal para llamarlo préstamo — es solo una transferencia sin explicación.</p>
+    </div>
+    <div class="mistake-item">
+      <p class="num">02</p>
+      <h3>Interés Ausente o Por Debajo del Mercado</h3>
+      <p>Un "préstamo" entre empresas cobra 0% de interés, o una tasa que nadie se molestó en comparar con el mercado, porque el interés se siente como puro papeleo entre entidades relacionadas. El IRS puede imputar interés a la Tasa Federal Aplicable y gravar la diferencia como ingreso fantasma.</p>
+    </div>
+    <div class="mistake-item">
+      <p class="num">03</p>
+      <h3>Sin Calendario Real de Pago</h3>
+      <p>El "préstamo" no tiene fecha de vencimiento, ni calendario de pagos, y pasan los años sin que se pague el principal — es más fácil dejar correr el saldo. Un préstamo sin un plan realista de pago se interpreta como una aportación de capital o una distribución, sin importar cómo esté etiquetado en los libros.</p>
+    </div>
+    <div class="mistake-item">
+      <p class="num">04</p>
+      <h3>Fondos Mezclados, Sin Libro Contable por Entidad</h3>
+      <p>Una sola cuenta operativa termina financiando a varias entidades, sin llevar un saldo actualizado de quién le debe a quién — es más rápido en el día a día. Para cuando alguien intenta reconstruir los saldos, hay que desenredar a mano meses o años de transacciones.</p>
+    </div>
+    <div class="mistake-item">
+      <p class="num">05</p>
+      <h3>Sin Propósito de Negocio Documentado</h3>
+      <p>No hay ningún registro de por qué ocurrió la transferencia, porque el propósito era obvio para todos en su momento. "Obvio en su momento" no sobrevive tres años, un cambio de personal, ni un examinador que no estuvo presente.</p>
+    </div>
+    <div class="mistake-item">
+      <p class="num">06</p>
+      <h3>Sin Rastro de Autorización</h3>
+      <p>No existe resolución de la junta, consentimiento de los miembros, ni actas que aprueben la transferencia — la autorización formal se siente como pura formalidad cuando es la misma persona en ambos lados. La falta de autorización elimina tu mejor evidencia de que no hubo autotrato.</p>
+    </div>
+    <div class="mistake-item">
+      <p class="num">07</p>
+      <h3>Estados Financieros Consolidados Que No Eliminan el Saldo</h3>
+      <p>Las cuentas por cobrar y por pagar entre empresas aparecen en ambos libros, inflando los activos, pasivos, o ingresos consolidados — los asientos de eliminación son fáciles de omitir. Una empresa que no elimina los saldos genera dudas sobre todo lo demás en los estados.</p>
+    </div>
+    <div class="mistake-item">
+      <p class="num">08</p>
+      <h3>Tratamiento Inconsistente Entre Entidades</h3>
+      <p>Una transacción entre empresas también se genera cuando una entidad paga un gasto en nombre de otra, y el mismo asiento debe aparecer en los dos libros. Un tratamiento inconsistente es una de las primeras cosas que encuentra un auditor.</p>
+    </div>
+    <div class="mistake-item">
+      <p class="num">09</p>
+      <h3>Socavando el Escudo de Responsabilidad</h3>
+      <p>Los fondos se mueven libremente entre entidades creadas específicamente para mantener separadas sus responsabilidades — especialmente común entre LLCs que poseen propiedades. Los tribunales examinan exactamente este tipo de mezcla al decidir si levantar el velo corporativo.</p>
+    </div>
+
+    <div class="callout">
+      <strong>N.º 10 — la que atrapa a todos: la trampa del préstamo al accionista.</strong> Empieza pequeño: el dueño retira efectivo del negocio entre un pago de nómina y otro, lo registra como "adeudado por el accionista," y tiene la intención de devolverlo. Luego vuelve a pasar. Y otra vez — durante años — hasta que el saldo es tan grande que todos dejan de mencionarlo. Para cuando alguien lo examina de cerca, ya no es un préstamo. Es solo una cifra sin pagaré, sin interés, y sin un plan realista de pago.
+    </div>
+
+    <h2>Cómo Se Activa Realmente la Trampa</h2>
+    <p>Un préstamo al accionista que se ha quedado estancado se resuelve de una de dos maneras — y ambas son costosas.</p>
+    <div class="path-grid">
+      <div class="path-col reactive">
+        <p class="label">Camino A — se perdona el saldo</p>
+        <p>La empresa o el dueño finalmente da de baja el saldo. Ese perdón es ingreso por Cancelación de Deuda (COD) bajo la Sección 108 del Código de Impuestos — gravable para la entidad que debía el dinero, a menudo en un año en el que menos puede absorber el golpe.</p>
+      </div>
+      <div class="path-col proactive">
+        <p class="label">Camino B — el IRS llega primero</p>
+        <p>Un examinador revisa los hechos — sin pagaré, sin interés, sin pagos, sin capacidad real de pago — y concluye que nunca fue realmente un préstamo. Se reclasifica como dividendo constructivo o compensación, gravable desde el día en que se retiró, más multas e intereses.</p>
+      </div>
+    </div>
+
+    <h2>La Solución Es Casi Siempre la Misma</h2>
+    <div class="fix-grid">
+      <div class="fix-item"><p class="num">1</p><h3>Ponlo por escrito</h3><p>Un pagaré de verdad — principal, tasa de interés, fecha de vencimiento, firmas.</p></div>
+      <div class="fix-item"><p class="num">2</p><h3>Cobra interés real</h3><p>Igual o mayor a la Tasa Federal Aplicable, realmente pagado o devengado.</p></div>
+      <div class="fix-item"><p class="num">3</p><h3>Establece un calendario de pago</h3><p>Y síguelo — los pagos esporádicos no cuentan.</p></div>
+      <div class="fix-item"><p class="num">4</p><h3>Documenta la capacidad de pago</h3><p>Los números deben ser creíbles, no solo posibles en papel.</p></div>
+      <div class="fix-item"><p class="num">5</p><h3>Llévalo por entidad</h3><p>Un saldo contable actualizado, conciliado en cada cierre.</p></div>
+      <div class="fix-item"><p class="num">6</p><h3>Obtén autorización por escrito</h3><p>Aprobación de la junta, por escrito, antes de que se mueva el dinero.</p></div>
+    </div>
+
+    <div class="disclaimer">
+      Esta presentación se ofrece únicamente con fines educativos generales y no constituye asesoría fiscal, legal, ni contable. Consulta a un profesional calificado sobre tu situación específica.
+    </div>
+
+    <div class="faq">
+      <h2>Preguntas Frecuentes</h2>
+      <div class="faq-item">
+        <h3>¿Mover dinero entre dos LLCs que poseo es automáticamente un problema?</h3>
+        <p>No automáticamente, pero necesita documentarse como una transacción real — un pagaré con términos, interés real, un calendario de pago, y autorización registrada.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Qué pasa si un préstamo al accionista nunca se paga?</h3>
+        <p>O el saldo se perdona, lo cual es ingreso por Cancelación de Deuda bajo la Sección 108 — o un examinador lo reclasifica como dividendo constructivo, gravable desde el día en que se retiró, más multas e intereses.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Importa cobrar 0% de interés en un préstamo entre empresas?</h3>
+        <p>Sí. El IRS puede imputar interés a la Tasa Federal Aplicable y gravar la diferencia como ingreso fantasma, aunque nunca haya cambiado de manos dinero real.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<div class="related">
+  <div class="wrap">
+    <h2>Guías relacionadas</h2>
+    <div class="related-links">
+      <a href="/guides/mi-negocio-paga-mi-hipoteca.html"><span>Mi negocio paga mi hipoteca — ¿es eso un problema?</span><span class="arrow">→</span></a>
+    </div>
+  </div>
+</div>
+
+<div class="cta-band">
+  <div class="wrap">
+    <p class="eyebrow">¿No sabes cómo esto aplica a ti?</p>
+    <h2>Desenreda tus cuentas entre empresas antes de que alguien más las encuentre.</h2>
+    <a class="btn primary" href="mailto:nacarledger@outlook.com">Pregúntanos directamente</a>
+    <a class="btn secondary" href="/Nacar_Ledger_Transferencias_Entre_Empresas_Top10.pdf" target="_blank" rel="noopener">Descargar el PDF</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap-wide">
+    Nácar &amp; Ledger — Consultoría Financiera y Operativa para los Pequeños Negocios de Providence
+    &nbsp;|&nbsp; <a href="mailto:nacarledger@outlook.com">nacarledger@outlook.com</a>
+    &nbsp;|&nbsp; 401-617-7926
+  </div>
+</footer>
+
+</body>
+</html>
