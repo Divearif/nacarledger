@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guías Gratuitas para Dueños de Negocio en Providence | Nácar &amp; Ledger</title>
+<meta name="description" content="Guías directas sobre clasificación de trabajadores, transferencias entre empresas, y cómo empezar bien — para la próxima generación de dueños de negocio en Providence.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --abyss-deep:#081F33;
+    --ocean:#0E3A5F;
+    --gold:#C9A97E;
+    --gold-deep:#8C7A54;
+    --rose:#D98C7A;
+    --rose-deep:#B8664F;
+    --pearl:#F7F2EA;
+    --ink:#24303A;
+    --muted:#5B6670;
+    --white:#FFFFFF;
+    --line:#E4DCC9;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Inter',sans-serif;
+    color:var(--ink);
+    background:var(--white);
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces',serif;
+    font-weight:500;
+    margin:0;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.72rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    font-weight:500;
+  }
+  a{color:inherit;}
+  .wrap{
+    max-width:1080px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  /* ---------- NAV ---------- */
+  nav{ background:var(--abyss-deep); padding:22px 0; }
+  nav .wrap{display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px;}
+  .nav-mark{display:flex; align-items:center; gap:14px; text-decoration:none;}
+  .nav-mark svg{width:34px; height:31px;}
+  .nav-mark span{ font-family:'Fraunces',serif; font-size:1.3rem; color:var(--pearl); letter-spacing:0.01em; }
+  .nav-mark span b{color:var(--gold); font-weight:500;}
+  .nav-links{display:flex; align-items:center; gap:26px;}
+  .nav-links a{
+    font-family:'IBM Plex Mono',monospace; font-size:0.76rem; letter-spacing:0.07em; text-transform:uppercase;
+    color:#9FB0B8; text-decoration:none; transition:color .2s ease;
+  }
+  .nav-links a:hover{color:var(--pearl);}
+  .nav-links a.current{color:var(--gold);}
+  .nav-links .cta{
+    color:var(--pearl); border:1px solid rgba(247,242,234,0.35); padding:9px 18px; border-radius:2px;
+    transition:border-color .2s ease, background .2s ease;
+  }
+  .nav-links .cta:hover{border-color:var(--gold); background:rgba(201,169,126,0.08); color:var(--pearl);}
+  .nav-mobile{display:none; position:relative;}
+  .nav-mobile summary{
+    list-style:none; cursor:pointer;
+    font-family:'IBM Plex Mono',monospace; font-size:0.76rem; letter-spacing:0.07em; text-transform:uppercase;
+    color:var(--pearl); border:1px solid rgba(247,242,234,0.35); padding:8px 16px; border-radius:2px;
+  }
+  .nav-mobile summary::-webkit-details-marker{display:none;}
+  .nav-mobile-panel{
+    position:absolute; top:calc(100% + 8px); right:0; background:var(--ocean);
+    border:1px solid rgba(247,242,234,0.2); border-radius:4px; padding:8px;
+    display:flex; flex-direction:column; min-width:180px; z-index:10;
+  }
+  .nav-mobile-panel a{
+    font-family:'IBM Plex Mono',monospace; font-size:0.76rem; letter-spacing:0.06em; text-transform:uppercase;
+    color:#9FB0B8; text-decoration:none; padding:10px 12px; border-radius:3px; display:block;
+  }
+  .nav-mobile-panel a.current{color:var(--gold);}
+  .nav-mobile-panel a:hover{background:rgba(255,255,255,0.06); color:var(--pearl);}
+  .lang-toggle{display:flex; align-items:center; gap:6px;}
+  .lang-btn{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.72rem;
+    letter-spacing:0.06em;
+    padding:5px 11px;
+    border-radius:3px;
+    border:1px solid rgba(159,176,184,0.4);
+    color:#9FB0B8;
+    text-decoration:none;
+    transition:border-color .2s ease, background .2s ease, color .2s ease;
+  }
+  .lang-btn.active{
+    color:var(--abyss-deep);
+    background:var(--gold);
+    border-color:var(--gold);
+    font-weight:600;
+  }
+  .lang-btn:not(.active):hover{border-color:var(--gold); color:var(--pearl);}
+
+  /* ---------- MINI HERO ---------- */
+  .mini-hero{ position:relative; background:var(--abyss-deep); overflow:hidden; padding:90px 0 130px; }
+  .mini-hero .wrap{position:relative; z-index:3; text-align:center;}
+  .mini-hero .eyebrow{color:var(--gold); margin-bottom:20px;}
+  .mini-hero h1{ font-size:clamp(2rem, 4.4vw, 3.2rem); line-height:1.15; color:var(--white); max-width:640px; margin:0 auto; }
+  .mini-hero p.lede{ margin:22px auto 0; font-size:1.05rem; line-height:1.7; color:#E4E9EB; max-width:640px; }
+  .mini-hero p.lede strong{color:var(--white); font-weight:600;}
+  .mini-hero-mark{ position:absolute; left:50%; bottom:-7vw; transform:translateX(-50%); width:min(700px, 120vw); z-index:1; opacity:0.55; }
+  .mini-hero-mark svg{width:100%; height:auto; display:block;}
+  .mini-hero::after{
+    content:""; position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(8,31,51,0.4) 0%, transparent 60%);
+    z-index:2; pointer-events:none;
+  }
+
+  /* ---------- PILLARS ---------- */
+  .pillar{ padding:88px 0; }
+  .pillar.pearl{background:var(--pearl);}
+  .pillar.white{background:var(--white); border-bottom:1px solid var(--line);}
+  .pillar-tag{
+    font-family:'IBM Plex Mono',monospace; font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase;
+    color:var(--rose-deep); margin-bottom:16px; display:block;
+  }
+  .pillar h2{font-size:1.8rem; color:var(--ocean); line-height:1.3; margin-bottom:12px;}
+  .pillar .dek{font-size:1.02rem; line-height:1.7; color:var(--muted); max-width:640px; margin-bottom:44px;}
+
+  .guide-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:22px;}
+  .guide-card{
+    background:var(--white); border:1px solid var(--line); border-radius:8px;
+    padding:28px 26px; display:flex; flex-direction:column; min-height:200px;
+    transition:box-shadow .25s ease, transform .25s ease;
+  }
+  .guide-card:hover{box-shadow:0 18px 40px rgba(14,58,95,0.08); transform:translateY(-3px);}
+  .guide-card.featured{ background:var(--abyss-deep); border-color:var(--gold); }
+  .guide-card h3{font-size:1.05rem; line-height:1.4; color:var(--ocean); margin-bottom:10px;}
+  .guide-card.featured h3{color:var(--white);}
+  .guide-card p{font-size:0.9rem; color:var(--muted); line-height:1.6; margin:0 0 20px; flex-grow:1;}
+  .guide-card.featured p{color:#B9C4CA;}
+  .guide-card .btn{
+    font-family:'IBM Plex Mono',monospace; font-size:0.76rem; letter-spacing:0.05em;
+    color:var(--rose-deep); text-decoration:none; align-self:flex-start;
+  }
+  .guide-card.featured .btn{color:var(--gold);}
+  .guide-card .btn + .btn{margin-top:8px;}
+  .guide-card .note{ font-size:0.78rem; color:var(--muted); font-weight:400; }
+  .guide-card.featured .note{ color:#8FA0A6; }
+
+  .guide-card.placeholder{ background:#F3F1EC; border:1px dashed #C7BFAE; }
+  .guide-card.placeholder h3{color:var(--muted);}
+
+  .subgroup-label{
+    font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase;
+    color:var(--muted); margin:36px 0 18px;
+  }
+  .subgroup-label:first-of-type{margin-top:0;}
+
+  /* ---------- CLOSE ---------- */
+  .close{background:var(--abyss-deep); padding:100px 0 60px; text-align:center;}
+  .close svg{width:50px; height:auto; margin-bottom:28px;}
+  .close .eyebrow{color:var(--gold); margin-bottom:16px;}
+  .close h2{color:var(--white); font-size:1.7rem; max-width:520px; margin:0 auto; line-height:1.4;}
+  .close p.sub{color:#B9C4CA; font-size:0.98rem; max-width:460px; margin:18px auto 0; line-height:1.7;}
+  .contact-row{margin-top:34px; display:flex; justify-content:center; gap:16px; flex-wrap:wrap;}
+  .btn.primary, a.btn.primary{
+    font-family:'IBM Plex Mono',monospace; font-size:0.8rem; letter-spacing:0.06em; text-decoration:none;
+    padding:13px 26px; border-radius:3px; display:inline-block;
+    background:var(--gold); color:var(--abyss-deep); font-weight:500;
+  }
+  .btn.primary:hover{background:#dabb8f;}
+  footer{
+    margin-top:70px; padding-top:24px; border-top:1px solid rgba(247,242,234,0.12);
+    font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.05em; color:#5E6E78;
+  }
+
+  @media (max-width:760px){
+    .nav-links{display:none;}
+    .nav-mobile{display:block;}
+    .pillar{padding:60px 0;}
+    .mini-hero{padding-bottom:100px;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="nav-mark" href="/es.html">
+      <svg viewBox="0 0 340 320" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 170 285 L 20 285 A 150 150 0 1 1 320 285 Z" fill="#C9A97E"/>
+        <circle cx="170" cy="285" r="6" fill="#0E3A5F"/>
+        <rect x="8" y="285" width="324" height="4" rx="2" fill="#0E3A5F"/>
+      </svg>
+      <span>Nácar <b>&amp; Ledger</b></span>
+    </a>
+    <div class="nav-links">
+      <a href="/bookkeeping-es.html">Contabilidad</a>
+      <a href="/advisory-es.html">Asesoría</a>
+      <a class="current" href="/resources-es.html">Guías</a>
+      <a href="/dealcheck.html">Analizar Negocio</a>
+      <span class="lang-toggle">
+        <a href="/resources.html" class="lang-btn">EN</a>
+        <span class="lang-btn active">ES</span>
+      </span>
+      <a class="cta" href="mailto:nacarledger@outlook.com">Contáctame</a>
+    </div>
+    <details class="nav-mobile">
+      <summary aria-label="Abrir menú">Menú</summary>
+      <div class="nav-mobile-panel">
+        <a href="/bookkeeping-es.html">Contabilidad</a>
+        <a href="/advisory-es.html">Asesoría</a>
+        <a class="current" href="/resources-es.html">Guías</a>
+        <a href="/dealcheck.html">Analizar Negocio</a>
+        <a href="/resources.html">English</a>
+        <a href="mailto:nacarledger@outlook.com">Contáctame</a>
+      </div>
+    </details>
+  </div>
+</nav>
+
+<header class="mini-hero">
+  <div class="wrap">
+    <div class="eyebrow">Guías gratuitas</div>
+    <h1>Respuestas directas, en la etapa en la que realmente estás.</h1>
+    <p class="lede">
+      <strong>Estas guías son gratuitas para cualquier dueño de negocio — sin excepción.</strong> Nácar &amp; Ledger
+      se creó con un enfoque particular en servir a los fundadores subrepresentados de Providence — emprendedores
+      de primera generación, negocios propiedad de la comunidad LGBTQ+, fundadoras y fundadores mujeres y no
+      binarios, y la nueva generación de dueños Gen Z y Millennial — pero una contabilidad precisa y nunca
+      condescendiente no es algo que reservemos para un solo grupo. Sin importar en qué etapa esté tu negocio,
+      esta biblioteca es para ti.
+    </p>
+  </div>
+  <div class="mini-hero-mark" aria-hidden="true">
+    <svg viewBox="0 0 340 300" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="resEsSweep" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#0E3A5F"/>
+          <stop offset="45%" stop-color="#8C7A54"/>
+          <stop offset="72%" stop-color="#C9A97E"/>
+          <stop offset="100%" stop-color="#D98C7A"/>
+        </linearGradient>
+      </defs>
+      <path d="M 170 285 L 20 285 A 150 150 0 1 1 320 285 Z" fill="url(#resEsSweep)"/>
+      <path d="M 100 285 A 70 70 0 0 1 240 285" fill="none" stroke="#F5EEDF" stroke-opacity="0.35" stroke-width="1.4"/>
+    </svg>
+  </div>
+</header>
+
+<!-- ============ PILAR 1: RECIÉN EMPEZANDO ============ -->
+<section class="pillar white" id="just-starting-out">
+  <div class="wrap">
+    <span class="pillar-tag">Recién empezando</span>
+    <h2>Estableciendo bien las bases</h2>
+    <p class="dek">Para dueños primerizos — antes de que los errores sean costosos de deshacer.</p>
+
+    <div class="guide-grid">
+      <div class="guide-card">
+        <h3>Soy el único dueño de mi LLC — ¿cómo me pago a mí mismo?</h3>
+        <p>La forma correcta de tomar retiros sin una sorpresa fiscal al final del año. <span class="note">(PDF en inglés)</span></p>
+        <a class="btn" href="https://raw.githubusercontent.com/Divearif/nacarledger/refs/heads/main/Nacar_Ledger_Pay_Yourself_Single_Member_LLC.pdf" target="_blank" rel="noopener">Ver guía →</a>
+      </div>
+      <div class="guide-card">
+        <h3>Es mi negocio y es mi dinero — ¿de verdad necesito mantenerlos separados?</h3>
+        <p>Por qué toda entidad — LLC, S-corp, o solo un DBA — necesita su propia identidad financiera.</p>
+        <a class="btn" href="/guides/es-mi-negocio-y-es-mi-dinero.html">Ver guía →</a>
+      </div>
+      <div class="guide-card placeholder">
+        <h3>Más guías básicas en camino</h3>
+        <p>LLC vs. negocio individual, sorpresas de impuestos trimestrales, tu primer 1099, y registros contables — en progreso.</p>
+      </div>
+    </div>
+
+    <p class="subgroup-label">Extras para creadores</p>
+    <div class="guide-grid">
+      <div class="guide-card">
+        <h3>Una marca me regaló productos en vez de pagarme — ¿eso es gravable?</h3>
+        <p>El mito de "no es dinero real" que atrapa a casi todo creador nuevo. <span class="note">(PDF en inglés)</span></p>
+        <a class="btn" href="https://raw.githubusercontent.com/Divearif/nacarledger/refs/heads/main/Nacar_Ledger_Gifted_Products_Taxable_Income.pdf" target="_blank" rel="noopener">Ver guía →</a>
+      </div>
+      <div class="guide-card">
+        <h3>Tengo formularios 1099 de cinco plataformas distintas — ¿estoy reportando esto bien?</h3>
+        <p>Cómo conciliar varios 1099 sin contar dos veces, ni perder, tus ingresos. <span class="note">(PDF en inglés)</span></p>
+        <a class="btn" href="https://raw.githubusercontent.com/Divearif/nacarledger/refs/heads/main/Nacar_Ledger_Multi_Platform_1099_Reconciliation.pdf" target="_blank" rel="noopener">Ver guía →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PILAR 2: CLASIFICACIÓN DE TRABAJADORES ============ -->
+<section class="pillar pearl" id="worker-classification">
+  <div class="wrap">
+    <span class="pillar-tag">Clasificación de trabajadores</span>
+    <h2>W-2 o 1099 — y acertar antes de que salga caro</h2>
+    <p class="dek">Para dueños que están contratando, convirtiendo un puesto, o dependen de contratistas y asistentes virtuales.</p>
+
+    <div class="guide-grid">
+      <div class="guide-card">
+        <h3>¿Este nuevo empleado debería ser W-2 o 1099?</h3>
+        <p>Acertar en la clasificación del trabajador desde el principio. <span class="note">(PDF en inglés)</span></p>
+        <a class="btn" href="https://raw.githubusercontent.com/Divearif/nacarledger/refs/heads/main/Nacar_Ledger_W2_vs_1099.pdf" target="_blank" rel="noopener">Ver guía →</a>
+      </div>
+      <div class="guide-card">
+        <h3>¿Empleado o contratista? Cómo lo decide realmente el IRS</h3>
+        <p>La prueba fundamental de tres factores, explicada en lenguaje sencillo. <span class="note">(PDF en inglés)</span></p>
+        <a class="btn" href="https://raw.githubusercontent.com/Divearif/nacarledger/refs/heads/main/Nacar_Ledger_IRS_Three_Factor_Test.pdf" target="_blank" rel="noopener">Ver guía →</a>
+      </div>
+      <div class="guide-card">
+        <h3>Acabamos de convertir un 1099 a W-2. ¿Ahora qué?</h3>
+        <p>Descubriendo qué debes del año pasado, antes de que alguien pregunte. <span class="note">(PDF en inglés)</span></p>
+        <a class="btn" href="https://raw.githubusercontent.com/Divearif/nacarledger/refs/heads/main/Nacar_Ledger_1099_to_W2_Conversion.pdf" target="_blank" rel="noopener">Ver guía →</a>
+      </div>
+      <div class="guide-card">
+        <h3>Tu asistente virtual pasa la prueba del IRS. ¿Pasa la de Rhode Island?</h3>
+        <p>Por qué RI y MA usan una segunda prueba, más estricta — y por qué las prácticas de salud están especialmente expuestas. <span class="note">(PDF en inglés)</span></p>
+        <a class="btn" href="https://raw.githubusercontent.com/Divearif/nacarledger/refs/heads/main/Nacar_Ledger_VA_Passes_IRS_Test_Rhode_Island.pdf" target="_blank" rel="noopener">Ver guía →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PILAR 3: TRANSFERENCIAS ENTRE EMPRESAS ============ -->
+<section class="pillar white" id="intercompany-transfers" style="border-bottom:none;">
+  <div class="wrap">
+    <span class="pillar-tag">Transferencias entre empresas y préstamos a accionistas</span>
+    <h2>Dinero que se mueve entre entidades que posees</h2>
+    <p class="dek">Para dueños con más de una LLC — donde una simple transferencia deja de ser simple.</p>
+
+    <div class="guide-grid">
+      <div class="guide-card featured">
+        <h3>Moví $50,000 entre mis dos LLCs — ¿metí la pata con mis impuestos?</h3>
+        <p>Los 10 errores más comunes en las transferencias entre empresas, y la trampa del préstamo al accionista que atrapa a casi todos.</p>
+        <a class="btn" href="/guides/transferencias-entre-empresas-top10.html">Ver guía →</a>
+      </div>
+      <div class="guide-card featured">
+        <h3>Mi negocio paga mi hipoteca — ¿es eso un problema?</h3>
+        <p>El costo real de poner tu casa en los libros de la empresa — la trampa del vencimiento por venta, la distribución disfrazada, y el escudo de responsabilidad que silenciosamente deshace.</p>
+        <a class="btn" href="/guides/mi-negocio-paga-mi-hipoteca.html">Ver guía →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="close" id="contact">
+  <div class="wrap">
+    <svg viewBox="0 0 340 320" xmlns="http://www.w3.org/2000/svg" style="margin:0 auto 28px auto;">
+      <defs>
+        <linearGradient id="resEsCloseSweep" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#0E3A5F"/>
+          <stop offset="45%" stop-color="#8C7A54"/>
+          <stop offset="72%" stop-color="#C9A97E"/>
+          <stop offset="100%" stop-color="#D98C7A"/>
+        </linearGradient>
+      </defs>
+      <path d="M 170 285 L 20 285 A 150 150 0 1 1 320 285 Z" fill="url(#resEsCloseSweep)"/>
+      <circle cx="170" cy="285" r="6" fill="#F7F2EA"/>
+      <rect x="8" y="285" width="324" height="4" rx="2" fill="#F7F2EA"/>
+    </svg>
+    <div class="eyebrow">¿No sabes cuál aplica para ti?</div>
+    <h2>Cada negocio es un poco diferente.</h2>
+    <p class="sub">Si prefieres simplemente preguntar, con gusto lo hablamos directamente.</p>
+    <div class="contact-row">
+      <a class="btn primary" href="mailto:nacarledger@outlook.com">Pregúntanos directamente</a>
+    </div>
+    <footer>© 2026 NÁCAR &amp; LEDGER · PROVIDENCE, RI · NACARLEDGER.COM</footer>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('click', function(e) {
+    document.querySelectorAll('.nav-mobile[open]').forEach(function(menu) {
+      if (!menu.contains(e.target)) menu.removeAttribute('open');
+    });
+  });
+</script>
+</body>
+</html>
