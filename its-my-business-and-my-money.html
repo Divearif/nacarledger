@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Do I Need a Separate Business Bank Account? | Nácar &amp; Ledger</title>
+<meta name="description" content="Why every entity — LLC, S-corp, or just a DBA — needs its own financial identity, and what commingled funds actually cost you, shield or no shield.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need a separate bank account if I'm just a sole proprietor with a DBA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. A DBA has no liability shield to lose, but separation is still what lets you prove what's a real business expense, know if the business is actually profitable, and have clean books ready if you convert to an LLC later."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does commingling funds actually put my LLC's liability protection at risk?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Commingled funds are exactly what courts examine when deciding whether to pierce the corporate veil — treating the entity's money as your own personal money undermines the argument that it's truly a separate legal person."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it enough to just open a separate business bank account?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It's necessary but not sufficient. Draws and contributions still need to be tracked against an actual equity account — a separate account with no real bookkeeping behind it still leaves nobody able to tell whether the business is actually profitable."
+      }
+    }
+  ]
+}
+</script>
+<style>
+  :root{
+    --abyss-deep:#081F33; --ocean:#0E3A5F; --gold:#C9A97E; --gold-deep:#8C7A54;
+    --rose:#D98C7A; --rose-deep:#B8664F; --pearl:#F7F2EA; --ink:#24303A;
+    --muted:#5B6670; --white:#FFFFFF; --line:#E4DCC9;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{ margin:0; font-family:'Inter',sans-serif; color:var(--ink); background:var(--white); -webkit-font-smoothing:antialiased; line-height:1.65; }
+  h1,h2,h3{ font-family:'Fraunces',serif; font-weight:500; margin:0; }
+  .eyebrow{ font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; font-weight:500; }
+  a{ color:inherit; }
+  .wrap{ max-width:760px; margin:0 auto; padding:0 32px; }
+  .wrap-wide{ max-width:1080px; margin:0 auto; padding:0 32px; }
+
+  nav{ background:var(--abyss-deep); padding:22px 0; }
+  nav .wrap-wide{ display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px; }
+  .nav-mark{ display:flex; align-items:center; gap:14px; text-decoration:none; }
+  .nav-mark svg{ width:34px; height:31px; }
+  .nav-mark span{ font-family:'Fraunces',serif; font-size:1.3rem; color:var(--pearl); }
+  .nav-mark span b{ color:var(--gold); font-weight:500; }
+  .nav-links{ display:flex; align-items:center; gap:26px; }
+  .nav-links a{ font-family:'IBM Plex Mono',monospace; font-size:0.76rem; letter-spacing:0.07em; text-transform:uppercase; color:#9FB0B8; text-decoration:none; }
+  .nav-links a:hover{ color:var(--pearl); }
+  .nav-links a.current{ color:var(--gold); }
+  .nav-links .cta{ color:var(--pearl); border:1px solid rgba(247,242,234,0.35); padding:9px 18px; border-radius:2px; }
+  .nav-links .cta:hover{ border-color:var(--gold); background:rgba(201,169,126,0.08); }
+  .nav-mobile{ display:none; position:relative; }
+  .nav-mobile summary{ list-style:none; cursor:pointer; font-family:'IBM Plex Mono',monospace; font-size:0.76rem; letter-spacing:0.07em; text-transform:uppercase; color:var(--pearl); border:1px solid rgba(247,242,234,0.35); padding:8px 16px; border-radius:2px; }
+  .nav-mobile summary::-webkit-details-marker{ display:none; }
+  .nav-mobile-panel{ position:absolute; top:calc(100% + 8px); right:0; background:var(--ocean); border:1px solid rgba(247,242,234,0.2); border-radius:4px; padding:8px; display:flex; flex-direction:column; min-width:180px; z-index:10; }
+  .nav-mobile-panel a{ font-family:'IBM Plex Mono',monospace; font-size:0.76rem; letter-spacing:0.06em; text-transform:uppercase; color:#9FB0B8; text-decoration:none; padding:10px 12px; border-radius:3px; display:block; }
+  .nav-mobile-panel a.current{ color:var(--gold); }
+  .nav-mobile-panel a:hover{ background:rgba(255,255,255,0.06); color:var(--pearl); }
+
+  .breadcrumb{ padding:18px 0; border-bottom:1px solid var(--line); }
+  .breadcrumb ol{ list-style:none; display:flex; flex-wrap:wrap; gap:6px; margin:0; padding:0; font-size:0.82rem; color:var(--muted); }
+  .breadcrumb a{ text-decoration:none; color:var(--muted); }
+  .breadcrumb a:hover{ color:var(--ocean); }
+  .breadcrumb li:not(:last-child)::after{ content:"/"; margin-left:6px; color:#C7BFAE; }
+  .breadcrumb li:last-child{ color:var(--ink); }
+
+  article{ padding:56px 0 24px; }
+  .article-eyebrow{ color:var(--rose-deep); margin-bottom:16px; }
+  h1{ font-size:2.1rem; line-height:1.28; color:var(--ocean); margin-bottom:22px; }
+  .direct-answer{ background:var(--pearl); border-left:3px solid var(--gold); border-radius:0 8px 8px 0; padding:22px 26px; font-size:1.05rem; line-height:1.7; margin-bottom:40px; }
+  .direct-answer strong{ color:var(--ocean); }
+  article h2{ font-size:1.4rem; color:var(--ocean); margin-top:44px; margin-bottom:14px; }
+  article p{ font-size:1rem; margin:0 0 16px; }
+  article ul, article ol{ margin:0 0 16px; padding-left:22px; }
+  article li{ margin-bottom:8px; }
+  .mistake-item{ border-top:1px solid var(--line); padding:20px 0; }
+  .mistake-item .num{ font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--gold-deep); }
+  .mistake-item h3{ font-family:'Fraunces',serif; font-size:1.1rem; color:var(--ink); margin:4px 0 10px; }
+  .mistake-item p{ font-size:0.95rem; margin:0 0 6px; }
+  .path-grid{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:16px 0 24px; }
+  .path-col{ background:var(--pearl); border-radius:8px; padding:18px 20px; }
+  .path-col.reactive{ border-top:3px solid var(--rose-deep); }
+  .path-col.proactive{ border-top:3px solid var(--ocean); }
+  .path-col p.label{ font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--muted); margin-bottom:10px; }
+  .fix-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:16px 0 24px; }
+  .fix-item{ background:var(--pearl); border-radius:8px; padding:16px 18px; }
+  .fix-item .num{ font-family:'Fraunces',serif; color:var(--gold-deep); font-size:1.2rem; }
+  .fix-item h3{ font-size:0.98rem; margin:4px 0 6px; }
+  .fix-item p{ font-size:0.88rem; color:var(--muted); margin:0; }
+
+  .faq{ margin-top:48px; }
+  .faq h2{ font-size:1.4rem; color:var(--ocean); margin-bottom:18px; }
+  .faq-item{ border-top:1px solid var(--line); padding:18px 0; }
+  .faq-item h3{ font-size:1rem; color:var(--ink); margin:0 0 8px; }
+  .faq-item p{ font-size:0.94rem; color:var(--muted); margin:0; }
+
+  .related{ background:var(--pearl); padding:44px 0; margin-top:56px; }
+  .related h2{ font-size:1.2rem; color:var(--ocean); margin-bottom:18px; }
+  .related-links{ display:flex; flex-direction:column; gap:12px; }
+  .related-links a{ display:flex; justify-content:space-between; align-items:center; gap:12px; background:var(--white); border:1px solid var(--line); border-radius:8px; padding:14px 18px; text-decoration:none; font-size:0.94rem; color:var(--ink); }
+  .related-links a span.arrow{ color:var(--rose-deep); font-weight:700; flex-shrink:0; }
+
+  .cta-band{ background:var(--ocean); padding:48px 0; text-align:center; }
+  .cta-band p.eyebrow{ color:var(--gold); margin-bottom:10px; }
+  .cta-band h2{ color:var(--white); font-size:1.4rem; margin-bottom:20px; }
+  .btn{ font-family:'IBM Plex Mono',monospace; font-size:0.8rem; letter-spacing:0.06em; text-decoration:none; padding:13px 26px; border-radius:3px; display:inline-block; }
+  .btn.primary{ background:var(--gold); color:var(--abyss-deep); font-weight:500; }
+  .btn.secondary{ border:1px solid rgba(247,242,234,0.4); color:var(--pearl); margin-left:10px; }
+
+  footer{ background:var(--abyss-deep); color:#C7D2D6; font-size:13px; padding:28px 0; text-align:center; }
+  footer a{ color:#C7D2D6; text-decoration:none; }
+  .disclaimer{ font-size:0.82rem; color:var(--muted); border-top:1px solid var(--line); padding-top:20px; margin-top:40px; }
+
+  @media (max-width:640px){
+    .nav-links{ display:none; }
+    .nav-mobile{ display:block; }
+    .path-grid, .fix-grid{ grid-template-columns:1fr; }
+    h1{ font-size:1.7rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap-wide">
+    <a class="nav-mark" href="/">
+      <svg viewBox="0 0 340 320" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 170 285 L 20 285 A 150 150 0 1 1 320 285 Z" fill="#C9A97E"/>
+        <circle cx="170" cy="285" r="6" fill="#0E3A5F"/>
+        <rect x="8" y="285" width="324" height="4" rx="2" fill="#0E3A5F"/>
+      </svg>
+      <span>Nácar <b>&amp; Ledger</b></span>
+    </a>
+    <div class="nav-links">
+      <a href="/bookkeeping.html">Bookkeeping</a>
+      <a href="/advisory.html">Advisory</a>
+      <a href="/dealcheck.html">Deal Check</a>
+      <a class="current" href="/resources.html">Guides</a>
+    </div>
+    <details class="nav-mobile">
+      <summary aria-label="Open menu">Menu</summary>
+      <div class="nav-mobile-panel">
+        <a href="/bookkeeping.html">Bookkeeping</a>
+        <a href="/advisory.html">Advisory</a>
+        <a href="/dealcheck.html">Deal Check</a>
+        <a class="current" href="/resources.html">Guides</a>
+      </div>
+    </details>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <div class="wrap">
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li><a href="/resources.html">Guides</a></li>
+      <li><a href="/resources.html#just-starting-out">Just Starting Out</a></li>
+      <li>Keeping Money Separate</li>
+    </ol>
+  </div>
+</div>
+
+<article>
+  <div class="wrap">
+    <p class="eyebrow article-eyebrow">Just starting out</p>
+    <h1>It's My Business and My Money — Do I Need to Keep Them Separate?</h1>
+
+    <div class="direct-answer">
+      <strong>Short answer:</strong> yes, regardless of whether you're an LLC, an S-corp, or just operating under a DBA. For an LLC or S-corp, commingled funds are exactly what a court examines when deciding whether your liability shield still applies. For a DBA with no shield to lose, separation is still what lets you prove what's a real business expense — the legal protection was never the only reason to keep the money apart.
+    </div>
+
+    <h2>Why This List Exists</h2>
+    <p>When you own 100% of the business, keeping the money separate can feel like a formality nobody really needs. It stops feeling like a formality the day a lender, a court, or the IRS asks you to prove where the business actually ends and you begin. Commingled funds are exactly what courts look at when deciding whether an LLC or S-corp's liability protection still applies, or never really existed. Without separation, there's no way to prove what's a real business expense, shield or no shield. And one pool of money makes it impossible to tell whether the business is actually profitable, or just moving cash in a circle.</p>
+
+    <h2>The Six Mistakes</h2>
+
+    <div class="mistake-item">
+      <p class="num">01</p>
+      <h3>One Account for Everything</h3>
+      <p>Every dollar — business revenue, personal groceries, an owner's night out — comes out of the same account, no matter what kind of entity is on paper, because it's one person making every decision. For an LLC or S-corp, this is exactly what a court examines when deciding whether to pierce the liability shield. For a DBA, there's no shield to lose, but there's also no way to prove what's a real business expense the day the IRS asks.</p>
+    </div>
+    <div class="mistake-item">
+      <p class="num">02</p>
+      <h3>The "It's My Money" Mentality</h3>
+      <p>The underlying belief that because you own the whole business, there's no real difference between the business's money and your own — ownership feels total, so the boundary feels artificial. The entity is its own legal and financial person whether you treat it that way or not, LLC, S-corp, or DBA alike.</p>
+    </div>
+    <div class="mistake-item">
+      <p class="num">03</p>
+      <h3>No Real Draw or Distribution Process</h3>
+      <p>Money moves out whenever it's needed, in whatever amount, with no consistent pattern, because the owner is the only signer and nothing stops an impulsive transfer. Without a real draw process, there's no way to separate legitimate profit distribution from money that's actually still owed back.</p>
+    </div>
+    <div class="mistake-item">
+      <p class="num">04</p>
+      <h3>Treating a DBA Like Separation Doesn't Matter</h3>
+      <p>Because a DBA offers no liability shield, the owner assumes there's no reason to separate accounts at all — if the law doesn't require it, it feels optional. A DBA with commingled books can't prove its own numbers to a lender, can't cleanly convert into an LLC later, and has no defensible expense trail if the IRS ever asks.</p>
+    </div>
+    <div class="mistake-item">
+      <p class="num">05</p>
+      <h3>Running Personal Purchases Through the Business</h3>
+      <p>Personal expenses get paid from the business account and categorized as business costs because it feels like free tax savings. Misclassified personal expenses are one of the first things an examiner finds, and once one number is wrong, the credibility of every other number on the return goes with it.</p>
+    </div>
+    <div class="mistake-item">
+      <p class="num">06</p>
+      <h3>Separate Accounts, But No Real Equity Tracking</h3>
+      <p>The business has its own bank account, but draws and contributions never get recorded to an actual equity account — they just vanish into "miscellaneous," because opening a second account felt like the whole fix. Without tracking contributions and draws against equity, nobody can tell whether the business is actually profitable or just moving cash in a circle.</p>
+    </div>
+
+    <h2>How This Actually Catches Up With You</h2>
+    <p>Commingled funds resolve themselves one of two ways — and one is a lot more expensive than the other.</p>
+    <div class="path-grid">
+      <div class="path-col proactive">
+        <p class="label">Path A — you catch it yourself</p>
+        <p>A real business account gets opened, a consistent draw process gets established, and the books get untangled before anyone outside the business is looking. The fix happens quietly, on your own timeline, before it costs you anything but the time to do it.</p>
+      </div>
+      <div class="path-col reactive">
+        <p class="label">Path B — someone else catches it first</p>
+        <p>A lender questions the numbers, a court examines the entity during a lawsuit, or an examiner finds personal expenses buried in the business return. For an LLC or S-corp, that's the liability shield unwound. For anyone, it's disallowed deductions, reconstructed income, and penalties.</p>
+      </div>
+    </div>
+
+    <h2>The Fix Is Almost Always the Same</h2>
+    <div class="fix-grid">
+      <div class="fix-item"><p class="num">1</p><h3>Open a real business account</h3><p>Every entity, every time — no exceptions for a DBA.</p></div>
+      <div class="fix-item"><p class="num">2</p><h3>Pay yourself on purpose</h3><p>A consistent draw or distribution process, not ad hoc withdrawals.</p></div>
+      <div class="fix-item"><p class="num">3</p><h3>Track draws against equity</h3><p>Every dollar in or out gets recorded to the right account, not "miscellaneous."</p></div>
+      <div class="fix-item"><p class="num">4</p><h3>Keep receipts separated</h3><p>Personal stays personal, business stays business, no exceptions.</p></div>
+      <div class="fix-item"><p class="num">5</p><h3>Review the account monthly</h3><p>Not just at tax time, when the trail has already gone cold.</p></div>
+      <div class="fix-item"><p class="num">6</p><h3>Treat it as its own entity</h3><p>Because legally and financially, whether LLC, S-corp, or DBA, it is one.</p></div>
+    </div>
+
+    <div class="disclaimer">
+      This material is for general education and does not constitute tax or legal advice. Consult a qualified professional for guidance specific to your business.
+    </div>
+
+    <div class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h3>Do I need a separate bank account if I'm just a sole proprietor with a DBA?</h3>
+        <p>Yes. A DBA has no liability shield to lose, but separation still lets you prove what's a real business expense and have clean books ready if you convert to an LLC later.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does commingling funds actually put my LLC's liability protection at risk?</h3>
+        <p>Yes. Commingled funds are exactly what courts examine when deciding whether to pierce the corporate veil.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is it enough to just open a separate business bank account?</h3>
+        <p>It's necessary but not sufficient. Draws and contributions still need to be tracked against an actual equity account.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<div class="related">
+  <div class="wrap">
+    <h2>Related guides</h2>
+    <div class="related-links">
+      <a href="/guides/pay-yourself-single-member-llc.html"><span>I'm the only owner of my LLC — how do I actually pay myself?</span><span class="arrow">→</span></a>
+    </div>
+  </div>
+</div>
+
+<div class="cta-band">
+  <div class="wrap">
+    <p class="eyebrow">Not sure how this applies to you?</p>
+    <h2>Untangle it before someone else does.</h2>
+    <a class="btn primary" href="mailto:nacarledger@outlook.com">Ask directly</a>
+    <a class="btn secondary" href="/Nacar_Ledger_Its_My_Business_And_My_Money.pdf" target="_blank" rel="noopener">Download the PDF</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap-wide">
+    Nácar &amp; Ledger — Financial &amp; Operations Consulting for Providence's Small Businesses
+    &nbsp;|&nbsp; <a href="mailto:nacarledger@outlook.com">nacarledger@outlook.com</a>
+    &nbsp;|&nbsp; 401-617-7926
+  </div>
+</footer>
+
+</body>
+</html>
