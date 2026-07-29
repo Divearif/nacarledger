@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Convertimos un 1099 a W-2. ¿Ahora Qué? | Nácar &amp; Ledger</title>
+<meta name="description" content="Descubriendo qué debes tras convertir un trabajador 1099 a W-2: el período retroactivo, el alivio de la Sección 3509, y qué corregir primero.">
+<link rel="alternate" hreflang="en" href="https://nacarledger.com/1099-to-w2-conversion.html">
+<link rel="alternate" hreflang="es" href="https://nacarledger.com/1099-to-w2-conversion-es.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "es",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Hasta dónde tengo que calcular lo que debo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El punto de partida es la fecha en que el puesto del trabajador realmente comenzó a funcionar como el de un empleado, no la fecha en que decidiste corregirlo ni la fecha de contratación original. Las declaraciones de impuestos de empleo generalmente están abiertas para corrección hasta 3 años atrás desde la fecha de vencimiento original, pero la mala clasificación subyacente puede ser más antigua."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué es la Sección 3509 y me aplica?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La Sección 3509 es una opción de alivio de tasa reducida para empleadores que clasificaron mal a un trabajador de buena fe. Generalmente está disponible cuando la mala clasificación no fue desacato intencional de las reglas de reporte y se presentó el Formulario 1099-NEC para el trabajador en los años en cuestión."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Corregir mis declaraciones federales resuelve todo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Una corrección federal resuelve la exposición ante el IRS pero no resuelve automáticamente el seguro de desempleo estatal, la compensación laboral, la retención de impuesto estatal, o las obligaciones de programas de permiso pagado."
+      }
+    }
+  ]
+}
+</script>
+<style>
+  :root{
+    --abyss-deep:#081F33; --ocean:#0E3A5F; --gold:#C9A97E; --gold-deep:#8C7A54;
+    --rose:#D98C7A; --rose-deep:#B8664F; --pearl:#F7F2EA; --ink:#24303A;
+    --muted:#5B6670; --white:#FFFFFF; --line:#E4DCC9;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{ margin:0; font-family:'Inter',sans-serif; color:var(--ink); background:var(--white); -webkit-font-smoothing:antialiased; line-height:1.65; }
+  h1,h2,h3{ font-family:'Fraunces',serif; font-weight:500; margin:0; }
+  .eyebrow{ font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; font-weight:500; }
+  a{ color:inherit; }
+  .wrap{ max-width:760px; margin:0 auto; padding:0 32px; }
+  .wrap-wide{ max-width:1080px; margin:0 auto; padding:0 32px; }
+
+  nav{ background:var(--abyss-deep); padding:22px 0; }
+  nav .wrap-wide{ display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px; }
+  .nav-mark{ display:flex; align-items:center; gap:14px; text-decoration:none; }
+  .nav-mark svg{ width:34px; height:31px; }
+  .nav-mark span{ font-family:'Fraunces',serif; font-size:1.3rem; color:var(--pearl); }
+  .nav-mark span b{ color:var(--gold); font-weight:500; }
+  .nav-links{ display:flex; align-items:center; gap:26px; }
+  .nav-links a{ font-family:'IBM Plex Mono',monospace; font-size:0.76rem; letter-spacing:0.07em; text-transform:uppercase; color:#9FB0B8; text-decoration:none; }
+  .nav-links a:hover{ color:var(--pearl); }
+  .nav-links a.current{ color:var(--gold); }
+  .nav-links .cta{ color:var(--pearl); border:1px solid rgba(247,242,234,0.35); padding:9px 18px; border-radius:2px; }
+  .nav-links .cta:hover{ border-color:var(--gold); background:rgba(201,169,126,0.08); }
+  .nav-mobile{ display:none; position:relative; }
+  .nav-mobile summary{ list-style:none; cursor:pointer; font-family:'IBM Plex Mono',monospace; font-size:0.76rem; letter-spacing:0.07em; text-transform:uppercase; color:var(--pearl); border:1px solid rgba(247,242,234,0.35); padding:8px 16px; border-radius:2px; }
+  .nav-mobile summary::-webkit-details-marker{ display:none; }
+  .nav-mobile-panel{ position:absolute; top:calc(100% + 8px); right:0; background:var(--ocean); border:1px solid rgba(247,242,234,0.2); border-radius:4px; padding:8px; display:flex; flex-direction:column; min-width:180px; z-index:10; }
+  .nav-mobile-panel a{ font-family:'IBM Plex Mono',monospace; font-size:0.76rem; letter-spacing:0.06em; text-transform:uppercase; color:#9FB0B8; text-decoration:none; padding:10px 12px; border-radius:3px; display:block; }
+  .nav-mobile-panel a.current{ color:var(--gold); }
+  .nav-mobile-panel a:hover{ background:rgba(255,255,255,0.06); color:var(--pearl); }
+  .lang-toggle{ display:flex; align-items:center; gap:6px; }
+  .lang-btn{ font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.06em; padding:5px 11px; border-radius:3px; border:1px solid rgba(159,176,184,0.4); color:#9FB0B8; text-decoration:none; }
+  .lang-btn.active{ color:var(--abyss-deep); background:var(--gold); border-color:var(--gold); font-weight:600; }
+
+  .breadcrumb{ padding:18px 0; border-bottom:1px solid var(--line); }
+  .breadcrumb ol{ list-style:none; display:flex; flex-wrap:wrap; gap:6px; margin:0; padding:0; font-size:0.82rem; color:var(--muted); }
+  .breadcrumb a{ text-decoration:none; color:var(--muted); }
+  .breadcrumb a:hover{ color:var(--ocean); }
+  .breadcrumb li:not(:last-child)::after{ content:"/"; margin-left:6px; color:#C7BFAE; }
+  .breadcrumb li:last-child{ color:var(--ink); }
+
+  article{ padding:56px 0 24px; }
+  .article-eyebrow{ color:var(--rose-deep); margin-bottom:16px; }
+  h1{ font-size:2.1rem; line-height:1.28; color:var(--ocean); margin-bottom:22px; }
+  .direct-answer{ background:var(--pearl); border-left:3px solid var(--gold); border-radius:0 8px 8px 0; padding:22px 26px; font-size:1.05rem; line-height:1.7; margin-bottom:40px; }
+  .direct-answer strong{ color:var(--ocean); }
+  article h2{ font-size:1.4rem; color:var(--ocean); margin-top:44px; margin-bottom:14px; }
+  article h3{ font-size:1.1rem; color:var(--ink); margin-top:22px; margin-bottom:8px; }
+  article p{ font-size:1rem; margin:0 0 16px; }
+  article ul, article ol{ margin:0 0 16px; padding-left:22px; }
+  article li{ margin-bottom:8px; }
+  .path-grid{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:16px 0 24px; }
+  .path-col{ border-radius:8px; padding:18px 20px; }
+  .path-col.reactive{ background:var(--pearl); border-top:3px solid var(--rose-deep); }
+  .path-col.proactive{ background:var(--pearl); border-top:3px solid var(--ocean); }
+  .path-col p.label{ font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--muted); margin-bottom:10px; }
+  .callout{ background:var(--abyss-deep); color:#E4E9EB; border-radius:10px; padding:20px 24px; margin:20px 0; font-size:0.95rem; }
+  .callout strong{ color:var(--gold); }
+  table.compare{ width:100%; border-collapse:collapse; margin:16px 0 24px; font-size:0.92rem; }
+  table.compare th{ font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.05em; text-transform:uppercase; text-align:left; color:var(--muted); padding:8px 12px; border-bottom:2px solid var(--line); }
+  table.compare td{ padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; }
+
+  .faq{ margin-top:48px; }
+  .faq h2{ font-size:1.4rem; color:var(--ocean); margin-bottom:18px; }
+  .faq-item{ border-top:1px solid var(--line); padding:18px 0; }
+  .faq-item h3{ font-size:1rem; color:var(--ink); margin:0 0 8px; }
+  .faq-item p{ font-size:0.94rem; color:var(--muted); margin:0; }
+
+  .related{ background:var(--pearl); padding:44px 0; margin-top:56px; }
+  .related h2{ font-size:1.2rem; color:var(--ocean); margin-bottom:18px; }
+  .related-links{ display:flex; flex-direction:column; gap:12px; }
+  .related-links a{ display:flex; justify-content:space-between; align-items:center; gap:12px; background:var(--white); border:1px solid var(--line); border-radius:8px; padding:14px 18px; text-decoration:none; font-size:0.94rem; color:var(--ink); }
+  .related-links a span.arrow{ color:var(--rose-deep); font-weight:700; flex-shrink:0; }
+
+  .cta-band{ background:var(--ocean); padding:48px 0; text-align:center; }
+  .cta-band p.eyebrow{ color:var(--gold); margin-bottom:10px; }
+  .cta-band h2{ color:var(--white); font-size:1.4rem; margin-bottom:20px; }
+  .btn{ font-family:'IBM Plex Mono',monospace; font-size:0.8rem; letter-spacing:0.06em; text-decoration:none; padding:13px 26px; border-radius:3px; display:inline-block; }
+  .btn.primary{ background:var(--gold); color:var(--abyss-deep); font-weight:500; }
+  .btn.secondary{ border:1px solid rgba(247,242,234,0.4); color:var(--pearl); margin-left:10px; }
+
+  footer{ background:var(--abyss-deep); color:#C7D2D6; font-size:13px; padding:28px 0; text-align:center; }
+  footer a{ color:#C7D2D6; text-decoration:none; }
+  .disclaimer{ font-size:0.82rem; color:var(--muted); border-top:1px solid var(--line); padding-top:20px; margin-top:40px; }
+
+  @media (max-width:640px){
+    .nav-links{ display:none; }
+    .nav-mobile{ display:block; }
+    .path-grid{ grid-template-columns:1fr; }
+    table.compare{ font-size:0.82rem; }
+    h1{ font-size:1.7rem; }
+  }
+
+  .pdf-viewer-overlay{ display:none; position:fixed; inset:0; background:rgba(8,31,51,0.85); z-index:1000; align-items:center; justify-content:center; padding:24px; }
+  .pdf-viewer-overlay.open{ display:flex; }
+  .pdf-viewer-box{ background:#FFFFFF; width:100%; max-width:900px; height:88vh; border-radius:10px; overflow:hidden; display:flex; flex-direction:column; box-shadow:0 30px 80px rgba(0,0,0,0.4); }
+  .pdf-viewer-header{ display:flex; justify-content:space-between; align-items:center; padding:14px 20px; background:#081F33; color:#FFFFFF; flex-shrink:0; }
+  .pdf-viewer-header span{ font-family:'Fraunces',serif; font-size:0.98rem; padding-right:12px; }
+  .pdf-viewer-actions{ display:flex; align-items:center; gap:10px; flex-shrink:0; }
+  .pdf-viewer-actions a{ font-family:'IBM Plex Mono',monospace; font-size:0.76rem; letter-spacing:0.05em; text-decoration:none; background:#C9A97E; color:#081F33; font-weight:600; padding:8px 16px; border-radius:3px; white-space:nowrap; }
+  .pdf-viewer-close{ background:none; border:none; color:#FFFFFF; font-size:1.3rem; cursor:pointer; line-height:1; padding:0 4px; }
+  .pdf-viewer-box iframe{ flex:1; border:none; width:100%; background:#F7F2EA; }
+  @media (max-width:640px){
+    .pdf-viewer-overlay{ padding:0; }
+    .pdf-viewer-box{ height:100vh; border-radius:0; max-width:none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap-wide">
+    <a class="nav-mark" href="/es.html">
+      <svg viewBox="0 0 340 320" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 170 285 L 20 285 A 150 150 0 1 1 320 285 Z" fill="#C9A97E"/>
+        <circle cx="170" cy="285" r="6" fill="#0E3A5F"/>
+        <rect x="8" y="285" width="324" height="4" rx="2" fill="#0E3A5F"/>
+      </svg>
+      <span>Nácar <b>&amp; Ledger</b></span>
+    </a>
+    <div class="nav-links">
+      <a href="/bookkeeping-es.html">Contabilidad</a>
+      <a href="/advisory-es.html">Asesoría</a>
+      <a href="/dealcheck.html">Analizar Negocio</a>
+      <a class="current" href="/resources-es.html">Guías</a>
+      <span class="lang-toggle">
+        <a href="/1099-to-w2-conversion.html" class="lang-btn">EN</a>
+        <span class="lang-btn active">ES</span>
+      </span>
+    </div>
+    <details class="nav-mobile">
+      <summary aria-label="Abrir menú">Menú</summary>
+      <div class="nav-mobile-panel">
+        <a href="/bookkeeping-es.html">Contabilidad</a>
+        <a href="/advisory-es.html">Asesoría</a>
+        <a href="/dealcheck.html">Analizar Negocio</a>
+        <a class="current" href="/resources-es.html">Guías</a>
+        <a href="/1099-to-w2-conversion.html">English</a>
+      </div>
+    </details>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <div class="wrap">
+    <ol>
+      <li><a href="/es.html">Inicio</a></li>
+      <li><a href="/resources-es.html">Guías</a></li>
+      <li><a href="/resources-es.html#worker-classification">Clasificación de Trabajadores</a></li>
+      <li>Conversión de 1099 a W-2</li>
+    </ol>
+  </div>
+</div>
+
+<article>
+  <div class="wrap">
+    <p class="eyebrow article-eyebrow">Clasificación de trabajadores</p>
+    <h1>Acabamos de Convertir un 1099 a W-2. ¿Ahora Qué?</h1>
+
+    <div class="direct-answer">
+      <strong>Respuesta corta:</strong> calculas los impuestos atrasados desde la fecha en que el puesto realmente empezó a funcionar como empleo, no la fecha de contratación original — y como convertiste proactivamente en vez de que te atraparan, probablemente calificas para el alivio de tasa reducida de la Sección 3509 en vez de la responsabilidad estándar completa. La corrección se hace mediante declaraciones de nómina enmendadas, W-2 corregidos, y posiblemente un 1099-NEC corregido o anulado por los mismos salarios.
+    </div>
+
+    <h2>Estás en Mejor Posición de lo que Crees</h2>
+    <p>Hay dos formas en que los empleadores llegan aquí, y cuál sea la tuya cambia todo sobre tus opciones.</p>
+    <div class="path-grid">
+      <div class="path-col reactive">
+        <p class="label">Reactivo</p>
+        <p>El IRS o una agencia estatal reclasifica al trabajador por ti — a través de una auditoría, un reclamo del trabajador, o una declaración de desempleo. Generalmente aplican multas e intereses completos, con menos opciones para reducir la cuenta.</p>
+      </div>
+      <div class="path-col proactive">
+        <p class="label">Proactivo (tú)</p>
+        <p>Ya decidiste convertir el puesto y quieres corregir el año pasado correctamente, antes de que alguien pregunte. El alivio de tasa reducida y caminos de corrección más limpios generalmente están disponibles para ti.</p>
+      </div>
+    </div>
+
+    <h2>Paso 1: ¿Hasta Dónde Retrocedes?</h2>
+    <p>El punto de partida es la fecha en que el puesto del trabajador realmente comenzó a funcionar como el de un empleado — no la fecha en que decidiste corregirlo. Las declaraciones de impuestos de empleo generalmente están abiertas para corrección hasta 3 años atrás desde la fecha de vencimiento original, pero la mala clasificación subyacente puede ser más antigua. Si el puesto cambió con el tiempo, solo debes tratamiento fiscal tipo empleado desde el punto en que la relación se volvió tipo empleado, no necesariamente todo el compromiso. Haber presentado formularios 1099-NEC para el trabajador todo el tiempo generalmente te pone en una mejor categoría de tasa que si nunca se reportó nada.</p>
+
+    <div class="callout">
+      <strong>Un ejemplo de cronología:</strong> "Contratamos a una diseñadora 1099 en marzo del año pasado. Para septiembre, le habíamos dado una laptop de la empresa, fijado sus horarios, y había dejado de tomar otros clientes. Este mes la pasamos a W-2. ¿Qué debemos?" La respuesta probable: los impuestos atrasados se calculan desde septiembre, no marzo — el período donde la relación laboral realmente se volvió tipo empleado. El tramo genuinamente independiente antes de eso típicamente se queda como 1099.
+    </div>
+
+    <h2>Paso 2: Calculando lo Que Debes</h2>
+    <p>Bajo el método estándar de responsabilidad completa, el empleador se vuelve responsable de ambos lados de la relación fiscal: la parte del empleador de FICA (se debe sin importar la clasificación), la parte del empleado de FICA (normalmente retenido de los cheques, pero el empleador se vuelve responsable si no se retuvo), y la retención de impuesto federal sobre la renta calculada usando el estatus de declaración presunto del trabajador si se desconoce, más multas por no retener y no depositar e intereses. Este es el camino costoso — la Sección 3509, abajo, a menudo lo reduce significativamente para empleadores que califican.</p>
+
+    <h2>Una Opción de Tasa Reducida: IRC §3509</h2>
+    <p>El Congreso creó una válvula de alivio para empleadores que clasificaron mal de buena fe. En lugar de la responsabilidad estándar completa, la Sección 3509 ofrece tasas fijas reducidas si calificas — generalmente disponible cuando la mala clasificación no fue "desacato intencional" de las reglas de reporte, y se presentó el Formulario 1099-NEC para el trabajador en los años en cuestión. En lugar de cobrar los montos completos de FICA y retención del lado del empleado, el estatuto aplica porcentajes fijos reducidos a esas piezas específicas. La parte del empleador de FICA se sigue debiendo en su totalidad de cualquier forma — el 3509 solo reduce la responsabilidad del lado del empleado trasladada al empleador. Las tasas exactas las establece el estatuto y pueden actualizarse; confirma las cifras actuales con un profesional fiscal antes de calcular un número.</p>
+
+    <table class="compare">
+      <tr><th>Método estándar</th><th>Alivio de la Sección 3509</th></tr>
+      <tr><td>Parte del empleador de FICA — monto completo, siempre se debe</td><td>Parte del empleador de FICA — sigue siendo el monto completo, sin cambio</td></tr>
+      <tr><td>Parte del empleado de FICA — monto completo trasladado al empleador</td><td>Parte del empleado de FICA — tasa fija reducida en vez del monto completo</td></tr>
+      <tr><td>Retención de impuesto sobre la renta — monto presunto completo</td><td>Retención de impuesto sobre la renta — tasa fija reducida en vez del monto presunto</td></tr>
+      <tr><td>Pueden aplicar multas estándar por no presentar/depositar</td><td>Generalmente un desembolso de efectivo total menor para errores de buena fe</td></tr>
+    </table>
+
+    <h2>Corrigiendo Tus Declaraciones</h2>
+    <ol>
+      <li><strong>Formulario 941-X</strong> — enmienda la declaración de cada trimestre afectado para reflejar los salarios reclasificados y los impuestos ahora debidos</li>
+      <li><strong>Formulario W-2 / W-2c</strong> — emite un estado de salario corregido para los períodos afectados para que las declaraciones del trabajador puedan conciliarse</li>
+      <li><strong>Corregir o anular el 1099-NEC</strong> — si ya se presentó un 1099 por los mismos salarios ahora reportados en un W-2, ese traslape necesita resolverse con el IRS y el trabajador</li>
+      <li><strong>Declaraciones estatales de nómina</strong> — enmienda las declaraciones de retención estatal para que coincidan; las fechas límite varían por estado</li>
+    </ol>
+
+    <h2>Las Obligaciones Estatales No Desaparecen</h2>
+    <p>Una corrección federal resuelve tu exposición ante el IRS — no resuelve automáticamente el seguro de desempleo estatal (contribuciones retroactivas, a menudo auditadas de forma independiente del FUTA federal), la compensación laboral (las aseguradoras pueden reevaluar primas retroactivamente), la retención de impuesto estatal (la mayoría de los estados requieren sus propias declaraciones enmendadas), o los programas de permiso pagado y discapacidad con contribuciones retroactivas obligatorias.</p>
+
+    <h2>Documentación para Reunir Primero</h2>
+    <ul>
+      <li>Cada pago hecho al trabajador, por fecha, durante todo el período en cuestión</li>
+      <li>Copias de cualquier formulario 1099-NEC ya presentado para ese trabajador</li>
+      <li>Fechas en que cambiaron las condiciones de trabajo — horario, equipo, exclusividad</li>
+      <li>El W-4 del trabajador (si se recolectó) o la mejor información disponible sobre su estatus de declaración</li>
+      <li>Cualquier acuerdo de contratista independiente existente y su alcance declarado</li>
+    </ul>
+
+    <h2>Dos Caminos: VCSP vs. Autocorrección</h2>
+    <p>Como ya convertiste el puesto, estás eligiendo cómo corregir el pasado, no si convertir. La autocorrección (ruta 941-X) te permite calcular y pagar directamente lo que se debe para el período específico, manteniendo la corrección proporcional solo a los trimestres afectados — el alivio de la Sección 3509 puede aplicar si calificas. El Programa de Acuerdo de Clasificación Voluntaria (VCSP) solo está disponible antes de que hayas reclasificado por tu cuenta; requiere aplicar con anticipación, paga aproximadamente el 10% de la responsabilidad de un año, y evita intereses y multas — vale la pena conocerlo para otros contratistas que aún no has convertido.</p>
+
+    <h2>Errores Comunes al Autocorregir</h2>
+    <ul>
+      <li>Calcular impuestos atrasados desde la fecha de contratación en vez de cuándo el puesto realmente se volvió tipo empleado</li>
+      <li>Olvidar corregir o anular el 1099-NEC que se traslapa por los mismos salarios</li>
+      <li>Asumir que las tasas de la Sección 3509 aplican sin confirmar los requisitos de presentación y buena fe</li>
+      <li>Corregir las declaraciones federales pero omitir la exposición de desempleo estatal y compensación laboral</li>
+      <li>No documentar el razonamiento detrás de la fecha efectiva elegida</li>
+      <li>Esperar a la próxima declaración anual en vez de enmendar el trimestre afectado con prontitud</li>
+    </ul>
+
+    <div class="disclaimer">
+      Este material es para fines educativos generales y no constituye asesoría fiscal o legal. Consulta a un profesional calificado para orientación específica sobre tu negocio.
+    </div>
+
+    <div class="faq">
+      <h2>Preguntas Frecuentes</h2>
+      <div class="faq-item">
+        <h3>¿Hasta dónde tengo que calcular lo que debo?</h3>
+        <p>El punto de partida es la fecha en que el puesto realmente comenzó a funcionar como el de un empleado, no la fecha en que decidiste corregirlo. Generalmente 3 años atrás desde la fecha de vencimiento original.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Qué es la Sección 3509 y me aplica?</h3>
+        <p>Es una opción de alivio de tasa reducida para empleadores que clasificaron mal de buena fe, generalmente disponible si se presentó el 1099-NEC y no hubo desacato intencional.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Corregir mis declaraciones federales resuelve todo?</h3>
+        <p>No. Resuelve tu exposición ante el IRS pero no automáticamente el seguro de desempleo estatal, compensación laboral, u otras obligaciones estatales.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<div class="related">
+  <div class="wrap">
+    <h2>Guías relacionadas</h2>
+    <div class="related-links">
+      <a href="/w2-vs-1099-es.html"><span>¿Este nuevo empleado debería ser W-2 o 1099?</span><span class="arrow">→</span></a>
+      <a href="/irs-three-factor-test-es.html"><span>¿Empleado o contratista? Cómo lo decide realmente el IRS</span><span class="arrow">→</span></a>
+      <a href="/va-passes-irs-test-rhode-island-es.html"><span>Tu VA pasa la prueba del IRS. ¿Pasa la de Rhode Island?</span><span class="arrow">→</span></a>
+    </div>
+  </div>
+</div>
+
+<div class="cta-band">
+  <div class="wrap">
+    <p class="eyebrow">¿No sabes cómo esto aplica a ti?</p>
+    <h2>Calcula tu corrección bien desde la primera vez.</h2>
+    <a class="btn primary" href="mailto:nacarledger@outlook.com">Pregúntanos directamente</a>
+    <a class="btn secondary" href="#" onclick="openPdfViewer('/Nacar_Ledger_1099_to_W2_Conversion_ES.pdf', 'Conversión de 1099 a W-2'); return false;">Ver la guía</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap-wide">
+    Nácar &amp; Ledger — Consultoría Financiera y Operativa para los Pequeños Negocios de Providence
+    &nbsp;|&nbsp; <a href="mailto:nacarledger@outlook.com">nacarledger@outlook.com</a>
+    &nbsp;|&nbsp; 401-617-7926
+  </div>
+</footer>
+
+<div class="pdf-viewer-overlay" id="pdfViewerOverlay" onclick="if(event.target===this)closePdfViewer()">
+  <div class="pdf-viewer-box">
+    <div class="pdf-viewer-header">
+      <span id="pdfViewerTitle"></span>
+      <div class="pdf-viewer-actions">
+        <a id="pdfViewerDownload" href="#" download>Descargar</a>
+        <button class="pdf-viewer-close" onclick="closePdfViewer()" aria-label="Cerrar">&times;</button>
+      </div>
+    </div>
+    <iframe id="pdfViewerFrame" src="" title="Vista previa de la guía"></iframe>
+  </div>
+</div>
+<script>
+  function openPdfViewer(url, title) {
+    document.getElementById('pdfViewerFrame').src = url;
+    document.getElementById('pdfViewerTitle').textContent = title;
+    document.getElementById('pdfViewerDownload').href = url;
+    document.getElementById('pdfViewerOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closePdfViewer() {
+    document.getElementById('pdfViewerOverlay').classList.remove('open');
+    document.getElementById('pdfViewerFrame').src = '';
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closePdfViewer();
+  });
+</script>
+</body>
+</html>
