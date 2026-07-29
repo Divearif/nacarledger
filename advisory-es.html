@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Asesoría de Nivel Contralor para Negocios Multi-Entidad | Nácar &amp; Ledger</title>
+<meta name="description" content="Clasificación de trabajadores, contabilidad entre empresas, y asesoría de nivel contralor para dueños de negocio en Providence con más de una entidad o nómina.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --abyss-deep:#081F33;
+    --ocean:#0E3A5F;
+    --gold:#C9A97E;
+    --gold-deep:#8C7A54;
+    --rose:#D98C7A;
+    --rose-deep:#B8664F;
+    --pearl:#F7F2EA;
+    --ink:#24303A;
+    --muted:#5B6670;
+    --white:#FFFFFF;
+    --line:#E4DCC9;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Inter',sans-serif;
+    color:var(--ink);
+    background:var(--white);
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces',serif;
+    font-weight:500;
+    margin:0;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.72rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    font-weight:500;
+  }
+  a{color:inherit;}
+  .wrap{
+    max-width:1080px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  /* ---------- NAV ---------- */
+  nav{ background:var(--abyss-deep); padding:22px 0; }
+  nav .wrap{display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px;}
+  .nav-mark{display:flex; align-items:center; gap:14px; text-decoration:none;}
+  .nav-mark svg{width:34px; height:31px;}
+  .nav-mark span{ font-family:'Fraunces',serif; font-size:1.3rem; color:var(--pearl); letter-spacing:0.01em; }
+  .nav-mark span b{color:var(--gold); font-weight:500;}
+  .nav-links{display:flex; align-items:center; gap:26px;}
+  .nav-links a{
+    font-family:'IBM Plex Mono',monospace; font-size:0.76rem; letter-spacing:0.07em; text-transform:uppercase;
+    color:#9FB0B8; text-decoration:none; transition:color .2s ease;
+  }
+  .nav-links a:hover{color:var(--pearl);}
+  .nav-links a.current{color:var(--gold);}
+  .nav-links .cta{
+    color:var(--pearl); border:1px solid rgba(247,242,234,0.35); padding:9px 18px; border-radius:2px;
+    transition:border-color .2s ease, background .2s ease;
+  }
+  .nav-links .cta:hover{border-color:var(--gold); background:rgba(201,169,126,0.08); color:var(--pearl);}
+  .nav-mobile{display:none; position:relative;}
+  .nav-mobile summary{
+    list-style:none; cursor:pointer;
+    font-family:'IBM Plex Mono',monospace; font-size:0.76rem; letter-spacing:0.07em; text-transform:uppercase;
+    color:var(--pearl); border:1px solid rgba(247,242,234,0.35); padding:8px 16px; border-radius:2px;
+  }
+  .nav-mobile summary::-webkit-details-marker{display:none;}
+  .nav-mobile-panel{
+    position:absolute; top:calc(100% + 8px); right:0; background:var(--ocean);
+    border:1px solid rgba(247,242,234,0.2); border-radius:4px; padding:8px;
+    display:flex; flex-direction:column; min-width:180px; z-index:10;
+  }
+  .nav-mobile-panel a{
+    font-family:'IBM Plex Mono',monospace; font-size:0.76rem; letter-spacing:0.06em; text-transform:uppercase;
+    color:#9FB0B8; text-decoration:none; padding:10px 12px; border-radius:3px; display:block;
+  }
+  .nav-mobile-panel a.current{color:var(--gold);}
+  .nav-mobile-panel a:hover{background:rgba(255,255,255,0.06); color:var(--pearl);}
+  .lang-toggle{display:flex; align-items:center; gap:6px;}
+  .lang-btn{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.72rem;
+    letter-spacing:0.06em;
+    padding:5px 11px;
+    border-radius:3px;
+    border:1px solid rgba(159,176,184,0.4);
+    color:#9FB0B8;
+    text-decoration:none;
+    transition:border-color .2s ease, background .2s ease, color .2s ease;
+  }
+  .lang-btn.active{
+    color:var(--abyss-deep);
+    background:var(--gold);
+    border-color:var(--gold);
+    font-weight:600;
+  }
+  .lang-btn:not(.active):hover{border-color:var(--gold); color:var(--pearl);}
+
+  /* ---------- MINI HERO ---------- */
+  .mini-hero{ position:relative; background:var(--abyss-deep); overflow:hidden; padding:88px 0 72px; }
+  .mini-hero::before{ content:""; position:absolute; border-radius:50%; background:var(--ocean); opacity:0.55; width:380px; height:380px; top:-200px; right:-80px; }
+  .mini-hero::after{ content:""; position:absolute; border-radius:50%; background:var(--ocean); opacity:0.4; width:260px; height:260px; bottom:-160px; left:-90px; }
+  .mini-hero .wrap{position:relative; z-index:1; text-align:left;}
+  .mini-hero .eyebrow{color:var(--gold); margin-bottom:18px;}
+  .mini-hero h1{ color:var(--white); font-size:40px; line-height:1.25; max-width:17ch; }
+  .mini-hero p.lede{ margin-top:22px; max-width:56ch; color:#C7D2D6; font-size:17px; }
+
+  .section{ padding:64px 0; border-bottom:1px solid #EDE7DC; }
+  .section h2{ font-size:26px; margin-bottom:12px; }
+  .section .dek{ color:var(--muted); font-size:16px; max-width:62ch; margin-bottom:36px; }
+
+  .grid-2{ display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:20px; }
+  .item{ background:var(--pearl); border-radius:14px; padding:24px; }
+  .item h3{ font-size:16px; margin-bottom:8px; }
+  .item p{ font-size:14px; color:var(--muted); margin:0; }
+
+  .fit-list{ list-style:none; margin:0; padding:0; }
+  .fit-list li{ display:flex; gap:12px; font-size:15px; margin-bottom:14px; align-items:flex-start; }
+  .fit-list li svg{ flex-shrink:0; width:20px; height:20px; color:var(--ocean); margin-top:2px; }
+
+  .price-card{ background:var(--abyss-deep); border-radius:16px; padding:36px; color:#FFFFFF; max-width:440px; }
+  .price-card .tier{ color:var(--gold); font-size:13px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:10px; }
+  .price-card .amount{ font-family:Georgia, serif; font-size:34px; font-weight:700; margin-bottom:6px; }
+  .price-card .amount span{ font-size:15px; font-weight:400; color:#C7D2D6; }
+  .price-card .scope{ color:#C7D2D6; font-size:14px; margin-bottom:20px; }
+  .price-card .cta{
+    display:inline-block; background:var(--gold); color:#2E2010; font-weight:700;
+    font-size:14px; padding:12px 24px; border-radius:8px; text-decoration:none;
+  }
+  .project-note{ margin-top:20px; font-size:14px; color:var(--muted); }
+
+  .guide-links{ display:flex; flex-direction:column; gap:14px; }
+  .guide-links a{
+    display:flex; justify-content:space-between; align-items:center; gap:12px;
+    background:var(--pearl); border-radius:10px; padding:16px 20px;
+    text-decoration:none; font-size:15px; color:var(--ink);
+  }
+  .guide-links a span.arrow{ color:var(--ocean); font-weight:700; flex-shrink:0; }
+  .guide-links .note{ font-size:12px; color:var(--muted); font-weight:400; display:block; margin-top:2px; }
+  .guide-links .lang{ font-size:12px; color:var(--gold-deep); font-weight:500; }
+
+  .closing{ background:var(--ocean); padding:60px 0; text-align:center; }
+  .closing h2{ color:#FFFFFF; font-size:24px; margin-bottom:12px; }
+  .closing p{ color:#C7D2D6; max-width:52ch; margin:0 auto 24px; font-size:15px; }
+  .closing .cta{ display:inline-block; background:var(--gold); color:#2E2010; font-weight:700; font-size:14px; padding:14px 30px; border-radius:8px; text-decoration:none; }
+
+  footer{ background:var(--abyss-deep); color:#C7D2D6; font-size:13px; padding:28px 0; text-align:center; }
+  footer a{ color:#C7D2D6; text-decoration:none; }
+
+  @media (max-width:640px){
+    .mini-hero{ padding:60px 0 48px; }
+    .mini-hero h1{ font-size:30px; }
+    .nav-links{ display:none; }
+    .nav-mobile{ display:block; }
+    .section{ padding:48px 0; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="nav-mark" href="/es.html">
+      <svg viewBox="0 0 340 320" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 170 285 L 20 285 A 150 150 0 1 1 320 285 Z" fill="#C9A97E"/>
+        <circle cx="170" cy="285" r="6" fill="#0E3A5F"/>
+        <rect x="8" y="285" width="324" height="4" rx="2" fill="#0E3A5F"/>
+      </svg>
+      <span>Nácar <b>&amp; Ledger</b></span>
+    </a>
+    <div class="nav-links">
+      <a href="/bookkeeping-es.html">Contabilidad</a>
+      <a class="current" href="/advisory-es.html">Asesoría</a>
+      <a href="/resources-es.html">Guías</a>
+      <a href="/dealcheck.html">Analizar Negocio</a>
+      <span class="lang-toggle">
+        <a href="/advisory.html" class="lang-btn">EN</a>
+        <span class="lang-btn active">ES</span>
+      </span>
+      <a class="cta" href="mailto:nacarledger@outlook.com">Contáctame</a>
+    </div>
+    <details class="nav-mobile">
+      <summary aria-label="Abrir menú">Menú</summary>
+      <div class="nav-mobile-panel">
+        <a href="/bookkeeping-es.html">Contabilidad</a>
+        <a class="current" href="/advisory-es.html">Asesoría</a>
+        <a href="/resources-es.html">Guías</a>
+        <a href="/dealcheck.html">Analizar Negocio</a>
+        <a href="/advisory.html">English</a>
+        <a href="mailto:nacarledger@outlook.com">Contáctame</a>
+      </div>
+    </details>
+  </div>
+</nav>
+
+<header class="mini-hero">
+  <div class="wrap">
+    <p class="eyebrow">Asesoría de nivel contralor</p>
+    <h1>Para negocios que ya superaron la contabilidad básica.</h1>
+    <p class="lede">
+      Contabilidad multi-entidad, clasificación de trabajadores, y limpieza entre empresas — el tipo de
+      criterio que viene de dos décadas manejando tanto la contabilidad como la operación de un negocio,
+      no solo el software.
+    </p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <h2>Qué incluye</h2>
+    <p class="dek">El trabajo que empieza cuando eres más de una entidad, más de una nómina, o más de una fuente de ingresos.</p>
+    <div class="grid-2">
+      <div class="item">
+        <h3>Contabilidad multi-entidad</h3>
+        <p>Libros limpios en cada LLC que posees, con saldos entre empresas que realmente concilian al cierre.</p>
+      </div>
+      <div class="item">
+        <h3>Revisión de clasificación de trabajadores</h3>
+        <p>Decisiones de W-2 vs. 1099 tomadas correctamente antes de contratar, no reclasificadas después de un aviso de auditoría.</p>
+      </div>
+      <div class="item">
+        <h3>Limpieza de transferencias entre empresas</h3>
+        <p>Préstamos a accionistas, pagos entre entidades, y estados consolidados que eliminan los saldos correctamente.</p>
+      </div>
+      <div class="item">
+        <h3>Administración de nómina y RRHH</h3>
+        <p>Configuración y supervisión de nómina de nivel ADP, basada en prácticas institucionales de negocios de bienes raíces, construcción, y servicios.</p>
+      </div>
+      <div class="item">
+        <h3>Proyección de flujo de efectivo</h3>
+        <p>Una vista hacia adelante del negocio, no solo un espejo retrovisor del mes pasado.</p>
+      </div>
+      <div class="item">
+        <h3>Guía financiera estratégica</h3>
+        <p>El tipo de decisión que toma un contralor — no un contador esperando que le digan qué hacer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>Para quién es esto</h2>
+    <p class="dek">Este es el ajuste correcto si la mayoría de lo siguiente es verdad:</p>
+    <ul class="fit-list">
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+        Posees u operas más de una entidad, y el dinero se mueve entre ellas
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+        Estás contratando — y necesitas saber si un puesto es W-2 o 1099 antes de hacer la oferta
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+        Has trabajado con contratistas o asistentes virtuales y quieres revisar esa relación antes de que se cuestione
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+        La contabilidad mensual básica ya no responde las preguntas que realmente tienes
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>Precios</h2>
+    <p class="dek">Según el número de entidades y la complejidad de lo que ocurre entre ellas.</p>
+    <div class="price-card">
+      <p class="tier">Crecimiento</p>
+      <p class="amount">$2,500–$4,000 <span>/ mes</span></p>
+      <p class="scope">Negocios multi-entidad, clasificación de trabajadores, contabilidad entre empresas</p>
+      <a class="cta" href="mailto:nacarledger@outlook.com">Solicita una cotización</a>
+    </div>
+    <p class="project-note">
+      ¿Necesitas una revisión de clasificación, una limpieza, o un proyecto específico en vez de asesoría continua?
+      Trabajo por proyecto disponible a $75–$125/hora o cotización fija —
+      <a href="mailto:nacarledger@outlook.com" style="color:var(--ocean);">pregúntanos directamente</a>.
+    </p>
+  </div>
+</section>
+
+<section class="section" style="border-bottom:none;">
+  <div class="wrap">
+    <h2>¿No sabes si ya tienes exposición?</h2>
+    <p class="dek">Guías gratuitas sobre las dos cosas que más afectan a los dueños multi-entidad.</p>
+    <div class="guide-links">
+      <a href="/guides/w2-vs-1099.html">
+        <span>¿Este nuevo empleado debería ser W-2 o 1099?<span class="note">(en inglés)</span></span>
+        <span class="arrow">→</span>
+      </a>
+      <a href="/guides/irs-three-factor-test.html">
+        <span>¿Empleado o contratista? Cómo lo decide realmente el IRS<span class="note">(en inglés)</span></span>
+        <span class="arrow">→</span>
+      </a>
+      <a href="/guides/1099-to-w2-conversion.html">
+        <span>Acabamos de convertir un 1099 a W-2. ¿Ahora qué?<span class="note">(en inglés)</span></span>
+        <span class="arrow">→</span>
+      </a>
+      <a href="/guides/va-passes-irs-test-rhode-island.html">
+        <span>Tu asistente virtual pasa la prueba del IRS. ¿Pasa la de Rhode Island?<span class="note">(en inglés)</span></span>
+        <span class="arrow">→</span>
+      </a>
+      <a href="/guides/transferencias-entre-empresas-top10.html">
+        <span>Moví $50,000 entre mis dos LLCs — ¿metí la pata con mis impuestos? <span class="lang">(también en inglés)</span></span>
+        <span class="arrow">→</span>
+      </a>
+      <a href="/resources-es.html">
+        <span>Ver todas las guías gratuitas</span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="wrap">
+    <h2>¿Crees que ya tienes exposición en algún lugar?</h2>
+    <p>Cuéntanos qué está pasando en tus entidades, y te diremos honestamente qué necesita atención primero.</p>
+    <a class="cta" href="mailto:nacarledger@outlook.com">Empecemos a conversar</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Nácar &amp; Ledger — Consultoría Financiera y Operativa para los Pequeños Negocios de Providence
+    &nbsp;|&nbsp; <a href="mailto:nacarledger@outlook.com">nacarledger@outlook.com</a>
+    &nbsp;|&nbsp; 401-617-7926
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('click', function(e) {
+    document.querySelectorAll('.nav-mobile[open]').forEach(function(menu) {
+      if (!menu.contains(e.target)) menu.removeAttribute('open');
+    });
+  });
+</script>
+</body>
+</html>
