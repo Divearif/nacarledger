@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QXRQ1B2FRD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-QXRQ1B2FRD');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1099s From 5 Platforms — Reporting Right? | Nácar &amp; Ledger</title>
+<meta name="description" content="How to reconcile multiple 1099s across platforms without double-counting or missing income — before the IRS's automated matching program finds the gap.">
+<link rel="alternate" hreflang="en" href="https://nacarledger.com/multi-platform-1099-reconciliation.html">
+<link rel="alternate" hreflang="es" href="https://nacarledger.com/multi-platform-1099-reconciliation-es.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "If a platform never sent me a 1099, do I still owe taxes on that income?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The 1099 threshold is a reporting rule for the platform, not a taxability rule for you — every dollar earned is reportable whether or not a form ever arrives."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why would the same payment get reported twice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A brand deal paid through a processor like PayPal can get reported once by the brand on a 1099-NEC, and again by the processor on a 1099-K, because each side reports what it saw without checking whether the other side already reported it too."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the number on my 1099-K my actual taxable income?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. 1099-K totals are gross, before platform fees, refunds, and chargebacks. Reporting that gross figure without backing those out overstates your actual income."
+      }
+    }
+  ]
+}
+</script>
+<style>
+  :root{
+    --abyss-deep:#081F33; --ocean:#0E3A5F; --gold:#C9A97E; --gold-deep:#8C7A54;
+    --rose:#D98C7A; --rose-deep:#B8664F; --pearl:#F7F2EA; --ink:#24303A;
+    --muted:#5B6670; --white:#FFFFFF; --line:#E4DCC9;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{ margin:0; font-family:'Inter',sans-serif; color:var(--ink); background:var(--white); -webkit-font-smoothing:antialiased; line-height:1.65; }
+  h1,h2,h3{ font-family:'Fraunces',serif; font-weight:500; margin:0; }
+  .eyebrow{ font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; font-weight:500; }
+  a{ color:inherit; }
+  .wrap{ max-width:760px; margin:0 auto; padding:0 32px; }
+  .wrap-wide{ max-width:1080px; margin:0 auto; padding:0 32px; }
+
+  nav{ background:var(--abyss-deep); padding:22px 0; }
+  nav .wrap-wide{ display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px; }
+  .nav-mark{ display:flex; align-items:center; gap:14px; text-decoration:none; }
+  .nav-mark svg{ width:34px; height:31px; }
+  .nav-mark span{ font-family:'Fraunces',serif; font-size:1.3rem; color:var(--pearl); }
+  .nav-mark span b{ color:var(--gold); font-weight:500; }
+  .nav-links{ display:flex; align-items:center; gap:26px; }
+  .nav-links a{ font-family:'IBM Plex Mono',monospace; font-size:0.76rem; letter-spacing:0.07em; text-transform:uppercase; color:#9FB0B8; text-decoration:none; }
+  .nav-links a:hover{ color:var(--pearl); }
+  .nav-links a.current{ color:var(--gold); }
+  .nav-links .cta{ color:var(--pearl); border:1px solid rgba(247,242,234,0.35); padding:9px 18px; border-radius:2px; }
+  .nav-links .cta:hover{ border-color:var(--gold); background:rgba(201,169,126,0.08); }
+  .nav-mobile{ display:none; position:relative; }
+  .nav-mobile summary{ list-style:none; cursor:pointer; font-family:'IBM Plex Mono',monospace; font-size:0.76rem; letter-spacing:0.07em; text-transform:uppercase; color:var(--pearl); border:1px solid rgba(247,242,234,0.35); padding:8px 16px; border-radius:2px; }
+  .nav-mobile summary::-webkit-details-marker{ display:none; }
+  .nav-mobile-panel{ position:absolute; top:calc(100% + 8px); right:0; background:var(--ocean); border:1px solid rgba(247,242,234,0.2); border-radius:4px; padding:8px; display:flex; flex-direction:column; min-width:180px; z-index:10; }
+  .nav-mobile-panel a{ font-family:'IBM Plex Mono',monospace; font-size:0.76rem; letter-spacing:0.06em; text-transform:uppercase; color:#9FB0B8; text-decoration:none; padding:10px 12px; border-radius:3px; display:block; }
+  .nav-mobile-panel a.current{ color:var(--gold); }
+  .nav-mobile-panel a:hover{ background:rgba(255,255,255,0.06); color:var(--pearl); }
+  .lang-toggle{ display:flex; align-items:center; gap:6px; }
+  .lang-btn{ font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.06em; padding:5px 11px; border-radius:3px; border:1px solid rgba(159,176,184,0.4); color:#9FB0B8; text-decoration:none; }
+  .lang-btn.active{ color:var(--abyss-deep); background:var(--gold); border-color:var(--gold); font-weight:600; }
+
+  .breadcrumb{ padding:18px 0; border-bottom:1px solid var(--line); }
+  .breadcrumb ol{ list-style:none; display:flex; flex-wrap:wrap; gap:6px; margin:0; padding:0; font-size:0.82rem; color:var(--muted); }
+  .breadcrumb a{ text-decoration:none; color:var(--muted); }
+  .breadcrumb a:hover{ color:var(--ocean); }
+  .breadcrumb li:not(:last-child)::after{ content:"/"; margin-left:6px; color:#C7BFAE; }
+  .breadcrumb li:last-child{ color:var(--ink); }
+
+  article{ padding:56px 0 24px; }
+  .article-eyebrow{ color:var(--rose-deep); margin-bottom:16px; }
+  h1{ font-size:2.1rem; line-height:1.28; color:var(--ocean); margin-bottom:22px; }
+  .direct-answer{ background:var(--pearl); border-left:3px solid var(--gold); border-radius:0 8px 8px 0; padding:22px 26px; font-size:1.05rem; line-height:1.7; margin-bottom:40px; }
+  .direct-answer strong{ color:var(--ocean); }
+  article h2{ font-size:1.4rem; color:var(--ocean); margin-top:44px; margin-bottom:14px; }
+  article p{ font-size:1rem; margin:0 0 16px; }
+  article ul, article ol{ margin:0 0 16px; padding-left:22px; }
+  article li{ margin-bottom:8px; }
+  .mistake-item{ border-top:1px solid var(--line); padding:20px 0; }
+  .mistake-item .num{ font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--gold-deep); }
+  .mistake-item h3{ font-family:'Fraunces',serif; font-size:1.1rem; color:var(--ink); margin:4px 0 10px; }
+  .mistake-item p{ font-size:0.95rem; margin:0 0 6px; }
+  .path-grid{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:16px 0 24px; }
+  .path-col{ background:var(--pearl); border-radius:8px; padding:18px 20px; }
+  .path-col.reactive{ border-top:3px solid var(--rose-deep); }
+  .path-col.proactive{ border-top:3px solid var(--ocean); }
+  .path-col p.label{ font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--muted); margin-bottom:10px; }
+  .fix-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:16px 0 24px; }
+  .fix-item{ background:var(--pearl); border-radius:8px; padding:16px 18px; }
+  .fix-item .num{ font-family:'Fraunces',serif; color:var(--gold-deep); font-size:1.2rem; }
+  .fix-item h3{ font-size:0.98rem; margin:4px 0 6px; }
+  .fix-item p{ font-size:0.88rem; color:var(--muted); margin:0; }
+
+  .faq{ margin-top:48px; }
+  .faq h2{ font-size:1.4rem; color:var(--ocean); margin-bottom:18px; }
+  .faq-item{ border-top:1px solid var(--line); padding:18px 0; }
+  .faq-item h3{ font-size:1rem; color:var(--ink); margin:0 0 8px; }
+  .faq-item p{ font-size:0.94rem; color:var(--muted); margin:0; }
+
+  .related{ background:var(--pearl); padding:44px 0; margin-top:56px; }
+  .related h2{ font-size:1.2rem; color:var(--ocean); margin-bottom:18px; }
+  .related-links{ display:flex; flex-direction:column; gap:12px; }
+  .related-links a{ display:flex; justify-content:space-between; align-items:center; gap:12px; background:var(--white); border:1px solid var(--line); border-radius:8px; padding:14px 18px; text-decoration:none; font-size:0.94rem; color:var(--ink); }
+  .related-links a span.arrow{ color:var(--rose-deep); font-weight:700; flex-shrink:0; }
+
+  .cta-band{ background:var(--ocean); padding:48px 0; text-align:center; }
+  .cta-band p.eyebrow{ color:var(--gold); margin-bottom:10px; }
+  .cta-band h2{ color:var(--white); font-size:1.4rem; margin-bottom:20px; }
+  .btn{ font-family:'IBM Plex Mono',monospace; font-size:0.8rem; letter-spacing:0.06em; text-decoration:none; padding:13px 26px; border-radius:3px; display:inline-block; }
+  .btn.primary{ background:var(--gold); color:var(--abyss-deep); font-weight:500; }
+  .btn.secondary{ border:1px solid rgba(247,242,234,0.4); color:var(--pearl); margin-left:10px; }
+
+  footer{ background:var(--abyss-deep); color:#C7D2D6; font-size:13px; padding:28px 0; text-align:center; }
+  footer a{ color:#C7D2D6; text-decoration:none; }
+  .disclaimer{ font-size:0.82rem; color:var(--muted); border-top:1px solid var(--line); padding-top:20px; margin-top:40px; }
+
+  @media (max-width:640px){
+    .nav-links{ display:none; }
+    .nav-mobile{ display:block; }
+    .path-grid, .fix-grid{ grid-template-columns:1fr; }
+    h1{ font-size:1.7rem; }
+  }
+
+  .pdf-viewer-overlay{ display:none; position:fixed; inset:0; background:rgba(8,31,51,0.85); z-index:1000; align-items:center; justify-content:center; padding:24px; }
+  .pdf-viewer-overlay.open{ display:flex; }
+  .pdf-viewer-box{ background:#FFFFFF; width:100%; max-width:900px; height:88vh; border-radius:10px; overflow:hidden; display:flex; flex-direction:column; box-shadow:0 30px 80px rgba(0,0,0,0.4); }
+  .pdf-viewer-header{ display:flex; justify-content:space-between; align-items:center; padding:14px 20px; background:#081F33; color:#FFFFFF; flex-shrink:0; }
+  .pdf-viewer-header span{ font-family:'Fraunces',serif; font-size:0.98rem; padding-right:12px; }
+  .pdf-viewer-actions{ display:flex; align-items:center; gap:10px; flex-shrink:0; }
+  .pdf-viewer-actions a{ font-family:'IBM Plex Mono',monospace; font-size:0.76rem; letter-spacing:0.05em; text-decoration:none; background:#C9A97E; color:#081F33; font-weight:600; padding:8px 16px; border-radius:3px; white-space:nowrap; }
+  .pdf-viewer-close{ background:none; border:none; color:#FFFFFF; font-size:1.3rem; cursor:pointer; line-height:1; padding:0 4px; }
+  .pdf-viewer-box iframe{ flex:1; border:none; width:100%; background:#F7F2EA; }
+  @media (max-width:640px){
+    .pdf-viewer-overlay{ padding:0; }
+    .pdf-viewer-box{ height:100vh; border-radius:0; max-width:none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap-wide">
+    <a class="nav-mark" href="/">
+      <svg viewBox="0 0 340 320" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 170 285 L 20 285 A 150 150 0 1 1 320 285 Z" fill="#C9A97E"/>
+        <circle cx="170" cy="285" r="6" fill="#0E3A5F"/>
+        <rect x="8" y="285" width="324" height="4" rx="2" fill="#0E3A5F"/>
+      </svg>
+      <span>Nácar <b>&amp; Ledger</b></span>
+    </a>
+    <div class="nav-links">
+      <a href="/bookkeeping.html">Bookkeeping</a>
+      <a href="/advisory.html">Advisory</a>
+      <a href="/dealcheck.html">Deal Check</a>
+      <a class="current" href="/resources.html">Guides</a>
+      <span class="lang-toggle">
+        <span class="lang-btn active">EN</span>
+        <a href="/multi-platform-1099-reconciliation-es.html" class="lang-btn">ES</a>
+      </span>
+    </div>
+    <details class="nav-mobile">
+      <summary aria-label="Open menu">Menu</summary>
+      <div class="nav-mobile-panel">
+        <a href="/bookkeeping.html">Bookkeeping</a>
+        <a href="/advisory.html">Advisory</a>
+        <a href="/dealcheck.html">Deal Check</a>
+        <a class="current" href="/resources.html">Guides</a>
+        <a href="/multi-platform-1099-reconciliation-es.html">Español</a>
+      </div>
+    </details>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <div class="wrap">
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li><a href="/resources.html">Guides</a></li>
+      <li><a href="/resources.html#just-starting-out">Creator Extras</a></li>
+      <li>Multi-Platform 1099s</li>
+    </ol>
+  </div>
+</div>
+
+<article>
+  <div class="wrap">
+    <p class="eyebrow article-eyebrow">Creator extras</p>
+    <h1>I Have 1099s From Five Different Platforms — Am I Reporting This Right?</h1>
+
+    <div class="direct-answer">
+      <strong>Short answer:</strong> reconcile every 1099 and platform payout against a running ledger you keep yourself, not against memory. The two failure modes run in opposite directions — a brand and a payment processor both reporting the same payment, which double-counts it, and a platform that never sends a form at all, which quietly drops real income. Only your own total catches both.
+    </div>
+
+    <h2>Why This List Exists</h2>
+    <p>Getting paid on five platforms feels like just getting paid. It stops feeling simple the moment five different 1099s show up, and none of them match what you thought you made. A brand pays through PayPal, and both the brand and PayPal report it — the same dollar shows up on two forms unless someone catches it. Not every platform issues a 1099, but the payments are still taxable whether or not a form ever arrives. And the IRS matches 1099 totals against your return automatically — a gap between the two is what actually triggers a notice.</p>
+
+    <h2>The Six Mistakes</h2>
+
+    <div class="mistake-item">
+      <p class="num">01</p>
+      <h3>Assuming No 1099 Means No Taxable Income</h3>
+      <p>A platform paid out for the year but never sent a 1099, so the income doesn't get reported at all — it's easy to treat the form as the trigger for taxes instead of the payment itself. The 1099 threshold is a reporting rule for the platform, not a taxability rule for you.</p>
+    </div>
+    <div class="mistake-item">
+      <p class="num">02</p>
+      <h3>Double-Counting the Same Payment</h3>
+      <p>A brand deal gets reported once by the brand on a 1099-NEC, and again by the payment processor that moved the money on a 1099-K, because each side reports what it saw without checking the other. Report both forms at face value and the same income gets taxed twice.</p>
+    </div>
+    <div class="mistake-item">
+      <p class="num">03</p>
+      <h3>Treating 1099-K Totals as Take-Home Pay</h3>
+      <p>The number on the 1099-K gets reported as income exactly as printed, because it's the only number the platform gave you. 1099-K totals are gross, before platform fees, refunds, and chargebacks — reporting the gross figure overstates your income.</p>
+    </div>
+    <div class="mistake-item">
+      <p class="num">04</p>
+      <h3>Losing Track of Which Platform Reports What</h3>
+      <p>Some platforms issue a 1099-NEC, some issue a 1099-K, some issue nothing, and by tax time nobody remembers which is which. Without a running list, reconciling five different forms against memory alone is where mistakes actually happen.</p>
+    </div>
+    <div class="mistake-item">
+      <p class="num">05</p>
+      <h3>Mixing Business and Personal Payment Apps</h3>
+      <p>The same Venmo or Cash App account receives platform payouts, fan gifts, and a roommate's half of the rent, because opening a separate account felt like overkill when the payments started small. Personal transfers can get swept into a 1099-K by mistake, and real income can get lost in a sea of personal transactions.</p>
+    </div>
+    <div class="mistake-item">
+      <p class="num">06</p>
+      <h3>Never Reconciling the Total</h3>
+      <p>Each 1099 gets entered on the return as it arrives, with no step that adds them up against what was actually earned, because filing feels done once every form has been typed in. Without a total to check against, there's no way to know the forms are complete or free of duplicates.</p>
+    </div>
+
+    <h2>How This Actually Catches Up With You</h2>
+    <p>Unreconciled 1099s resolve themselves one of two ways — and one is a lot more expensive than the other.</p>
+    <div class="path-grid">
+      <div class="path-col proactive">
+        <p class="label">Path A — you reconcile it yourself</p>
+        <p>You total every 1099 and platform payout before filing, catch the duplicate or the gap, and adjust the return before it's submitted. The fix happens quietly, on your own timeline, with no one else involved.</p>
+      </div>
+      <div class="path-col reactive">
+        <p class="label">Path B — the IRS reconciles it for you</p>
+        <p>The IRS's automated matching program compares every 1099 filed under your name to what your return reported, and flags the difference. That mismatch generates a notice — commonly a CP2000 — proposing additional tax, penalties, and interest.</p>
+      </div>
+    </div>
+
+    <h2>The Fix Is Almost Always the Same</h2>
+    <div class="fix-grid">
+      <div class="fix-item"><p class="num">1</p><h3>Keep one running ledger</h3><p>Log every payout by platform and date as it lands, not just at tax time.</p></div>
+      <div class="fix-item"><p class="num">2</p><h3>Match 1099s to your ledger</h3><p>When the forms arrive, check each one against what you already tracked.</p></div>
+      <div class="fix-item"><p class="num">3</p><h3>Report income, 1099 or not</h3><p>Your ledger determines what's taxable — the form is just paperwork.</p></div>
+      <div class="fix-item"><p class="num">4</p><h3>Catch double-reported income</h3><p>Flag it if a brand and a processor both report the same transaction.</p></div>
+      <div class="fix-item"><p class="num">5</p><h3>Back out fees separately</h3><p>Use gross figures as a starting point, not a final answer.</p></div>
+      <div class="fix-item"><p class="num">6</p><h3>Keep creator pay separate</h3><p>A dedicated account for platform-related income, so nothing gets lost.</p></div>
+    </div>
+
+    <div class="disclaimer">
+      This guide is for general educational purposes only and isn't tax, legal, or accounting advice. Consult a qualified professional for guidance specific to your situation.
+    </div>
+
+    <div class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h3>If a platform never sent me a 1099, do I still owe taxes on that income?</h3>
+        <p>Yes. The 1099 threshold is a reporting rule for the platform, not a taxability rule for you — every dollar earned is reportable whether or not a form ever arrives.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why would the same payment get reported twice?</h3>
+        <p>A brand deal paid through a processor like PayPal can get reported once by the brand and again by the processor, because each side reports what it saw independently.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is the number on my 1099-K my actual taxable income?</h3>
+        <p>No. 1099-K totals are gross, before platform fees, refunds, and chargebacks. Reporting that gross figure overstates your actual income.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<div class="related">
+  <div class="wrap">
+    <h2>Related guides</h2>
+    <div class="related-links">
+      <a href="/setting-up-your-business-finances.html"><span>Setting up your business finances right from day one (start here)</span><span class="arrow">→</span></a>
+      <a href="/gifted-products-taxable-income.html"><span>A brand sent me free stuff instead of paying me — is that taxable?</span><span class="arrow">→</span></a>
+    </div>
+  </div>
+</div>
+
+<div class="cta-band">
+  <div class="wrap">
+    <p class="eyebrow">Not sure how this applies to you?</p>
+    <h2>Get your numbers to match before the IRS checks.</h2>
+    <a class="btn primary" href="mailto:nacarledger@outlook.com">Ask directly</a>
+    <a class="btn secondary" href="#" onclick="openPdfViewer('/Nacar_Ledger_Multi_Platform_1099_Reconciliation.pdf', 'Multi Platform 1099 Reconciliation'); return false;">View the guide</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap-wide">
+    Nácar &amp; Ledger — Financial &amp; Operations Consulting for Providence's Small Businesses
+    &nbsp;|&nbsp; <a href="mailto:nacarledger@outlook.com">nacarledger@outlook.com</a>
+    &nbsp;|&nbsp; 401-617-7926
+  </div>
+</footer>
+
+
+<div class="pdf-viewer-overlay" id="pdfViewerOverlay" onclick="if(event.target===this)closePdfViewer()">
+  <div class="pdf-viewer-box">
+    <div class="pdf-viewer-header">
+      <span id="pdfViewerTitle"></span>
+      <div class="pdf-viewer-actions">
+        <a id="pdfViewerDownload" href="#" download>Download</a>
+        <button class="pdf-viewer-close" onclick="closePdfViewer()" aria-label="Close">&times;</button>
+      </div>
+    </div>
+    <iframe id="pdfViewerFrame" src="" title="Guide preview"></iframe>
+  </div>
+</div>
+<script>
+  function openPdfViewer(url, title) {
+    document.getElementById('pdfViewerFrame').src = url;
+    document.getElementById('pdfViewerTitle').textContent = title;
+    document.getElementById('pdfViewerDownload').href = url;
+    document.getElementById('pdfViewerOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closePdfViewer() {
+    document.getElementById('pdfViewerOverlay').classList.remove('open');
+    document.getElementById('pdfViewerFrame').src = '';
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closePdfViewer();
+  });
+</script>
+</body>
+</html>
