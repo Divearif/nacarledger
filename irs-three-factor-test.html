@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QXRQ1B2FRD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-QXRQ1B2FRD');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employee or Contractor? How the IRS Decides | Nácar &amp; Ledger</title>
+<meta name="description" content="The IRS's common-law control test explained plainly: three factors, weighed together, with the myths and mixed cases that trip up small business owners.">
+<link rel="alternate" hreflang="en" href="https://nacarledger.com/irs-three-factor-test.html">
+<link rel="alternate" hreflang="es" href="https://nacarledger.com/irs-three-factor-test-es.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does a signed contract calling someone a contractor settle the question?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. A label doesn't override the facts — the IRS looks at how the relationship actually functions day to day, not what a contract or invoice says."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "If a worker only works a few hours a week, are they automatically a contractor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Part-time doesn't equal contractor. A part-time role can still be an employee role if the business controls how, when, and where the work gets done."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if the case is genuinely mixed and unclear?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Two paths exist for formal clarity: filing Form SS-8 with the IRS for an official determination, or a professional review by a bookkeeper, CPA, or employment attorney who can also weigh state-specific tests the federal process doesn't consider."
+      }
+    }
+  ]
+}
+</script>
+<style>
+  :root{
+    --abyss-deep:#081F33; --ocean:#0E3A5F; --gold:#C9A97E; --gold-deep:#8C7A54;
+    --rose:#D98C7A; --rose-deep:#B8664F; --pearl:#F7F2EA; --ink:#24303A;
+    --muted:#5B6670; --white:#FFFFFF; --line:#E4DCC9;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{ margin:0; font-family:'Inter',sans-serif; color:var(--ink); background:var(--white); -webkit-font-smoothing:antialiased; line-height:1.65; }
+  h1,h2,h3{ font-family:'Fraunces',serif; font-weight:500; margin:0; }
+  .eyebrow{ font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; font-weight:500; }
+  a{ color:inherit; }
+  .wrap{ max-width:760px; margin:0 auto; padding:0 32px; }
+  .wrap-wide{ max-width:1080px; margin:0 auto; padding:0 32px; }
+
+  nav{ background:var(--abyss-deep); padding:22px 0; }
+  nav .wrap-wide{ display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px; }
+  .nav-mark{ display:flex; align-items:center; gap:14px; text-decoration:none; }
+  .nav-mark svg{ width:34px; height:31px; }
+  .nav-mark span{ font-family:'Fraunces',serif; font-size:1.3rem; color:var(--pearl); }
+  .nav-mark span b{ color:var(--gold); font-weight:500; }
+  .nav-links{ display:flex; align-items:center; gap:26px; }
+  .nav-links a{ font-family:'IBM Plex Mono',monospace; font-size:0.76rem; letter-spacing:0.07em; text-transform:uppercase; color:#9FB0B8; text-decoration:none; }
+  .nav-links a:hover{ color:var(--pearl); }
+  .nav-links a.current{ color:var(--gold); }
+  .nav-links .cta{ color:var(--pearl); border:1px solid rgba(247,242,234,0.35); padding:9px 18px; border-radius:2px; }
+  .nav-links .cta:hover{ border-color:var(--gold); background:rgba(201,169,126,0.08); }
+  .nav-mobile{ display:none; position:relative; }
+  .nav-mobile summary{ list-style:none; cursor:pointer; font-family:'IBM Plex Mono',monospace; font-size:0.76rem; letter-spacing:0.07em; text-transform:uppercase; color:var(--pearl); border:1px solid rgba(247,242,234,0.35); padding:8px 16px; border-radius:2px; }
+  .nav-mobile summary::-webkit-details-marker{ display:none; }
+  .nav-mobile-panel{ position:absolute; top:calc(100% + 8px); right:0; background:var(--ocean); border:1px solid rgba(247,242,234,0.2); border-radius:4px; padding:8px; display:flex; flex-direction:column; min-width:180px; z-index:10; }
+  .nav-mobile-panel a{ font-family:'IBM Plex Mono',monospace; font-size:0.76rem; letter-spacing:0.06em; text-transform:uppercase; color:#9FB0B8; text-decoration:none; padding:10px 12px; border-radius:3px; display:block; }
+  .nav-mobile-panel a.current{ color:var(--gold); }
+  .nav-mobile-panel a:hover{ background:rgba(255,255,255,0.06); color:var(--pearl); }
+  .lang-toggle{ display:flex; align-items:center; gap:6px; }
+  .lang-btn{ font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.06em; padding:5px 11px; border-radius:3px; border:1px solid rgba(159,176,184,0.4); color:#9FB0B8; text-decoration:none; }
+  .lang-btn.active{ color:var(--abyss-deep); background:var(--gold); border-color:var(--gold); font-weight:600; }
+
+  .breadcrumb{ padding:18px 0; border-bottom:1px solid var(--line); }
+  .breadcrumb ol{ list-style:none; display:flex; flex-wrap:wrap; gap:6px; margin:0; padding:0; font-size:0.82rem; color:var(--muted); }
+  .breadcrumb a{ text-decoration:none; color:var(--muted); }
+  .breadcrumb a:hover{ color:var(--ocean); }
+  .breadcrumb li:not(:last-child)::after{ content:"/"; margin-left:6px; color:#C7BFAE; }
+  .breadcrumb li:last-child{ color:var(--ink); }
+
+  article{ padding:56px 0 24px; }
+  .article-eyebrow{ color:var(--rose-deep); margin-bottom:16px; }
+  h1{ font-size:2.1rem; line-height:1.28; color:var(--ocean); margin-bottom:22px; }
+  .direct-answer{ background:var(--pearl); border-left:3px solid var(--gold); border-radius:0 8px 8px 0; padding:22px 26px; font-size:1.05rem; line-height:1.7; margin-bottom:40px; }
+  .direct-answer strong{ color:var(--ocean); }
+  article h2{ font-size:1.4rem; color:var(--ocean); margin-top:44px; margin-bottom:14px; }
+  article h3{ font-size:1.1rem; color:var(--ink); margin-top:22px; margin-bottom:8px; }
+  article p{ font-size:1rem; margin:0 0 16px; }
+  article ul, article ol{ margin:0 0 16px; padding-left:22px; }
+  article li{ margin-bottom:8px; }
+  .signal-grid{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:16px 0 24px; }
+  .signal-col{ background:var(--pearl); border-radius:8px; padding:18px 20px; }
+  .signal-col.employee{ border-top:3px solid var(--ocean); }
+  .signal-col.contractor{ border-top:3px solid var(--gold-deep); }
+  .signal-col p.label{ font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--muted); margin-bottom:10px; }
+  .signal-col ul{ margin:0; padding-left:18px; }
+  .signal-col li{ font-size:0.92rem; margin-bottom:6px; }
+  .callout{ background:var(--abyss-deep); color:#E4E9EB; border-radius:10px; padding:20px 24px; margin:20px 0; font-size:0.95rem; }
+  .callout strong{ color:var(--gold); }
+  .myth-item{ border-top:1px solid var(--line); padding:14px 0; }
+  .myth-item p.q{ font-weight:600; color:var(--ink); margin:0 0 4px; }
+  .myth-item p.a{ color:var(--muted); margin:0; font-size:0.94rem; }
+
+  .faq{ margin-top:48px; }
+  .faq h2{ font-size:1.4rem; color:var(--ocean); margin-bottom:18px; }
+  .faq-item{ border-top:1px solid var(--line); padding:18px 0; }
+  .faq-item h3{ font-size:1rem; color:var(--ink); margin:0 0 8px; }
+  .faq-item p{ font-size:0.94rem; color:var(--muted); margin:0; }
+
+  .related{ background:var(--pearl); padding:44px 0; margin-top:56px; }
+  .related h2{ font-size:1.2rem; color:var(--ocean); margin-bottom:18px; }
+  .related-links{ display:flex; flex-direction:column; gap:12px; }
+  .related-links a{ display:flex; justify-content:space-between; align-items:center; gap:12px; background:var(--white); border:1px solid var(--line); border-radius:8px; padding:14px 18px; text-decoration:none; font-size:0.94rem; color:var(--ink); }
+  .related-links a span.arrow{ color:var(--rose-deep); font-weight:700; flex-shrink:0; }
+
+  .cta-band{ background:var(--ocean); padding:48px 0; text-align:center; }
+  .cta-band p.eyebrow{ color:var(--gold); margin-bottom:10px; }
+  .cta-band h2{ color:var(--white); font-size:1.4rem; margin-bottom:20px; }
+  .btn{ font-family:'IBM Plex Mono',monospace; font-size:0.8rem; letter-spacing:0.06em; text-decoration:none; padding:13px 26px; border-radius:3px; display:inline-block; }
+  .btn.primary{ background:var(--gold); color:var(--abyss-deep); font-weight:500; }
+  .btn.secondary{ border:1px solid rgba(247,242,234,0.4); color:var(--pearl); margin-left:10px; }
+
+  footer{ background:var(--abyss-deep); color:#C7D2D6; font-size:13px; padding:28px 0; text-align:center; }
+  footer a{ color:#C7D2D6; text-decoration:none; }
+  .disclaimer{ font-size:0.82rem; color:var(--muted); border-top:1px solid var(--line); padding-top:20px; margin-top:40px; }
+
+  @media (max-width:640px){
+    .nav-links{ display:none; }
+    .nav-mobile{ display:block; }
+    .signal-grid{ grid-template-columns:1fr; }
+    h1{ font-size:1.7rem; }
+  }
+
+  .pdf-viewer-overlay{ display:none; position:fixed; inset:0; background:rgba(8,31,51,0.85); z-index:1000; align-items:center; justify-content:center; padding:24px; }
+  .pdf-viewer-overlay.open{ display:flex; }
+  .pdf-viewer-box{ background:#FFFFFF; width:100%; max-width:900px; height:88vh; border-radius:10px; overflow:hidden; display:flex; flex-direction:column; box-shadow:0 30px 80px rgba(0,0,0,0.4); }
+  .pdf-viewer-header{ display:flex; justify-content:space-between; align-items:center; padding:14px 20px; background:#081F33; color:#FFFFFF; flex-shrink:0; }
+  .pdf-viewer-header span{ font-family:'Fraunces',serif; font-size:0.98rem; padding-right:12px; }
+  .pdf-viewer-actions{ display:flex; align-items:center; gap:10px; flex-shrink:0; }
+  .pdf-viewer-actions a{ font-family:'IBM Plex Mono',monospace; font-size:0.76rem; letter-spacing:0.05em; text-decoration:none; background:#C9A97E; color:#081F33; font-weight:600; padding:8px 16px; border-radius:3px; white-space:nowrap; }
+  .pdf-viewer-close{ background:none; border:none; color:#FFFFFF; font-size:1.3rem; cursor:pointer; line-height:1; padding:0 4px; }
+  .pdf-viewer-box iframe{ flex:1; border:none; width:100%; background:#F7F2EA; }
+  @media (max-width:640px){
+    .pdf-viewer-overlay{ padding:0; }
+    .pdf-viewer-box{ height:100vh; border-radius:0; max-width:none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap-wide">
+    <a class="nav-mark" href="/">
+      <svg viewBox="0 0 340 320" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 170 285 L 20 285 A 150 150 0 1 1 320 285 Z" fill="#C9A97E"/>
+        <circle cx="170" cy="285" r="6" fill="#0E3A5F"/>
+        <rect x="8" y="285" width="324" height="4" rx="2" fill="#0E3A5F"/>
+      </svg>
+      <span>Nácar <b>&amp; Ledger</b></span>
+    </a>
+    <div class="nav-links">
+      <a href="/bookkeeping.html">Bookkeeping</a>
+      <a href="/advisory.html">Advisory</a>
+      <a href="/realestate.html">Real Estate</a>
+      <a class="current" href="/resources.html">Guides</a>
+      <a href="/dealcheck.html">Deal Check</a>
+      <span class="lang-toggle">
+        <span class="lang-btn active">EN</span>
+        <a href="/irs-three-factor-test-es.html" class="lang-btn">ES</a>
+      </span>
+    </div>
+    <details class="nav-mobile">
+      <summary aria-label="Open menu">Menu</summary>
+      <div class="nav-mobile-panel">
+        <a href="/bookkeeping.html">Bookkeeping</a>
+        <a href="/advisory.html">Advisory</a>
+        <a href="/realestate.html">Real Estate</a>
+        <a class="current" href="/resources.html">Guides</a>
+        <a href="/dealcheck.html">Deal Check</a>
+        <a href="/irs-three-factor-test-es.html">Español</a>
+      </div>
+    </details>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <div class="wrap">
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li><a href="/resources.html">Guides</a></li>
+      <li><a href="/resources.html#worker-classification">Worker Classification</a></li>
+      <li>How the IRS Decides</li>
+    </ol>
+  </div>
+</div>
+
+<article>
+  <div class="wrap">
+    <p class="eyebrow article-eyebrow">Worker classification</p>
+    <h1>Employee or Contractor? How the IRS Actually Decides</h1>
+
+    <div class="direct-answer">
+      <strong>Short answer:</strong> the IRS uses a common-law control test built on three factors — behavioral control, financial control, and type of relationship — weighed together as a whole picture, not a checklist. A worker can look "contractor-like" on one factor and "employee-like" on another; when the picture is mixed, the safer assumption is generally employee status until a professional confirms otherwise.
+    </div>
+
+    <h2>One Test, Almost Every Decision</h2>
+    <p>Whether you're hiring your first contractor, reviewing a worker you've had for years, or responding to a question from your accountant, it almost always comes back to this same framework. The IRS calls it the common-law control test. It's not a checklist you complete once and forget — it's a lens for evaluating a working relationship as it actually functions, not just what a contract says.</p>
+
+    <h2>The Three Factors</h2>
+    <p>The IRS looks at the whole relationship — these three lenses, considered together, not in isolation.</p>
+
+    <h3>Factor 1: Behavioral Control</h3>
+    <p>Does the business control, or have the right to control, how the work gets done?</p>
+    <div class="signal-grid">
+      <div class="signal-col employee">
+        <p class="label">Signals of employee status</p>
+        <ul>
+          <li>You set specific hours or a fixed schedule</li>
+          <li>You give detailed instructions on how, when, and where work happens</li>
+          <li>You train the worker on your required procedures</li>
+          <li>You evaluate the process, not just the finished result</li>
+        </ul>
+      </div>
+      <div class="signal-col contractor">
+        <p class="label">Signals of contractor status</p>
+        <ul>
+          <li>Worker decides their own hours and methods</li>
+          <li>You specify the outcome, they determine the approach</li>
+          <li>Worker brings pre-existing expertise; no training needed</li>
+          <li>You evaluate the final product, not the day-to-day process</li>
+        </ul>
+      </div>
+    </div>
+    <p><em>Key idea: it's the right to direct the work that matters, not whether you actually exercise it every day.</em></p>
+
+    <h3>Factor 2: Financial Control</h3>
+    <p>Who controls the business side — investment, expenses, opportunity for profit or loss?</p>
+    <div class="signal-grid">
+      <div class="signal-col employee">
+        <p class="label">Signals of employee status</p>
+        <ul>
+          <li>You reimburse expenses or supply tools/equipment</li>
+          <li>Worker has no other clients — you're their sole income</li>
+          <li>Worker earns a guaranteed wage regardless of outcome</li>
+          <li>Worker bears no real risk of profit or loss</li>
+        </ul>
+      </div>
+      <div class="signal-col contractor">
+        <p class="label">Signals of contractor status</p>
+        <ul>
+          <li>Worker invests in their own equipment and tools</li>
+          <li>Worker markets services to other clients in the market</li>
+          <li>Worker bills a flat or project rate, bearing the risk of loss</li>
+          <li>Worker can realize a genuine profit or a genuine loss</li>
+        </ul>
+      </div>
+    </div>
+    <p><em>Key idea: a true business bears real economic risk. Guaranteed pay with no downside looks like a wage, not an invoice.</em></p>
+
+    <h3>Factor 3: Type of Relationship</h3>
+    <p>Are there benefits, a contract, and is the work central and ongoing to the business?</p>
+    <div class="signal-grid">
+      <div class="signal-col employee">
+        <p class="label">Signals of employee status</p>
+        <ul>
+          <li>You offer benefits: insurance, PTO, retirement contributions</li>
+          <li>The relationship is open-ended, with no defined end</li>
+          <li>The work is central to your core business, not incidental</li>
+        </ul>
+      </div>
+      <div class="signal-col contractor">
+        <p class="label">Signals of contractor status</p>
+        <ul>
+          <li>No employee-type benefits are offered</li>
+          <li>The engagement has a defined scope, project, or end date</li>
+          <li>A signed independent contractor agreement defines the scope</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>No Single Factor Decides the Case</h2>
+    <p>This test descends from a longer, 20-factor common-law analysis the IRS used historically. The three-factor framework groups those considerations into workable categories, but the underlying principle hasn't changed:</p>
+    <ul>
+      <li>A worker can score "contractor-like" on one factor and "employee-like" on another — the IRS weighs the total relationship, not a single checkbox</li>
+      <li>Facts matter more than labels: what actually happens day to day outweighs what a contract or invoice says</li>
+      <li>The analysis can change over time — a role that started as a genuine project can drift into an employee-like pattern without anyone updating the paperwork</li>
+      <li>When the picture is mixed, the safer assumption is generally employee status until a professional confirms otherwise</li>
+    </ul>
+
+    <h2>Common Myths That Get People in Trouble</h2>
+    <div class="myth-item">
+      <p class="q">"We signed a contract calling them a contractor."</p>
+      <p class="a">A label doesn't override the facts — the IRS looks at how the relationship actually functions.</p>
+    </div>
+    <div class="myth-item">
+      <p class="q">"They asked to be paid as a 1099."</p>
+      <p class="a">The worker's preference doesn't change the legal analysis or who owes what taxes.</p>
+    </div>
+    <div class="myth-item">
+      <p class="q">"It's under $600, so it doesn't matter."</p>
+      <p class="a">The $600 threshold triggers a 1099-NEC filing requirement — it has nothing to do with classification itself.</p>
+    </div>
+    <div class="myth-item">
+      <p class="q">"They only work a few hours a week."</p>
+      <p class="a">Part-time doesn't equal contractor — a part-time role can still be an employee role.</p>
+    </div>
+    <div class="myth-item">
+      <p class="q">"Everyone in our industry does it this way."</p>
+      <p class="a">Industry norms don't bind the IRS, and "everyone does it" has never been a successful audit defense.</p>
+    </div>
+
+    <div class="callout">
+      <strong>Putting it together:</strong> "I hired a bookkeeper who comes in every Tuesday and Thursday, uses our accounting software under our license, and I review her work weekly. She also does books for two other small businesses. She invoices us monthly at an hourly rate." Behavioral control is mixed — fixed days lean employee-like, but she controls her own method. Financially and relationally, she leans contractor: she serves other clients, bears ordinary business risk, and the work is specialized rather than central. Likely conclusion: a defensible 1099 relationship — but mixed cases like this are worth a professional's second look.
+    </div>
+
+    <h2>What Misclassification Actually Costs</h2>
+    <ul>
+      <li><strong>Back payroll taxes</strong> — the employer share of Social Security and Medicare, retroactive to when the role began functioning as employment</li>
+      <li><strong>Penalties and interest</strong> — failure-to-withhold and failure-to-deposit penalties, plus interest from each period's original due date</li>
+      <li><strong>Multiple agencies, independently</strong> — state unemployment and workers' comp agencies can pursue this separately from any federal resolution</li>
+      <li><strong>Benefits exposure</strong> — retroactive claims for benefits the worker would have received as an employee</li>
+    </ul>
+
+    <h2>Documentation That Supports Your Position</h2>
+    <ul>
+      <li>A signed agreement describing outcomes and deliverables, not supervised tasks</li>
+      <li>Evidence the worker markets services to, and serves, other clients</li>
+      <li>Invoices reflecting project or milestone billing, not a recurring wage-like pattern</li>
+      <li>No company equipment, email address, or mandatory training records</li>
+      <li>Form W-9 collected before the first payment, Form 1099-NEC filed on time</li>
+    </ul>
+    <p><em>Even strong documentation can't fix a role where the facts clearly point to employee status — in that case, the paperwork just becomes evidence of what you already knew.</em></p>
+
+    <h2>When the Case Is Genuinely Unclear</h2>
+    <p>Two paths exist for getting formal clarity. <strong>Form SS-8</strong> is a formal request to the IRS for a determination on a specific worker's status — either the business or the worker can file it, but it takes several months and applies going forward, not for urgent decisions. A <strong>professional review</strong> — a bookkeeper, CPA, or employment attorney weighing the facts against the three-factor test and any applicable state law — is faster, and can weigh state-specific tests the IRS process doesn't consider.</p>
+
+    <h2>Quick-Reference Decision Framework</h2>
+    <ol>
+      <li>Do you control the hours, methods, or day-to-day process? <strong>Yes → leans employee</strong></li>
+      <li>Does the worker take on other clients in the same line of work? <strong>No → leans employee</strong></li>
+      <li>Does the worker bear real risk of profit or loss on the engagement? <strong>No → leans employee</strong></li>
+      <li>Is the relationship open-ended and central to your core business? <strong>Yes → leans employee</strong></li>
+    </ol>
+    <p>Three or more "employee-leaning" answers? Treat the role as W-2 until a professional confirms otherwise.</p>
+
+    <div class="disclaimer">
+      This material is for general education and does not constitute tax or legal advice. Consult a qualified professional for guidance specific to your business.
+    </div>
+
+    <div class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h3>Does a signed contract calling someone a contractor settle the question?</h3>
+        <p>No. A label doesn't override the facts — the IRS looks at how the relationship actually functions day to day, not what a contract or invoice says.</p>
+      </div>
+      <div class="faq-item">
+        <h3>If a worker only works a few hours a week, are they automatically a contractor?</h3>
+        <p>No. Part-time doesn't equal contractor. A part-time role can still be an employee role if the business controls how, when, and where the work gets done.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What if the case is genuinely mixed and unclear?</h3>
+        <p>Two paths exist for formal clarity: filing Form SS-8 with the IRS for an official determination, or a professional review by a bookkeeper, CPA, or employment attorney who can also weigh state-specific tests the federal process doesn't consider.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<div class="related">
+  <div class="wrap">
+    <h2>Related guides</h2>
+    <div class="related-links">
+      <a href="/w2-vs-1099.html"><span>Should this new hire be a W-2 or a 1099?</span><span class="arrow">→</span></a>
+      <a href="/1099-to-w2-conversion.html"><span>We just converted a 1099 to W-2. Now what?</span><span class="arrow">→</span></a>
+      <a href="/va-passes-irs-test-rhode-island.html"><span>Your VA passes the IRS test. Does it pass Rhode Island's?</span><span class="arrow">→</span></a>
+    </div>
+  </div>
+</div>
+
+<div class="cta-band">
+  <div class="wrap">
+    <p class="eyebrow">Not sure how this applies to you?</p>
+    <h2>Get a second set of eyes on your worker classifications.</h2>
+    <a class="btn primary" href="mailto:nacarledger@outlook.com">Ask directly</a>
+    <a class="btn secondary" href="#" onclick="openPdfViewer('/Nacar_Ledger_IRS_Three_Factor_Test.pdf', 'IRS Three Factor Test'); return false;">View the guide</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap-wide">
+    Nácar &amp; Ledger — Financial &amp; Operations Consulting for Providence's Small Businesses
+    &nbsp;|&nbsp; <a href="mailto:nacarledger@outlook.com">nacarledger@outlook.com</a>
+    &nbsp;|&nbsp; 401-617-7926
+  </div>
+</footer>
+
+
+<div class="pdf-viewer-overlay" id="pdfViewerOverlay" onclick="if(event.target===this)closePdfViewer()">
+  <div class="pdf-viewer-box">
+    <div class="pdf-viewer-header">
+      <span id="pdfViewerTitle"></span>
+      <div class="pdf-viewer-actions">
+        <a id="pdfViewerDownload" href="#" download>Download</a>
+        <button class="pdf-viewer-close" onclick="closePdfViewer()" aria-label="Close">&times;</button>
+      </div>
+    </div>
+    <iframe id="pdfViewerFrame" src="" title="Guide preview"></iframe>
+  </div>
+</div>
+<script>
+  function openPdfViewer(url, title) {
+    document.getElementById('pdfViewerFrame').src = url;
+    document.getElementById('pdfViewerTitle').textContent = title;
+    document.getElementById('pdfViewerDownload').href = url;
+    document.getElementById('pdfViewerOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closePdfViewer() {
+    document.getElementById('pdfViewerOverlay').classList.remove('open');
+    document.getElementById('pdfViewerFrame').src = '';
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closePdfViewer();
+  });
+</script>
+</body>
+</html>

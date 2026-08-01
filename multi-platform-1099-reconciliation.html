@@ -12,10 +12,10 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>We Converted a 1099 to W-2. Now What? | Nácar &amp; Ledger</title>
-<meta name="description" content="Figuring out what you owe after converting a 1099 worker to W-2: the lookback period, Section 3509 relief, and which filings to correct first.">
-<link rel="alternate" hreflang="en" href="https://nacarledger.com/1099-to-w2-conversion.html">
-<link rel="alternate" hreflang="es" href="https://nacarledger.com/1099-to-w2-conversion-es.html">
+<title>1099s From 5 Platforms — Reporting Right? | Nácar &amp; Ledger</title>
+<meta name="description" content="How to reconcile multiple 1099s across platforms without double-counting or missing income — before the IRS's automated matching program finds the gap.">
+<link rel="alternate" hreflang="en" href="https://nacarledger.com/multi-platform-1099-reconciliation.html">
+<link rel="alternate" hreflang="es" href="https://nacarledger.com/multi-platform-1099-reconciliation-es.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
@@ -26,26 +26,26 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "How far back do I have to calculate what I owe?",
+      "name": "If a platform never sent me a 1099, do I still owe taxes on that income?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The starting point is the date the worker's role actually began functioning like an employee's, not the date you decided to fix it or the original hire date. Employment tax returns are generally open for correction going back 3 years from the original due date, but the underlying misclassification can be older."
+        "text": "Yes. The 1099 threshold is a reporting rule for the platform, not a taxability rule for you — every dollar earned is reportable whether or not a form ever arrives."
       }
     },
     {
       "@type": "Question",
-      "name": "What is Section 3509 and does it apply to me?",
+      "name": "Why would the same payment get reported twice?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Section 3509 is a reduced-rate relief option for employers who misclassified a worker in good faith. It's generally available when the misclassification wasn't intentional disregard of the reporting rules and Form 1099-NEC was filed for the worker in the years in question. It reduces the employee-side liability shifted onto the employer; your own employer-side FICA is still owed in full either way."
+        "text": "A brand deal paid through a processor like PayPal can get reported once by the brand on a 1099-NEC, and again by the processor on a 1099-K, because each side reports what it saw without checking whether the other side already reported it too."
       }
     },
     {
       "@type": "Question",
-      "name": "Does fixing my federal filings resolve everything?",
+      "name": "Is the number on my 1099-K my actual taxable income?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. A federal correction resolves IRS exposure but doesn't automatically resolve state unemployment insurance, workers' compensation, state income tax withholding, or paid leave program obligations — those typically need their own separate corrections."
+        "text": "No. 1099-K totals are gross, before platform fees, refunds, and chargebacks. Reporting that gross figure without backing those out overstates your actual income."
       }
     }
   ]
@@ -102,20 +102,23 @@
   .direct-answer{ background:var(--pearl); border-left:3px solid var(--gold); border-radius:0 8px 8px 0; padding:22px 26px; font-size:1.05rem; line-height:1.7; margin-bottom:40px; }
   .direct-answer strong{ color:var(--ocean); }
   article h2{ font-size:1.4rem; color:var(--ocean); margin-top:44px; margin-bottom:14px; }
-  article h3{ font-size:1.1rem; color:var(--ink); margin-top:22px; margin-bottom:8px; }
   article p{ font-size:1rem; margin:0 0 16px; }
   article ul, article ol{ margin:0 0 16px; padding-left:22px; }
   article li{ margin-bottom:8px; }
+  .mistake-item{ border-top:1px solid var(--line); padding:20px 0; }
+  .mistake-item .num{ font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--gold-deep); }
+  .mistake-item h3{ font-family:'Fraunces',serif; font-size:1.1rem; color:var(--ink); margin:4px 0 10px; }
+  .mistake-item p{ font-size:0.95rem; margin:0 0 6px; }
   .path-grid{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:16px 0 24px; }
-  .path-col{ border-radius:8px; padding:18px 20px; }
-  .path-col.reactive{ background:var(--pearl); border-top:3px solid var(--rose-deep); }
-  .path-col.proactive{ background:var(--pearl); border-top:3px solid var(--ocean); }
+  .path-col{ background:var(--pearl); border-radius:8px; padding:18px 20px; }
+  .path-col.reactive{ border-top:3px solid var(--rose-deep); }
+  .path-col.proactive{ border-top:3px solid var(--ocean); }
   .path-col p.label{ font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--muted); margin-bottom:10px; }
-  .callout{ background:var(--abyss-deep); color:#E4E9EB; border-radius:10px; padding:20px 24px; margin:20px 0; font-size:0.95rem; }
-  .callout strong{ color:var(--gold); }
-  table.compare{ width:100%; border-collapse:collapse; margin:16px 0 24px; font-size:0.92rem; }
-  table.compare th{ font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.05em; text-transform:uppercase; text-align:left; color:var(--muted); padding:8px 12px; border-bottom:2px solid var(--line); }
-  table.compare td{ padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; }
+  .fix-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:16px 0 24px; }
+  .fix-item{ background:var(--pearl); border-radius:8px; padding:16px 18px; }
+  .fix-item .num{ font-family:'Fraunces',serif; color:var(--gold-deep); font-size:1.2rem; }
+  .fix-item h3{ font-size:0.98rem; margin:4px 0 6px; }
+  .fix-item p{ font-size:0.88rem; color:var(--muted); margin:0; }
 
   .faq{ margin-top:48px; }
   .faq h2{ font-size:1.4rem; color:var(--ocean); margin-bottom:18px; }
@@ -143,8 +146,7 @@
   @media (max-width:640px){
     .nav-links{ display:none; }
     .nav-mobile{ display:block; }
-    .path-grid{ grid-template-columns:1fr; }
-    table.compare{ font-size:0.82rem; }
+    .path-grid, .fix-grid{ grid-template-columns:1fr; }
     h1{ font-size:1.7rem; }
   }
 
@@ -183,7 +185,7 @@
       <a href="/dealcheck.html">Deal Check</a>
       <span class="lang-toggle">
         <span class="lang-btn active">EN</span>
-        <a href="/1099-to-w2-conversion-es.html" class="lang-btn">ES</a>
+        <a href="/multi-platform-1099-reconciliation-es.html" class="lang-btn">ES</a>
       </span>
     </div>
     <details class="nav-mobile">
@@ -194,7 +196,7 @@
         <a href="/realestate.html">Real Estate</a>
         <a class="current" href="/resources.html">Guides</a>
         <a href="/dealcheck.html">Deal Check</a>
-        <a href="/1099-to-w2-conversion-es.html">Español</a>
+        <a href="/multi-platform-1099-reconciliation-es.html">Español</a>
       </div>
     </details>
   </div>
@@ -205,105 +207,97 @@
     <ol>
       <li><a href="/">Home</a></li>
       <li><a href="/resources.html">Guides</a></li>
-      <li><a href="/resources.html#worker-classification">Worker Classification</a></li>
-      <li>1099 to W-2 Conversion</li>
+      <li><a href="/resources.html#just-starting-out">Creator Extras</a></li>
+      <li>Multi-Platform 1099s</li>
     </ol>
   </div>
 </div>
 
 <article>
   <div class="wrap">
-    <p class="eyebrow article-eyebrow">Worker classification</p>
-    <h1>We Just Converted a 1099 to W-2. Now What?</h1>
+    <p class="eyebrow article-eyebrow">Creator extras</p>
+    <h1>I Have 1099s From Five Different Platforms — Am I Reporting This Right?</h1>
 
     <div class="direct-answer">
-      <strong>Short answer:</strong> you calculate back taxes from the date the role actually started functioning like employment, not the original hire date — and because you converted proactively rather than being caught, you likely qualify for Section 3509's reduced-rate relief instead of full standard liability. The correction runs through amended payroll filings, corrected W-2s, and possibly a corrected or voided 1099-NEC for the same wages.
+      <strong>Short answer:</strong> reconcile every 1099 and platform payout against a running ledger you keep yourself, not against memory. The two failure modes run in opposite directions — a brand and a payment processor both reporting the same payment, which double-counts it, and a platform that never sends a form at all, which quietly drops real income. Only your own total catches both.
     </div>
 
-    <h2>You're in a Better Position Than You Think</h2>
-    <p>There are two ways employers end up here, and which one you're in changes everything about your options.</p>
+    <h2>Why This List Exists</h2>
+    <p>Getting paid on five platforms feels like just getting paid. It stops feeling simple the moment five different 1099s show up, and none of them match what you thought you made. A brand pays through PayPal, and both the brand and PayPal report it — the same dollar shows up on two forms unless someone catches it. Not every platform issues a 1099, but the payments are still taxable whether or not a form ever arrives. And the IRS matches 1099 totals against your return automatically — a gap between the two is what actually triggers a notice.</p>
+
+    <h2>The Six Mistakes</h2>
+
+    <div class="mistake-item">
+      <p class="num">01</p>
+      <h3>Assuming No 1099 Means No Taxable Income</h3>
+      <p>A platform paid out for the year but never sent a 1099, so the income doesn't get reported at all — it's easy to treat the form as the trigger for taxes instead of the payment itself. The 1099 threshold is a reporting rule for the platform, not a taxability rule for you.</p>
+    </div>
+    <div class="mistake-item">
+      <p class="num">02</p>
+      <h3>Double-Counting the Same Payment</h3>
+      <p>A brand deal gets reported once by the brand on a 1099-NEC, and again by the payment processor that moved the money on a 1099-K, because each side reports what it saw without checking the other. Report both forms at face value and the same income gets taxed twice.</p>
+    </div>
+    <div class="mistake-item">
+      <p class="num">03</p>
+      <h3>Treating 1099-K Totals as Take-Home Pay</h3>
+      <p>The number on the 1099-K gets reported as income exactly as printed, because it's the only number the platform gave you. 1099-K totals are gross, before platform fees, refunds, and chargebacks — reporting the gross figure overstates your income.</p>
+    </div>
+    <div class="mistake-item">
+      <p class="num">04</p>
+      <h3>Losing Track of Which Platform Reports What</h3>
+      <p>Some platforms issue a 1099-NEC, some issue a 1099-K, some issue nothing, and by tax time nobody remembers which is which. Without a running list, reconciling five different forms against memory alone is where mistakes actually happen.</p>
+    </div>
+    <div class="mistake-item">
+      <p class="num">05</p>
+      <h3>Mixing Business and Personal Payment Apps</h3>
+      <p>The same Venmo or Cash App account receives platform payouts, fan gifts, and a roommate's half of the rent, because opening a separate account felt like overkill when the payments started small. Personal transfers can get swept into a 1099-K by mistake, and real income can get lost in a sea of personal transactions.</p>
+    </div>
+    <div class="mistake-item">
+      <p class="num">06</p>
+      <h3>Never Reconciling the Total</h3>
+      <p>Each 1099 gets entered on the return as it arrives, with no step that adds them up against what was actually earned, because filing feels done once every form has been typed in. Without a total to check against, there's no way to know the forms are complete or free of duplicates.</p>
+    </div>
+
+    <h2>How This Actually Catches Up With You</h2>
+    <p>Unreconciled 1099s resolve themselves one of two ways — and one is a lot more expensive than the other.</p>
     <div class="path-grid">
-      <div class="path-col reactive">
-        <p class="label">Reactive</p>
-        <p>The IRS or a state agency reclassifies the worker for you — through an audit, a worker's claim, or an unemployment filing. Full penalties and interest generally apply, with fewer options to reduce the bill.</p>
-      </div>
       <div class="path-col proactive">
-        <p class="label">Proactive (you)</p>
-        <p>You've already decided to convert the role and want to true up last year correctly, before anyone asks. Reduced-rate relief and cleaner correction paths are generally available to you.</p>
+        <p class="label">Path A — you reconcile it yourself</p>
+        <p>You total every 1099 and platform payout before filing, catch the duplicate or the gap, and adjust the return before it's submitted. The fix happens quietly, on your own timeline, with no one else involved.</p>
+      </div>
+      <div class="path-col reactive">
+        <p class="label">Path B — the IRS reconciles it for you</p>
+        <p>The IRS's automated matching program compares every 1099 filed under your name to what your return reported, and flags the difference. That mismatch generates a notice — commonly a CP2000 — proposing additional tax, penalties, and interest.</p>
       </div>
     </div>
 
-    <h2>Step 1: How Far Back Do You Go?</h2>
-    <p>The starting point is the date the worker's role actually began functioning like an employee's — not the date you decided to fix it. Employment tax returns are generally open for correction going back 3 years from the original due date, but the underlying misclassification can be older. If the role changed over time, you only owe employee-style tax treatment from the point the relationship became employee-like, not necessarily the entire engagement. Having filed 1099-NEC forms for the worker all along generally puts you in a better rate category than if nothing was ever reported.</p>
-
-    <div class="callout">
-      <strong>A timeline example:</strong> "We hired a 1099 designer in March last year. By September, we'd given her a company laptop, set her hours, and she'd stopped taking other clients. We just moved her to W-2 this month. What do we owe?" The likely answer: back taxes are calculated from September, not March — the period where the working relationship actually became employee-like. The genuinely independent stretch before that typically stays 1099.
+    <h2>The Fix Is Almost Always the Same</h2>
+    <div class="fix-grid">
+      <div class="fix-item"><p class="num">1</p><h3>Keep one running ledger</h3><p>Log every payout by platform and date as it lands, not just at tax time.</p></div>
+      <div class="fix-item"><p class="num">2</p><h3>Match 1099s to your ledger</h3><p>When the forms arrive, check each one against what you already tracked.</p></div>
+      <div class="fix-item"><p class="num">3</p><h3>Report income, 1099 or not</h3><p>Your ledger determines what's taxable — the form is just paperwork.</p></div>
+      <div class="fix-item"><p class="num">4</p><h3>Catch double-reported income</h3><p>Flag it if a brand and a processor both report the same transaction.</p></div>
+      <div class="fix-item"><p class="num">5</p><h3>Back out fees separately</h3><p>Use gross figures as a starting point, not a final answer.</p></div>
+      <div class="fix-item"><p class="num">6</p><h3>Keep creator pay separate</h3><p>A dedicated account for platform-related income, so nothing gets lost.</p></div>
     </div>
-
-    <h2>Step 2: Calculating What You Owe</h2>
-    <p>Under the standard, full-liability method, the employer becomes responsible for both sides of the tax relationship: the employer share of FICA (owed regardless of classification), the employee share of FICA (normally withheld from paychecks, but the employer becomes liable if it wasn't), and federal income tax withholding calculated using the worker's presumed filing status if unknown, plus failure-to-withhold and failure-to-deposit penalties and interest. This is the expensive path — Section 3509, below, often reduces it significantly for qualifying employers.</p>
-
-    <h2>A Reduced-Rate Option: IRC §3509</h2>
-    <p>Congress built a relief valve for employers who misclassified in good faith. Instead of the full standard liability, Section 3509 offers reduced flat rates if you qualify — generally available when the misclassification wasn't "intentional disregard" of the reporting rules, and Form 1099-NEC was filed for the worker for the years in question. Instead of collecting the full employee-side FICA and withholding amounts, the statute applies reduced flat percentages to those specific pieces. The employer's own share of FICA is still owed in full either way — 3509 only reduces the employee-side liability shifted onto the employer. Exact rates are set by statute and can be updated; confirm current figures with a tax professional before calculating a number.</p>
-
-    <table class="compare">
-      <tr><th>Standard method</th><th>Section 3509 relief</th></tr>
-      <tr><td>Employer share of FICA — full amount, always owed</td><td>Employer share of FICA — still full amount, unchanged</td></tr>
-      <tr><td>Employee share of FICA — full amount shifted to employer</td><td>Employee share of FICA — reduced flat rate instead of full amount</td></tr>
-      <tr><td>Income tax withholding — full presumed amount</td><td>Income tax withholding — reduced flat rate instead of presumed full amount</td></tr>
-      <tr><td>Standard failure-to-file/deposit penalties can apply</td><td>Generally lower overall cash outlay for good-faith errors</td></tr>
-    </table>
-
-    <h2>Correcting Your Filings</h2>
-    <ol>
-      <li><strong>Form 941-X</strong> — amend each affected quarter's payroll tax return to reflect the reclassified wages and taxes now due</li>
-      <li><strong>Form W-2 / W-2c</strong> — issue a corrected wage statement for the affected periods so the worker's own tax filings can be reconciled</li>
-      <li><strong>Correct or void 1099-NEC</strong> — if a 1099 was already filed for the same wages now reported on a W-2, that overlap needs to be resolved with the IRS and the worker</li>
-      <li><strong>State payroll returns</strong> — amend state income tax withholding filings to match; due dates and processes vary significantly by state</li>
-    </ol>
-
-    <h2>State Obligations Don't Disappear</h2>
-    <p>A federal correction resolves your IRS exposure — it doesn't automatically resolve state unemployment insurance (retroactive contributions, often audited independently from federal FUTA), workers' compensation (carriers may reassess premiums retroactively), state income tax withholding (most states require their own amended filings), or paid leave and disability programs with mandatory retroactive contributions.</p>
-
-    <h2>Documentation to Gather First</h2>
-    <ul>
-      <li>Every payment made to the worker, by date, for the full period in question</li>
-      <li>Copies of any 1099-NEC forms already filed for that worker</li>
-      <li>Dates when working conditions changed — schedule, equipment, exclusivity</li>
-      <li>The worker's W-4 (if collected) or best available filing status information</li>
-      <li>Any existing independent contractor agreement and its stated scope</li>
-    </ul>
-
-    <h2>Two Paths: VCSP vs. Self-Correction</h2>
-    <p>Since you've already converted the role, you're choosing how to true up the past, not whether to convert. Self-correction (the 941-X route) lets you calculate and pay what's owed for the specific period directly, keeping the correction proportional to only the affected quarters — Section 3509 relief may apply if you qualify. The Voluntary Classification Settlement Program (VCSP) is only available before you've reclassified on your own; it requires applying in advance, pays roughly 10% of one year's liability, and avoids interest and penalties — worth knowing about for other contractors you haven't converted yet.</p>
-
-    <h2>Common Mistakes When Self-Correcting</h2>
-    <ul>
-      <li>Calculating back taxes from the hire date instead of when the role actually became employee-like</li>
-      <li>Forgetting to correct or void the overlapping 1099-NEC for the same wages</li>
-      <li>Assuming Section 3509 rates apply without confirming the 1099-filing and good-faith requirements</li>
-      <li>Fixing the federal filings but skipping state unemployment and workers' comp exposure</li>
-      <li>Not documenting the reasoning behind the effective date you chose</li>
-      <li>Waiting for the next annual filing instead of amending the affected quarter promptly</li>
-    </ul>
 
     <div class="disclaimer">
-      This material is for general education and does not constitute tax or legal advice. Consult a qualified professional for guidance specific to your business.
+      This guide is for general educational purposes only and isn't tax, legal, or accounting advice. Consult a qualified professional for guidance specific to your situation.
     </div>
 
     <div class="faq">
       <h2>Frequently Asked Questions</h2>
       <div class="faq-item">
-        <h3>How far back do I have to calculate what I owe?</h3>
-        <p>The starting point is the date the worker's role actually began functioning like an employee's, not the date you decided to fix it or the original hire date. Employment tax returns are generally open for correction going back 3 years from the original due date, but the underlying misclassification can be older.</p>
+        <h3>If a platform never sent me a 1099, do I still owe taxes on that income?</h3>
+        <p>Yes. The 1099 threshold is a reporting rule for the platform, not a taxability rule for you — every dollar earned is reportable whether or not a form ever arrives.</p>
       </div>
       <div class="faq-item">
-        <h3>What is Section 3509 and does it apply to me?</h3>
-        <p>Section 3509 is a reduced-rate relief option for employers who misclassified a worker in good faith. It's generally available when the misclassification wasn't intentional disregard of the reporting rules and Form 1099-NEC was filed for the worker in the years in question.</p>
+        <h3>Why would the same payment get reported twice?</h3>
+        <p>A brand deal paid through a processor like PayPal can get reported once by the brand and again by the processor, because each side reports what it saw independently.</p>
       </div>
       <div class="faq-item">
-        <h3>Does fixing my federal filings resolve everything?</h3>
-        <p>No. A federal correction resolves IRS exposure but doesn't automatically resolve state unemployment insurance, workers' compensation, state income tax withholding, or paid leave program obligations.</p>
+        <h3>Is the number on my 1099-K my actual taxable income?</h3>
+        <p>No. 1099-K totals are gross, before platform fees, refunds, and chargebacks. Reporting that gross figure overstates your actual income.</p>
       </div>
     </div>
   </div>
@@ -313,9 +307,8 @@
   <div class="wrap">
     <h2>Related guides</h2>
     <div class="related-links">
-      <a href="/w2-vs-1099.html"><span>Should this new hire be a W-2 or a 1099?</span><span class="arrow">→</span></a>
-      <a href="/irs-three-factor-test.html"><span>Employee or contractor? How the IRS actually decides</span><span class="arrow">→</span></a>
-      <a href="/va-passes-irs-test-rhode-island.html"><span>Your VA passes the IRS test. Does it pass Rhode Island's?</span><span class="arrow">→</span></a>
+      <a href="/setting-up-your-business-finances.html"><span>Setting up your business finances right from day one (start here)</span><span class="arrow">→</span></a>
+      <a href="/gifted-products-taxable-income.html"><span>A brand sent me free stuff instead of paying me — is that taxable?</span><span class="arrow">→</span></a>
     </div>
   </div>
 </div>
@@ -323,9 +316,9 @@
 <div class="cta-band">
   <div class="wrap">
     <p class="eyebrow">Not sure how this applies to you?</p>
-    <h2>Get your correction calculated right the first time.</h2>
+    <h2>Get your numbers to match before the IRS checks.</h2>
     <a class="btn primary" href="mailto:nacarledger@outlook.com">Ask directly</a>
-    <a class="btn secondary" href="#" onclick="openPdfViewer('/Nacar_Ledger_1099_to_W2_Conversion.pdf', '1099 to W2 Conversion'); return false;">View the guide</a>
+    <a class="btn secondary" href="#" onclick="openPdfViewer('/Nacar_Ledger_Multi_Platform_1099_Reconciliation.pdf', 'Multi Platform 1099 Reconciliation'); return false;">View the guide</a>
   </div>
 </div>
 
