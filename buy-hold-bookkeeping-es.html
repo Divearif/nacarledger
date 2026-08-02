@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QXRQ1B2FRD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-QXRQ1B2FRD');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Renta Nunca Muestra Depreciación — ¿Es Un Problema? | Nácar &amp; Ledger</title>
+<meta name="description" content="Seis errores de contabilidad que hacen que los números de una renta de buy &amp; hold estén mal — y la sorpresa de recaptura de depreciación que espera hasta la venta para aparecer.">
+<link rel="alternate" hreflang="en" href="https://nacarledger.com/buy-hold-bookkeeping.html">
+<link rel="alternate" hreflang="es" href="https://nacarledger.com/buy-hold-bookkeeping-es.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Una renta se deprecia incluso en los meses en que realmente no está rentada?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. La depreciación corre según el calendario de puesta en servicio del edificio, no según la ocupación — una vacante entre inquilinos, o el tiempo dedicado a preparar la unidad para el siguiente inquilino, no la pausa. La propiedad se deprecia mientras se mantenga disponible para renta."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué es la ganancia no recapturada de la Sección 1250?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Es la parte de la ganancia de venta igual a la depreciación tomada durante el período de tenencia, gravada a una tasa federal distinta al resto de la ganancia de capital. Solo se vuelve visible en la venta, por lo cual atrapa a los dueños que no han estado dando seguimiento a su depreciación acumulada a lo largo del camino."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Un techo o sistema de aire acondicionado nuevo se debe capitalizar o registrar como reparación?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un reemplazo completo — un techo nuevo, un sistema de aire acondicionado nuevo — es una mejora de capital, depreciada en su propio calendario comenzando en su propia fecha de puesta en servicio. Una reparación que restaura la propiedad a su condición anterior sin extender su vida útil, como remendar una sección del techo, se registra como gasto conforme se incurre. Los casos límite deben seguir la política de capitalización del CPA del cliente."
+      }
+    }
+  ]
+}
+</script>
+<style>
+  :root{
+    --abyss-deep:#081F33; --ocean:#0E3A5F; --gold:#C9A97E; --gold-deep:#8C7A54;
+    --rose:#D98C7A; --rose-deep:#B8664F; --pearl:#F7F2EA; --ink:#24303A;
+    --muted:#5B6670; --white:#FFFFFF; --line:#E4DCC9;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{ margin:0; font-family:'Inter',sans-serif; color:var(--ink); background:var(--white); -webkit-font-smoothing:antialiased; line-height:1.65; }
+  h1,h2,h3{ font-family:'Fraunces',serif; font-weight:500; margin:0; }
+  .eyebrow{ font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; font-weight:500; }
+  a{ color:inherit; }
+  .wrap{ max-width:760px; margin:0 auto; padding:0 32px; }
+  .wrap-wide{ max-width:1080px; margin:0 auto; padding:0 32px; }
+
+  nav{ background:var(--abyss-deep); padding:22px 0; }
+  nav .wrap-wide{ display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px; }
+  .nav-mark{ display:flex; align-items:center; gap:14px; text-decoration:none; }
+  .nav-mark svg{ width:34px; height:31px; }
+  .nav-mark span{ font-family:'Fraunces',serif; font-size:1.3rem; color:var(--pearl); }
+  .nav-mark span b{ color:var(--gold); font-weight:500; }
+  .nav-links{ display:flex; align-items:center; gap:26px; }
+  .nav-links a{ font-family:'IBM Plex Mono',monospace; font-size:0.76rem; letter-spacing:0.07em; text-transform:uppercase; color:#9FB0B8; text-decoration:none; }
+  .nav-links a:hover{ color:var(--pearl); }
+  .nav-links a.current{ color:var(--gold); }
+  .nav-links .cta{ color:var(--pearl); border:1px solid rgba(247,242,234,0.35); padding:9px 18px; border-radius:2px; }
+  .nav-links .cta:hover{ border-color:var(--gold); background:rgba(201,169,126,0.08); }
+  .nav-mobile{ display:none; position:relative; }
+  .nav-mobile summary{ list-style:none; cursor:pointer; font-family:'IBM Plex Mono',monospace; font-size:0.76rem; letter-spacing:0.07em; text-transform:uppercase; color:var(--pearl); border:1px solid rgba(247,242,234,0.35); padding:8px 16px; border-radius:2px; }
+  .nav-mobile summary::-webkit-details-marker{ display:none; }
+  .nav-mobile-panel{ position:absolute; top:calc(100% + 8px); right:0; background:var(--ocean); border:1px solid rgba(247,242,234,0.2); border-radius:4px; padding:8px; display:flex; flex-direction:column; min-width:180px; z-index:10; }
+  .nav-mobile-panel a{ font-family:'IBM Plex Mono',monospace; font-size:0.76rem; letter-spacing:0.06em; text-transform:uppercase; color:#9FB0B8; text-decoration:none; padding:10px 12px; border-radius:3px; display:block; }
+  .nav-mobile-panel a.current{ color:var(--gold); }
+  .nav-mobile-panel a:hover{ background:rgba(255,255,255,0.06); color:var(--pearl); }
+  .lang-toggle{ display:flex; align-items:center; gap:6px; }
+  .lang-btn{ font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.06em; padding:5px 11px; border-radius:3px; border:1px solid rgba(159,176,184,0.4); color:#9FB0B8; text-decoration:none; }
+  .lang-btn.active{ color:var(--abyss-deep); background:var(--gold); border-color:var(--gold); font-weight:600; }
+
+  .breadcrumb{ padding:18px 0; border-bottom:1px solid var(--line); }
+  .breadcrumb ol{ list-style:none; display:flex; flex-wrap:wrap; gap:6px; margin:0; padding:0; font-size:0.82rem; color:var(--muted); }
+  .breadcrumb a{ text-decoration:none; color:var(--muted); }
+  .breadcrumb a:hover{ color:var(--ocean); }
+  .breadcrumb li:not(:last-child)::after{ content:"/"; margin-left:6px; color:#C7BFAE; }
+  .breadcrumb li:last-child{ color:var(--ink); }
+
+  article{ padding:56px 0 24px; }
+  .article-eyebrow{ color:var(--rose-deep); margin-bottom:16px; }
+  h1{ font-size:2.1rem; line-height:1.28; color:var(--ocean); margin-bottom:22px; }
+  .direct-answer{ background:var(--pearl); border-left:3px solid var(--gold); border-radius:0 8px 8px 0; padding:22px 26px; font-size:1.05rem; line-height:1.7; margin-bottom:40px; }
+  .direct-answer strong{ color:var(--ocean); }
+  article h2{ font-size:1.4rem; color:var(--ocean); margin-top:44px; margin-bottom:14px; }
+  article p{ font-size:1rem; margin:0 0 16px; }
+  article ul, article ol{ margin:0 0 16px; padding-left:22px; }
+  article li{ margin-bottom:8px; }
+  .mistake-item{ border-top:1px solid var(--line); padding:20px 0; }
+  .mistake-item .num{ font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--gold-deep); }
+  .mistake-item h3{ font-family:'Fraunces',serif; font-size:1.1rem; color:var(--ink); margin:4px 0 10px; }
+  .mistake-item p{ font-size:0.95rem; margin:0 0 6px; }
+  .mistake-item p.label{ font-family:'IBM Plex Mono',monospace; font-size:0.68rem; letter-spacing:0.05em; text-transform:uppercase; color:var(--muted); margin:10px 0 3px; }
+  .callout{ background:var(--abyss-deep); color:#E4E9EB; border-radius:10px; padding:20px 24px; margin:20px 0; font-size:0.95rem; }
+  .callout strong{ color:var(--gold); }
+  .path-grid{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:16px 0 24px; }
+  .path-col{ background:var(--pearl); border-radius:8px; padding:18px 20px; }
+  .path-col.reactive{ border-top:3px solid var(--rose-deep); }
+  .path-col.proactive{ border-top:3px solid var(--ocean); }
+  .path-col p.label{ font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--muted); margin-bottom:10px; }
+  .fix-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:16px 0 24px; }
+  .fix-item{ background:var(--pearl); border-radius:8px; padding:16px 18px; }
+  .fix-item .num{ font-family:'Fraunces',serif; color:var(--gold-deep); font-size:1.2rem; }
+  .fix-item h3{ font-size:0.98rem; margin:4px 0 6px; }
+  .fix-item p{ font-size:0.88rem; color:var(--muted); margin:0; }
+
+  .faq{ margin-top:48px; }
+  .faq h2{ font-size:1.4rem; color:var(--ocean); margin-bottom:18px; }
+  .faq-item{ border-top:1px solid var(--line); padding:18px 0; }
+  .faq-item h3{ font-size:1rem; color:var(--ink); margin:0 0 8px; }
+  .faq-item p{ font-size:0.94rem; color:var(--muted); margin:0; }
+
+  .related{ background:var(--pearl); padding:44px 0; margin-top:56px; }
+  .related h2{ font-size:1.2rem; color:var(--ocean); margin-bottom:18px; }
+  .related-links{ display:flex; flex-direction:column; gap:12px; }
+  .related-links a{ display:flex; justify-content:space-between; align-items:center; gap:12px; background:var(--white); border:1px solid var(--line); border-radius:8px; padding:14px 18px; text-decoration:none; font-size:0.94rem; color:var(--ink); }
+  .related-links a span.arrow{ color:var(--rose-deep); font-weight:700; flex-shrink:0; }
+
+  .cta-band{ background:var(--ocean); padding:48px 0; text-align:center; }
+  .cta-band p.eyebrow{ color:var(--gold); margin-bottom:10px; }
+  .cta-band h2{ color:var(--white); font-size:1.4rem; margin-bottom:20px; }
+  .btn{ font-family:'IBM Plex Mono',monospace; font-size:0.8rem; letter-spacing:0.06em; text-decoration:none; padding:13px 26px; border-radius:3px; display:inline-block; }
+  .btn.primary{ background:var(--gold); color:var(--abyss-deep); font-weight:500; }
+  .btn.secondary{ border:1px solid rgba(247,242,234,0.4); color:var(--pearl); margin-left:10px; }
+
+  footer{ background:var(--abyss-deep); color:#C7D2D6; font-size:13px; padding:28px 0; text-align:center; }
+  footer a{ color:#C7D2D6; text-decoration:none; }
+  .disclaimer{ font-size:0.82rem; color:var(--muted); border-top:1px solid var(--line); padding-top:20px; margin-top:40px; }
+
+  @media (max-width:640px){
+    .nav-links{ display:none; }
+    .nav-mobile{ display:block; }
+    .path-grid, .fix-grid{ grid-template-columns:1fr; }
+    h1{ font-size:1.7rem; }
+  }
+
+  .pdf-viewer-overlay{ display:none; position:fixed; inset:0; background:rgba(8,31,51,0.85); z-index:1000; align-items:center; justify-content:center; padding:24px; }
+  .pdf-viewer-overlay.open{ display:flex; }
+  .pdf-viewer-box{ background:#FFFFFF; width:100%; max-width:900px; height:88vh; border-radius:10px; overflow:hidden; display:flex; flex-direction:column; box-shadow:0 30px 80px rgba(0,0,0,0.4); }
+  .pdf-viewer-header{ display:flex; justify-content:space-between; align-items:center; padding:14px 20px; background:#081F33; color:#FFFFFF; flex-shrink:0; }
+  .pdf-viewer-header span{ font-family:'Fraunces',serif; font-size:0.98rem; padding-right:12px; }
+  .pdf-viewer-actions{ display:flex; align-items:center; gap:10px; flex-shrink:0; }
+  .pdf-viewer-actions a{ font-family:'IBM Plex Mono',monospace; font-size:0.76rem; letter-spacing:0.05em; text-decoration:none; background:#C9A97E; color:#081F33; font-weight:600; padding:8px 16px; border-radius:3px; white-space:nowrap; }
+  .pdf-viewer-close{ background:none; border:none; color:#FFFFFF; font-size:1.3rem; cursor:pointer; line-height:1; padding:0 4px; }
+  .pdf-viewer-box iframe{ flex:1; border:none; width:100%; background:#F7F2EA; }
+  @media (max-width:640px){
+    .pdf-viewer-overlay{ padding:0; }
+    .pdf-viewer-box{ height:100vh; border-radius:0; max-width:none; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap-wide">
+    <a class="nav-mark" href="/es.html">
+      <svg viewBox="0 0 340 320" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 170 285 L 20 285 A 150 150 0 1 1 320 285 Z" fill="#C9A97E"/>
+        <circle cx="170" cy="285" r="6" fill="#0E3A5F"/>
+        <rect x="8" y="285" width="324" height="4" rx="2" fill="#0E3A5F"/>
+      </svg>
+      <span>Nácar <b>&amp; Ledger</b></span>
+    </a>
+    <div class="nav-links">
+      <a href="/bookkeeping-es.html">Contabilidad</a>
+      <a href="/advisory-es.html">Asesoría</a>
+      <a href="/realestate-es.html">Bienes Raíces</a>
+      <a class="current" href="/resources-es.html">Guías</a>
+      <a href="/dealcheck.html">Analizar Negocio</a>
+      <span class="lang-toggle">
+        <a href="/buy-hold-bookkeeping.html" class="lang-btn">EN</a>
+        <span class="lang-btn active">ES</span>
+      </span>
+    </div>
+    <details class="nav-mobile">
+      <summary aria-label="Abrir menú">Menú</summary>
+      <div class="nav-mobile-panel">
+        <a href="/bookkeeping-es.html">Contabilidad</a>
+        <a href="/advisory-es.html">Asesoría</a>
+        <a href="/realestate-es.html">Bienes Raíces</a>
+        <a class="current" href="/resources-es.html">Guías</a>
+        <a href="/dealcheck.html">Analizar Negocio</a>
+        <a href="/buy-hold-bookkeeping.html">English</a>
+      </div>
+    </details>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <div class="wrap">
+    <ol>
+      <li><a href="/es.html">Inicio</a></li>
+      <li><a href="/resources-es.html">Guías</a></li>
+      <li><a href="/resources-es.html#inversionistas-bienes-raices">Inversionistas de Bienes Raíces</a></li>
+      <li>Contabilidad de Buy &amp; Hold</li>
+    </ol>
+  </div>
+</div>
+
+<article>
+  <div class="wrap">
+    <p class="eyebrow article-eyebrow">Contabilidad de buy &amp; hold (renta a largo plazo)</p>
+    <h1>Mi Renta Nunca Muestra Depreciación — ¿Es Un Problema?</h1>
+
+    <div class="direct-answer">
+      <strong>Respuesta corta:</strong> sí. Una propiedad en renta es un activo fijo depreciable desde el día que se pone en servicio — dejando aparte el terreno, el edificio se deprecia cada período que se mantiene disponible para renta, esté o no ocupado ese mes. Un archivo sin calendario de depreciación no es más simple, está equivocado, y usualmente significa que la ganancia eventual de la venta también está mal.
+    </div>
+
+    <h2>Por Qué Existe Esta Lista</h2>
+    <p>Una renta de buy &amp; hold es la imagen espejo de un flip: en lugar de que todo se quede en el balance hasta una venta rápida, esta propiedad está pensada para usarse por años, y la contabilidad tiene que reflejar eso — una división entre terreno y edificio en la adquisición, un asiento de depreciación recurrente, un pago de hipoteca que en realidad son tres cosas distintas, y una venta, cuando llegue, que tiene que contabilizar cada dólar de depreciación tomado a lo largo del camino. Omite cualquiera de estos y la propiedad se ve bien en papel justo hasta que deja de estarlo.</p>
+
+    <h2>Los Seis Errores</h2>
+
+    <div class="mistake-item">
+      <p class="num">01</p>
+      <h3>Sin División Entre Terreno y Edificio en la Adquisición</h3>
+      <p>El precio de compra completo se registra en una sola cuenta de activo "propiedad", sin ninguna división entre terreno y edificio — es un solo estado de cierre, así que se siente como un solo número. El terreno nunca se deprecia; solo el edificio. Sin la división, o no se deprecia nada o el cálculo de depreciación está mal desde el primer día.</p>
+    </div>
+    <div class="mistake-item">
+      <p class="num">02</p>
+      <h3>El Pago Completo de la Hipoteca Registrado Como Gasto de Interés</h3>
+      <p>Cada pago de hipoteca se registra en su totalidad como gasto de interés, porque así "se siente" un pago de préstamo — es una sola línea en el estado de cuenta bancario. Un pago de hipoteca en realidad son tres cosas: capital (reduce el saldo del préstamo), interés (el gasto real), y frecuentemente depósito en garantía o escrow (un prepago de impuestos y seguro, que no es gasto en absoluto). Registrar el pago completo como interés infla el gasto y oculta que se está generando capital real con cada pago.</p>
+    </div>
+    <div class="mistake-item">
+      <p class="num">03</p>
+      <h3>Nunca Se Registra Depreciación</h3>
+      <p>La propiedad permanece en los libros a su precio de compra original indefinidamente — nadie estableció un calendario de depreciación en la adquisición, así que nadie ha estado registrando el asiento. La depreciación es un gasto real, recurrente y no monetario en cada período que la propiedad está en servicio; omitirla infla la utilidad neta y deja la cifra de depreciación acumulada a la fecha de venta en cero, lo cual es su propio problema al momento del cierre.</p>
+    </div>
+    <div class="mistake-item">
+      <p class="num">04</p>
+      <h3>Mejoras de Capital Registradas Como Reparaciones</h3>
+      <p>Un reemplazo completo de techo o un sistema de aire acondicionado nuevo se registra directamente en reparaciones y mantenimiento — se paga en una sola factura, así que se trata como un solo gasto. Un reemplazo completo de sistema es una mejora de capital: recibe su propia cuenta de activo y su propio calendario de depreciación, comenzando en su propia fecha de puesta en servicio, no incluido en reparaciones ni en la base original del edificio.</p>
+    </div>
+    <div class="mistake-item">
+      <p class="num">05</p>
+      <h3>Depósitos de Garantía de Inquilinos en la Cuenta Operativa</h3>
+      <p>Los depósitos de garantía de los inquilinos caen en la misma cuenta operativa que la renta y se gastan como cualquier otro efectivo disponible — no hay una cuenta de pasivo separada dando seguimiento a lo que realmente se debe. Un depósito de garantía no es dinero de la entidad para gastar; pertenece a una cuenta de pasivo hasta que se devuelve o se aplica, y mezclarlo con el efectivo operativo es exactamente el tipo de cosa que el abogado de un inquilino que se va busca.</p>
+    </div>
+    <div class="mistake-item">
+      <p class="num">06</p>
+      <h3>Comisiones del Préstamo Anterior No Canceladas en el Refinanciamiento</h3>
+      <p>Un refinanciamiento con retiro de efectivo o de tasa/plazo paga la hipoteca anterior, y las comisiones no amortizadas del préstamo original simplemente se quedan en el balance en lugar de cancelarse — el mismo vacío que aparece del lado del fix &amp; flip. Esas comisiones deben registrarse como gasto en su totalidad en el momento en que se paga el préstamo original, no arrastradas contra el nuevo préstamo.</p>
+    </div>
+
+    <div class="callout">
+      <strong>La que espera hasta la venta: la recaptura de depreciación.</strong> Años de depreciación no registrada o mal rastreada significan que nadie tiene un total corriente de depreciación acumulada — así que cuando la propiedad finalmente se vende, el CPA tiene que reconstruirla, y el dueño se entera por primera vez de que parte de la ganancia (igual a la depreciación tomada) es ganancia no recapturada de la Sección 1250, gravada de manera diferente al resto. No es una factura de impuestos más grande de lo que debería ser — es simplemente una que nadie vio venir, en el peor momento posible para sorprenderse.
+    </div>
+
+    <h2>Cómo Esto Realmente Te Alcanza</h2>
+    <p>Un archivo de renta sin estos asientos no se ve dañado — hasta que la propiedad cambia de manos.</p>
+    <div class="path-grid">
+      <div class="path-col reactive">
+        <p class="label">Camino A — la venta fuerza una reconstrucción</p>
+        <p>El CPA que prepara la declaración final tiene que reconstruir años de depreciación desde cero, la división entre terreno y edificio se estima después del hecho, y el impuesto de recaptura llega como noticia en el mismo año en que el dueño ya está lidiando con un cierre.</p>
+      </div>
+      <div class="path-col proactive">
+        <p class="label">Camino B — el calendario ha estado corriendo todo el tiempo</p>
+        <p>La depreciación se registra cada período, las mejoras de capital tienen sus propios calendarios, y el saldo de depreciación acumulada siempre está al día — así que el panorama fiscal del año de venta se conoce mucho antes de la fecha de cierre, no se descubre después.</p>
+      </div>
+    </div>
+
+    <h2>La Solución Es Casi Siempre la Misma</h2>
+    <div class="fix-grid">
+      <div class="fix-item"><p class="num">1</p><h3>Divide terreno y edificio</h3><p>En la adquisición, usando la proporción del asesor catastral — el terreno nunca se deprecia.</p></div>
+      <div class="fix-item"><p class="num">2</p><h3>Registra depreciación cada período</h3><p>Un asiento recurrente, esté o no ocupada la unidad ese mes.</p></div>
+      <div class="fix-item"><p class="num">3</p><h3>Da a las mejoras su propio calendario</h3><p>Un techo o aire acondicionado nuevo empieza en su propia fecha de servicio.</p></div>
+      <div class="fix-item"><p class="num">4</p><h3>Divide el pago de la hipoteca</h3><p>Capital, interés y depósito en garantía — nunca todo a una sola cuenta.</p></div>
+      <div class="fix-item"><p class="num">5</p><h3>Separa los depósitos de garantía</h3><p>Una cuenta de pasivo, separada del efectivo operativo, siempre.</p></div>
+      <div class="fix-item"><p class="num">6</p><h3>Cancela comisiones anteriores</h3><p>En su totalidad, cuando un refinanciamiento paga el préstamo original.</p></div>
+    </div>
+
+    <div class="disclaimer">
+      Este material es para educación general y no constituye asesoría fiscal ni legal. La vida depreciable, los estudios de segregación de costos, la elegibilidad para un intercambio bajo la Sección 1031, y las reglas de pérdidas de actividad pasiva son determinaciones de un contador (CPA) calificado. Consulta a un profesional para orientación específica a tu negocio.
+    </div>
+
+    <div class="faq">
+      <h2>Preguntas Frecuentes</h2>
+      <div class="faq-item">
+        <h3>¿Una renta se deprecia incluso en los meses en que realmente no está rentada?</h3>
+        <p>Sí. La depreciación corre según el calendario de puesta en servicio del edificio, no según la ocupación — una vacante entre inquilinos, o el tiempo dedicado a preparar la unidad para el siguiente inquilino, no la pausa. La propiedad se deprecia mientras se mantenga disponible para renta.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Qué es la ganancia no recapturada de la Sección 1250?</h3>
+        <p>Es la parte de la ganancia de venta igual a la depreciación tomada durante el período de tenencia, gravada a una tasa federal distinta al resto de la ganancia de capital. Solo se vuelve visible en la venta, por lo cual atrapa a los dueños que no han estado dando seguimiento a su depreciación acumulada a lo largo del camino.</p>
+      </div>
+      <div class="faq-item">
+        <h3>¿Un techo o sistema de aire acondicionado nuevo se debe capitalizar o registrar como reparación?</h3>
+        <p>Un reemplazo completo — un techo nuevo, un sistema de aire acondicionado nuevo — es una mejora de capital, depreciada en su propio calendario comenzando en su propia fecha de puesta en servicio. Una reparación que restaura la propiedad a su condición anterior sin extender su vida útil, como remendar una sección del techo, se registra como gasto conforme se incurre. Los casos límite deben seguir la política de capitalización del CPA del cliente.</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<div class="related">
+  <div class="wrap">
+    <h2>Guías relacionadas</h2>
+    <div class="related-links">
+      <a href="/fix-flip-bookkeeping-es.html"><span>Los libros de mi flip no muestran lo que realmente gané — ¿por qué?</span><span class="arrow">→</span></a>
+      <a href="/mi-negocio-paga-mi-hipoteca.html"><span>Mi negocio paga mi hipoteca — ¿es un problema?</span><span class="arrow">→</span></a>
+      <a href="/transferencias-entre-empresas-top10.html"><span>Moví $50,000 entre mis dos LLCs — ¿metí la pata con mis impuestos?</span><span class="arrow">→</span></a>
+    </div>
+  </div>
+</div>
+
+<div class="cta-band">
+  <div class="wrap">
+    <p class="eyebrow">¿No sabes cómo se ve realmente tu calendario de depreciación?</p>
+    <h2>Obtén una lista de rentas y un calendario de depreciación que realmente concilien.</h2>
+    <a class="btn primary" href="mailto:nacarledger@outlook.com">Pregúntanos directamente</a>
+    <a class="btn secondary" href="#" onclick="openPdfViewer('/Nacar_Ledger_Buy_Hold_Bookkeeping.pdf', 'Contabilidad de Buy & Hold'); return false;">Ver la guía</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap-wide">
+    Nácar &amp; Ledger — Consultoría Financiera y Operativa para los Pequeños Negocios de Providence
+    &nbsp;|&nbsp; <a href="mailto:nacarledger@outlook.com">nacarledger@outlook.com</a>
+    &nbsp;|&nbsp; 401-617-7926
+  </div>
+</footer>
+
+
+<div class="pdf-viewer-overlay" id="pdfViewerOverlay" onclick="if(event.target===this)closePdfViewer()">
+  <div class="pdf-viewer-box">
+    <div class="pdf-viewer-header">
+      <span id="pdfViewerTitle"></span>
+      <div class="pdf-viewer-actions">
+        <a id="pdfViewerDownload" href="#" download>Download</a>
+        <button class="pdf-viewer-close" onclick="closePdfViewer()" aria-label="Close">&times;</button>
+      </div>
+    </div>
+    <iframe id="pdfViewerFrame" src="" title="Guide preview"></iframe>
+  </div>
+</div>
+<script>
+  function openPdfViewer(url, title) {
+    document.getElementById('pdfViewerFrame').src = url;
+    document.getElementById('pdfViewerTitle').textContent = title;
+    document.getElementById('pdfViewerDownload').href = url;
+    document.getElementById('pdfViewerOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closePdfViewer() {
+    document.getElementById('pdfViewerOverlay').classList.remove('open');
+    document.getElementById('pdfViewerFrame').src = '';
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closePdfViewer();
+  });
+</script>
+</body>
+</html>
